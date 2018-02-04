@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="metamodeloTour" nsURI="http://www.example.org/metamodeloTour"
+    nsPrefix="metamodeloTour">
+  <eClassifiers xsi:type="ecore:EClass" name="Tour">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="hotspot" upperBound="-1"
+        eType="#//Hotspot" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="panorama" upperBound="-1"
+        eType="#//Panorama" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="nombre" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//String"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Panorama">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="rotacion" eType="#//Rotacion"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="hotspot" eType="#//Hotspot"
+        eOpposite="#//Hotspot/panorama"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="nombre" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//String"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="rutaImagen" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//String"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Hotspot">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="propiedad" upperBound="-1"
+        eType="#//Propiedad" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="posicion" eType="#//Coordenada"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="rotacion" eType="#//Coordenada"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="panorama" eType="#//Panorama"
+        eOpposite="#//Panorama/hotspot"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="nombre" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//String"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Posicion" eSuperTypes="#//Coordenada"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Rotacion" eSuperTypes="#//Coordenada"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Coordenada" abstract="true">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="x" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//Integer"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="y" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//Int"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="z" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//Int"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Propiedad">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="nombre" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//String"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="valor" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//String"/>
+  </eClassifiers>
+</ecore:EPackage>
