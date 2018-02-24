@@ -1,0 +1,56 @@
+context tour!Panorama {
+	// 1.1 SI existe un hotspot de A a B debe existir un hotspot de B a A
+	critique hotspotReturn {	
+    	guard : self.hotspot.isDefined()
+    	check : self.hotspot.forAll(h|h.dirige.hotspot.exists(h2 | h2.dirige = self))
+	    message : "No hay hotspot de regreso al panorama "+self.nombre
+    }
+    
+    // 1.2 No pueden haber dos panoramas con el mismo nombre
+	critique nameUnique {
+        guard : self.nombre.isDefined()	
+	    check : tour!Panorama.allInstances.select(p|p<>self).forAll(p|p.nombre<>self.nombre)
+	    //Mensaje de error en caso de que la condición sea falsa
+	    message : "El nombre " + self.nombre + " ya existe."
+    }
+}
+
+
+context tour!Hotspot {
+	// 1.3 La rotación en cada coordenada debe estar entre 0 y 360 grados.
+	critique checkXRotationRange {	
+		guard : self.rotacion.isDefined()
+    	check : 0 < self.rotacion.x < 360 
+	    message : "La coordenada X de rotación de "+self.nombre+" está fuera de rango"
+    }
+    critique checkYRotationRange {	
+		guard : self.rotacion.isDefined()
+    	check : 0 < self.rotacion.y < 360 
+	    message : "La coordenada Y de rotación de "+self.nombre+" está fuera de rango"
+    }
+    critique checkZRotationRange {	
+		guard : self.rotacion.isDefined()
+    	check : 0 < self.rotacion.z < 360  
+	    message : "La coordenada Z de rotación de "+self.nombre+" está fuera de rango"
+    }
+    
+	// 1.4 No pueden existir ningún hotspot posicionados en z=0
+	critique checkXPositionRange {	
+		guard : self.posicion.isDefined()
+    	check : 0 < self.posicion.x < 360 
+	    message : "La coordenada X de posición de "+self.nombre+" está fuera de rango"
+    }
+    critique checkYPositionRange {	
+		guard : self.posicion.isDefined()
+    	check : 0 < self.posicion.y < 360 
+	    message : "La coordenada Y de posición de "+self.nombre+" está fuera de rango"
+    }
+    critique checkZPositionRange {	
+		guard : self.posicion.isDefined()
+    	check : 0 < self.posicion.z < 360  
+	    message : "La coordenada Z de posición de "+self.nombre+" está fuera de rango"
+    }
+}
+
+// 1.5 En el tour existen por lo menos dos panoramas
+// 1.6 Existe un camino entre todos los panoramas de un tour

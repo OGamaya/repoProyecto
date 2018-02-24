@@ -1,28 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Tour:Tour xmi:version="2.0"
-    xmlns:xmi="http://www.omg.org/XMI"
-    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xmlns:Tour="http://www.uniandes.edu.co/tour"
-    xsi:schemaLocation="http://www.uniandes.edu.co/tour metamodeloTour.ecore">
-  <panorama
-      nombre="Mirador"
-      rutaImagen="image/mirador"
-      esPartida="true">
+<Tour:Tour xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:Tour="http://www.uniandes.edu.co/tour">
+  <panorama nombre="Mirador" rutaImagen="image/mirador" esPartida="true">
     <roptacionPanorama/>
-    <hotspot
-        nombre="Mirador-Pico"
-        dirige="//@panorama.1">
+    <hotspot nombre="Mirador-Pico" dirige="//@panorama.1">
       <posicion/>
       <rotacion/>
     </hotspot>
   </panorama>
-  <panorama
-      nombre="Pico"
-      rutaImagen="image/pico">
+  <panorama nombre="Pico" rutaImagen="image/pico">
     <roptacionPanorama/>
-    <hotspot
-        nombre="Pico-Mirador"
-        dirige="//@panorama.0">
+    <hotspot nombre="Pico-Mirador" dirige="//@panorama.0">
       <posicion/>
       <rotacion/>
     </hotspot>
