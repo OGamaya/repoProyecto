@@ -121,7 +121,7 @@
             <styles xmi:type="notation:FilteringStyle" xmi:id="_AuPJcgoPEeixJZn5kszHUQ"/>
           </children>
           <styles xmi:type="notation:ShapeStyle" xmi:id="_AuK4AQoPEeixJZn5kszHUQ" fontName="Segoe UI" fontHeight="8"/>
-          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_AuK4AgoPEeixJZn5kszHUQ" x="485" y="193" width="120" height="100"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_AuK4AgoPEeixJZn5kszHUQ" x="490" y="200" width="120" height="100"/>
         </children>
         <children xmi:type="notation:Node" xmi:id="_fD_hwBPlEeiFSvUb0CpNkA" type="2003" element="_fAStgBPlEeiFSvUb0CpNkA">
           <children xmi:type="notation:Node" xmi:id="_fFVlkBPlEeiFSvUb0CpNkA" type="5007"/>
