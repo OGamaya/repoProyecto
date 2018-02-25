@@ -1,11 +1,12 @@
 //Ejecucion
-//dosPanoramas();
-//panoramaMayor();
+dosPanoramas();
+panoramaMayor();
 caminoEntrePanoramas();
 
 //1.5 En el tour existen por lo menos dos panoramas
 operation dosPanoramas()
 {
+  "1.5 En el tour existen por lo menos dos panoramas".println();
   if (existenDosPanoramas())
   {
    "Existen 2 o mas panoramas en el tour.".println();
@@ -27,6 +28,7 @@ operation caminoEntrePanoramas ()
 { 
   var panoramas = Panorama.allInstances.select(p|p.hotspot.size()>0);  
   var rutaPanorama: String;
+  "1.6 Existe un camino entre todos los panoramas de un tour".println();
   for (p in panoramas)
   {
       for (h in p.hotspot )
@@ -40,6 +42,7 @@ operation caminoEntrePanoramas ()
 //1.7 Cuál es el panorama que tiene más hotspots
 operation panoramaMayor()
 {
+   "1.7 Cuál es el panorama que tiene más hotspots".println();
    panoramaConMasHostpot().nombre.println();
 }
 
