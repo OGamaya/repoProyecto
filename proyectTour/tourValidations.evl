@@ -1,8 +1,9 @@
+import "tourConsultas.eol";
 context tour!Panorama {
 	// 1.1 SI existe un hotspot de A a B debe existir un hotspot de B a A
 	critique hotspotReturn {	
-    	guard : self.hotspot.isDefined()
-    	check : self.hotspot.forAll(h|h.dirige.hotspot.exists(h2 | h2.dirige = self))
+		//guard : self.hotspot.notEmpty()
+    	check : self.hotspot.forAll(h2|h2.dirige.hotspot.exists(h3 | h3.dirige = self))
 	    message : "No hay hotspot de regreso al panorama "+self.nombre
     }
     
@@ -20,37 +21,77 @@ context tour!Hotspot {
 	// 1.3 La rotación en cada coordenada debe estar entre 0 y 360 grados.
 	critique checkXRotationRange {	
 		guard : self.rotacion.isDefined()
-    	check : 0 < self.rotacion.x < 360 
-	    message : "La coordenada X de rotación de "+self.nombre+" está fuera de rango"
+    	check : 0 <= self.rotacion.x and self.rotacion.x <= 360 
+	    message : "La coordenada X de rotación en el hotspot "+self.nombre+" está fuera de rango"
+	    fix{
+	    	title : "Ajuste coordenada X de rotación de " + self.nombre + " al rango"
+	    	do {
+	    	   if (self.rotacion.x < 0) 
+	    	      self.rotacion.x = 0;
+	    	   else
+	    	      self.rotacion.x = 360; 	
+	    	}
+	    }
     }
     critique checkYRotationRange {	
 		guard : self.rotacion.isDefined()
-    	check : 0 < self.rotacion.y < 360 
-	    message : "La coordenada Y de rotación de "+self.nombre+" está fuera de rango"
+    	check : 0 <= self.rotacion.y and self.rotacion.y <= 360 
+	    message : "La coordenada Y de rotación en el hotspot "+self.nombre+" está fuera de rango"
+	    fix {
+		  title : "Ajuste coordenada Y de rotación de " + self.nombre + " al rango "
+		  do {
+		  	if (self.rotacion.y < 0)
+		  		self.rotacion.y = 0;
+		  	else
+		  		self.rotacion.y = 360;
+		  
+			}
+		} 
     }
     critique checkZRotationRange {	
 		guard : self.rotacion.isDefined()
-    	check : 0 < self.rotacion.z < 360  
-	    message : "La coordenada Z de rotación de "+self.nombre+" está fuera de rango"
+    	check : 0 <= self.rotacion.z and self.rotacion.z <= 360  
+	    message : "La coordenada Z de rotación en el hotspot "+self.nombre+" está fuera de rango"
+	    fix {
+		  title : "Ajuste coordenada Z de rotación de " + self.nombre + " al rango "
+		  do {
+		  	if (self.rotacion.z < 0)
+		  		self.rotacion.z = 0;
+		  	else
+		  		self.rotacion.z = 360;
+		  
+			}
+		} 
     }
     
 	// 1.4 No pueden existir ningún hotspot posicionados en z=0
-	critique checkXPositionRange {	
-		guard : self.posicion.isDefined()
-    	check : 0 < self.posicion.x < 360 
-	    message : "La coordenada X de posición de "+self.nombre+" está fuera de rango"
-    }
-    critique checkYPositionRange {	
-		guard : self.posicion.isDefined()
-    	check : 0 < self.posicion.y < 360 
-	    message : "La coordenada Y de posición de "+self.nombre+" está fuera de rango"
-    }
     critique checkZPositionRange {	
 		guard : self.posicion.isDefined()
-    	check : 0 < self.posicion.z < 360  
-	    message : "La coordenada Z de posición de "+self.nombre+" está fuera de rango"
+    	check : 0 <> self.posicion.z  
+	    message : "La coordenada Z de posición de "+self.nombre+" está en 0 "
+	    fix {
+		  title : "Ajuste coordenada Z de posición de " + self.nombre + " a 1 "
+		  do {
+		  	self.posicion.z = 1;
+		  }
+		} 
     }
 }
 
-// 1.5 En el tour existen por lo menos dos panoramas
-// 1.6 Existe un camino entre todos los panoramas de un tour
+context tour!Tour {
+    // 1.5 En el tour existen por lo menos dos panoramas
+	critique minTowPanorams {
+    	guard : self.panorama.notEmpty()
+        check : self.panorama.size() >= 2
+	    //Mensaje de error en caso de que la condición sea falsa
+	    message : "El tour " + self.nombre + " tiene menos de 2 panoramas"
+    }
+    
+	// 1.6 Existe un camino entre todos los panoramas de un tour
+    critique fullWayPanorams {
+    	guard : self.panorama.notEmpty()
+        check : visitarPanoramas().size() = Panorama.allInstances().size()
+	    //Mensaje de error en caso de que la condición sea falsa
+	    message : "El tour tiene un camino incompleto"
+    }
+}
