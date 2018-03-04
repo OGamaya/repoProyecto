@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:Tour="http://www.uniandes.edu.co/tour">
+  <Tour:Tour nombre="BadTour">
+    <panorama nombre="Pico">
+      <hotspot nombre="pico-mirador" dirige="/0/@panorama.1">
+        <posicion/>
+        <rotacion x="-1" y="400" z="366"/>
+      </hotspot>
+      <hotspot nombre="pico-escalera" dirige="/0/@panorama.2"/>
+      <hotspot nombre="pico-parqueadero" dirige="/0/@panorama.1"/>
+    </panorama>
+    <panorama nombre="Mirador">
+      <hotspot nombre="HostpotMirador" dirige="/0/@panorama.0"/>
+      <hotspot nombre="Hostpot11" dirige="/0/@panorama.0"/>
+      <hotspot nombre="Hostpot12" dirige="/0/@panorama.0"/>
+      <hotspot nombre="Hostpot13" dirige="/0/@panorama.0"/>
+    </panorama>
+    <panorama nombre="Pico"/>
+    <panorama nombre="Parqueadero"/>
+  </Tour:Tour>
+  <Tour:Panorama/>
+  <Tour:Panorama/>
+  <Tour:Panorama/>
+  <Tour:Panorama/>
+  <Tour:Panorama/>
+</xmi:XMI>
