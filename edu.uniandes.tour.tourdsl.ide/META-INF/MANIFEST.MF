@@ -1,0 +1,16 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: edu.uniandes.tour.tourdsl.ide
+Bundle-Vendor: My Company
+Bundle-Version: 1.0.0.qualifier
+Bundle-SymbolicName: edu.uniandes.tour.tourdsl.ide; singleton:=true
+Bundle-ActivationPolicy: lazy
+Require-Bundle: edu.uniandes.tour.tourdsl,
+ projectTour,
+ org.eclipse.xtext.ide,
+ org.eclipse.xtext.xbase.ide,
+ org.antlr.runtime
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Export-Package: edu.uniandes.tour.tourdsl.ide.contentassist.antlr,
+ edu.uniandes.tour.tourdsl.ide.contentassist.antlr.internal
+

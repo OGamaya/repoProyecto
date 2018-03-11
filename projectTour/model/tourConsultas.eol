@@ -1,0 +1,31 @@
+//Ejecucion
+panoramaMayor();
+// Auxiliar para la validación 1.6
+operation visitarPanoramas()
+{
+    var visited : Map;
+    var aux : Set;
+
+  	aux.add(Panorama.allInstances().first());
+  	while (aux.notEmpty()) {
+  		var a = aux.first();
+  	    visited.put(a.name, true);
+  	    aux.remove(a);
+  	    aux.addAll(a.hotspot.reject(h|visited.containsKey(h.to.name)).collect(h|h.to));
+  	}
+  	return visited;
+}
+
+//1.7 Cuál es el panorama que tiene más hotspots
+operation panoramaMayor()
+{
+   "1.7 Cuál es el panorama que tiene más hotspots".println();
+   panoramaConMasHostpot().name.println();
+}
+
+operation panoramaConMasHostpot():Panorama
+{
+  var panorama : Panorama = new Panorama;
+  panorama=Panorama.allInstances.sortBy(p|p.hotspot.size()).last();
+  return panorama;
+}

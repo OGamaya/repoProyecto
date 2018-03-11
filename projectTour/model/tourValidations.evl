@@ -1,0 +1,97 @@
+import "tourConsultas.eol";
+context tour!Panorama {
+	// 1.1 SI existe un hotspot de A a B debe existir un hotspot de B a A
+	critique hotspotReturn {	
+		//guard : self.hotspot.notEmpty()
+    	check : self.hotspot.forAll(h2|h2.to.hotspot.exists(h3 | h3.to = self))
+	    message : "No hay hotspot de regreso al panorama "+self.name
+    }
+    
+    // 1.2 No pueden haber dos panoramas con el mismo nombre
+	critique nameUnique {
+        guard : self.name.isDefined()	
+	    check : tour!Panorama.allInstances.select(p|p<>self).forAll(p|p.name<>self.name)
+	    //Mensaje de error en caso de que la condición sea falsa
+	    message : "El nombre " + self.name + " ya existe."
+    }
+}
+
+
+context tour!Hotspot {
+	// 1.3 La rotación en cada coordenada debe estar entre 0 y 360 grados.
+	critique checkXRotationRange {	
+		guard : self.rotation.isDefined()
+    	check : 0 <= self.rotation.x and self.rotation.x <= 360 
+	    message : "La coordenada X de rotación en el hotspot "+self.name+" está fuera de rango"
+	    fix{
+	    	title : "Ajuste coordenada X de rotación de " + self.name + " al rango"
+	    	do {
+	    	   if (self.rotation.x < 0) 
+	    	      self.rotation.x = 0;
+	    	   else
+	    	      self.rotation.x = 360; 	
+	    	}
+	    }
+    }
+    critique checkYRotationRange {	
+		guard : self.rotation.isDefined()
+    	check : 0 <= self.rotation.y and self.rotation.y <= 360 
+	    message : "La coordenada Y de rotación en el hotspot "+self.name+" está fuera de rango"
+	    fix {
+		  title : "Ajuste coordenada Y de rotación de " + self.name + " al rango "
+		  do {
+		  	if (self.rotation.y < 0)
+		  		self.rotation.y = 0;
+		  	else
+		  		self.rotation.y = 360;
+		  
+			}
+		} 
+    }
+    critique checkZRotationRange {	
+		guard : self.rotation.isDefined()
+    	check : 0 <= self.rotation.z and self.rotation.z <= 360  
+	    message : "La coordenada Z de rotación en el hotspot "+self.name+" está fuera de rango"
+	    fix {
+		  title : "Ajuste coordenada Z de rotación de " + self.name + " al rango "
+		  do {
+		  	if (self.rotation.z < 0)
+		  		self.rotation.z = 0;
+		  	else
+		  		self.rotation.z = 360;
+		  
+			}
+		} 
+    }
+    
+	// 1.4 No pueden existir ningún hotspot posicionados en z=0
+    critique checkZPositionRange {	
+		guard : self.position.isDefined()
+    	check : 0 <> self.position.z  
+	    message : "La coordenada Z de posición de "+self.name+" está en 0 "
+	    fix {
+		  title : "Ajuste coordenada Z de posición de " + self.name + " a 1 "
+		  do {
+		  	self.position.z = 1;
+		  }
+		} 
+    }
+}
+
+context tour!Tour {
+    // 1.5 En el tour existen por lo menos dos panoramas
+	critique minTowPanorams {
+    	guard : self.panorama.notEmpty()
+        check : self.panorama.size() >= 2
+	    //Mensaje de error en caso de que la condición sea falsa
+	    message : "El tour " + self.nombre + " tiene menos de 2 panoramas"
+    }
+    
+	// 1.6 Existe un camino entre todos los panoramas de un tour
+    critique fullWayPanorams {
+    	guard : self.panorama.notEmpty()
+        check : visitarPanoramas().size() = Panorama.allInstances().size()
+	    //Mensaje de error en caso de que la condición sea falsa
+	    message : "El tour tiene un camino incompleto"
+    }
+}

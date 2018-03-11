@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:projectTour="http://www.uniandes.edu.co/projectTour">
+  <projectTour:Tour>
+    <panorama name="Pico">
+      <hotspot name="Pico-Mirador" to="/0/@panorama.1">
+        <position/>
+        <rotation x="-1.0" y="466.0" z="368.0"/>
+      </hotspot>
+    </panorama>
+    <panorama name="Mirador"/>
+    <panorama name="Parqueadero"/>
+  </projectTour:Tour>
+  <projectTour:Panorama/>
+  <projectTour:Panorama/>
+</xmi:XMI>
