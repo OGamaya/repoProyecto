@@ -22,6 +22,7 @@ Panorama returns Panorama:
 LBRACKET
 NAME TWOPOINTS name=EString COMA
 DESCRIPTION TWOPOINTS description=EString COMA
+T_IMAGEN TWOPOINTS imagePath=EString COMA
 T_HOTSPOT TWOPOINTS LPARENTISISCUADRADO
 hotspot+=Hotspot+
 RPARENTISISCUADRADO
@@ -69,6 +70,7 @@ terminal RPARENTISISCUADRADO: "]";
 terminal COMA:",";
 terminal TWOPOINTS:":";
 terminal NAME: "name";
+terminal T_IMAGEN: "imagePath";
 terminal T_PANORAMA:"panoramas";
 terminal DESCRIPTION: "description";
 terminal T_HOTSPOT:"hotspots";
