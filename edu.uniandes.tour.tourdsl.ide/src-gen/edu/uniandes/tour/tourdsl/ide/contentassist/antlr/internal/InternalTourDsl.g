@@ -885,9 +885,9 @@ rule__Panorama__Group__10__Impl
 	}
 :
 (
-	{ before(grammarAccess.getPanoramaAccess().getT_HOTSPOTTerminalRuleCall_10()); }
-	RULE_T_HOTSPOT
-	{ after(grammarAccess.getPanoramaAccess().getT_HOTSPOTTerminalRuleCall_10()); }
+	{ before(grammarAccess.getPanoramaAccess().getT_IMAGENTerminalRuleCall_10()); }
+	RULE_T_IMAGEN
+	{ after(grammarAccess.getPanoramaAccess().getT_IMAGENTerminalRuleCall_10()); }
 )
 ;
 finally {
@@ -939,9 +939,9 @@ rule__Panorama__Group__12__Impl
 	}
 :
 (
-	{ before(grammarAccess.getPanoramaAccess().getLPARENTISISCUADRADOTerminalRuleCall_12()); }
-	RULE_LPARENTISISCUADRADO
-	{ after(grammarAccess.getPanoramaAccess().getLPARENTISISCUADRADOTerminalRuleCall_12()); }
+	{ before(grammarAccess.getPanoramaAccess().getImagePathAssignment_12()); }
+	(rule__Panorama__ImagePathAssignment_12)
+	{ after(grammarAccess.getPanoramaAccess().getImagePathAssignment_12()); }
 )
 ;
 finally {
@@ -966,16 +966,9 @@ rule__Panorama__Group__13__Impl
 	}
 :
 (
-	(
-		{ before(grammarAccess.getPanoramaAccess().getHotspotAssignment_13()); }
-		(rule__Panorama__HotspotAssignment_13)
-		{ after(grammarAccess.getPanoramaAccess().getHotspotAssignment_13()); }
-	)
-	(
-		{ before(grammarAccess.getPanoramaAccess().getHotspotAssignment_13()); }
-		(rule__Panorama__HotspotAssignment_13)*
-		{ after(grammarAccess.getPanoramaAccess().getHotspotAssignment_13()); }
-	)
+	{ before(grammarAccess.getPanoramaAccess().getCOMATerminalRuleCall_13()); }
+	RULE_COMA
+	{ after(grammarAccess.getPanoramaAccess().getCOMATerminalRuleCall_13()); }
 )
 ;
 finally {
@@ -1000,9 +993,9 @@ rule__Panorama__Group__14__Impl
 	}
 :
 (
-	{ before(grammarAccess.getPanoramaAccess().getRPARENTISISCUADRADOTerminalRuleCall_14()); }
-	RULE_RPARENTISISCUADRADO
-	{ after(grammarAccess.getPanoramaAccess().getRPARENTISISCUADRADOTerminalRuleCall_14()); }
+	{ before(grammarAccess.getPanoramaAccess().getT_HOTSPOTTerminalRuleCall_14()); }
+	RULE_T_HOTSPOT
+	{ after(grammarAccess.getPanoramaAccess().getT_HOTSPOTTerminalRuleCall_14()); }
 )
 ;
 finally {
@@ -1027,9 +1020,9 @@ rule__Panorama__Group__15__Impl
 	}
 :
 (
-	{ before(grammarAccess.getPanoramaAccess().getRBRACKETTerminalRuleCall_15()); }
-	RULE_RBRACKET
-	{ after(grammarAccess.getPanoramaAccess().getRBRACKETTerminalRuleCall_15()); }
+	{ before(grammarAccess.getPanoramaAccess().getTWOPOINTSTerminalRuleCall_15()); }
+	RULE_TWOPOINTS
+	{ after(grammarAccess.getPanoramaAccess().getTWOPOINTSTerminalRuleCall_15()); }
 )
 ;
 finally {
@@ -1042,6 +1035,7 @@ rule__Panorama__Group__16
 	}
 :
 	rule__Panorama__Group__16__Impl
+	rule__Panorama__Group__17
 ;
 finally {
 	restoreStackSize(stackSize);
@@ -1053,9 +1047,123 @@ rule__Panorama__Group__16__Impl
 	}
 :
 (
-	{ before(grammarAccess.getPanoramaAccess().getCOMATerminalRuleCall_16()); }
+	{ before(grammarAccess.getPanoramaAccess().getLPARENTISISCUADRADOTerminalRuleCall_16()); }
+	RULE_LPARENTISISCUADRADO
+	{ after(grammarAccess.getPanoramaAccess().getLPARENTISISCUADRADOTerminalRuleCall_16()); }
+)
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__Panorama__Group__17
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+	rule__Panorama__Group__17__Impl
+	rule__Panorama__Group__18
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__Panorama__Group__17__Impl
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+(
+	(
+		{ before(grammarAccess.getPanoramaAccess().getHotspotAssignment_17()); }
+		(rule__Panorama__HotspotAssignment_17)
+		{ after(grammarAccess.getPanoramaAccess().getHotspotAssignment_17()); }
+	)
+	(
+		{ before(grammarAccess.getPanoramaAccess().getHotspotAssignment_17()); }
+		(rule__Panorama__HotspotAssignment_17)*
+		{ after(grammarAccess.getPanoramaAccess().getHotspotAssignment_17()); }
+	)
+)
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__Panorama__Group__18
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+	rule__Panorama__Group__18__Impl
+	rule__Panorama__Group__19
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__Panorama__Group__18__Impl
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+(
+	{ before(grammarAccess.getPanoramaAccess().getRPARENTISISCUADRADOTerminalRuleCall_18()); }
+	RULE_RPARENTISISCUADRADO
+	{ after(grammarAccess.getPanoramaAccess().getRPARENTISISCUADRADOTerminalRuleCall_18()); }
+)
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__Panorama__Group__19
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+	rule__Panorama__Group__19__Impl
+	rule__Panorama__Group__20
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__Panorama__Group__19__Impl
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+(
+	{ before(grammarAccess.getPanoramaAccess().getRBRACKETTerminalRuleCall_19()); }
+	RULE_RBRACKET
+	{ after(grammarAccess.getPanoramaAccess().getRBRACKETTerminalRuleCall_19()); }
+)
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__Panorama__Group__20
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+	rule__Panorama__Group__20__Impl
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__Panorama__Group__20__Impl
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+(
+	{ before(grammarAccess.getPanoramaAccess().getCOMATerminalRuleCall_20()); }
 	(RULE_COMA)?
-	{ after(grammarAccess.getPanoramaAccess().getCOMATerminalRuleCall_16()); }
+	{ after(grammarAccess.getPanoramaAccess().getCOMATerminalRuleCall_20()); }
 )
 ;
 finally {
@@ -2608,15 +2716,30 @@ finally {
 	restoreStackSize(stackSize);
 }
 
-rule__Panorama__HotspotAssignment_13
+rule__Panorama__ImagePathAssignment_12
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
 	(
-		{ before(grammarAccess.getPanoramaAccess().getHotspotHotspotParserRuleCall_13_0()); }
+		{ before(grammarAccess.getPanoramaAccess().getImagePathEStringParserRuleCall_12_0()); }
+		ruleEString
+		{ after(grammarAccess.getPanoramaAccess().getImagePathEStringParserRuleCall_12_0()); }
+	)
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__Panorama__HotspotAssignment_17
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+	(
+		{ before(grammarAccess.getPanoramaAccess().getHotspotHotspotParserRuleCall_17_0()); }
 		ruleHotspot
-		{ after(grammarAccess.getPanoramaAccess().getHotspotHotspotParserRuleCall_13_0()); }
+		{ after(grammarAccess.getPanoramaAccess().getHotspotHotspotParserRuleCall_17_0()); }
 	)
 ;
 finally {
@@ -2790,6 +2913,8 @@ RULE_COMA : ',';
 RULE_TWOPOINTS : ':';
 
 RULE_NAME : 'name';
+
+RULE_T_IMAGEN : 'imagePath';
 
 RULE_T_PANORAMA : 'panoramas';
 

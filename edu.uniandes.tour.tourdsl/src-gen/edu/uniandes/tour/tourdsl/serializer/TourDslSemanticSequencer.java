@@ -88,7 +88,7 @@ public class TourDslSemanticSequencer extends AbstractDelegatingSemanticSequence
 	 *     Panorama returns Panorama
 	 *
 	 * Constraint:
-	 *     (name=EString description=EString hotspot+=Hotspot+)
+	 *     (name=EString description=EString imagePath=EString hotspot+=Hotspot+)
 	 */
 	protected void sequence_Panorama(ISerializationContext context, Panorama semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);

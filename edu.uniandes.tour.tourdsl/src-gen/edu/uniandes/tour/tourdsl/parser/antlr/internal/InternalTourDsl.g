@@ -249,24 +249,55 @@ rulePanorama returns [EObject current=null]
 		{
 			newLeafNode(this_COMA_9, grammarAccess.getPanoramaAccess().getCOMATerminalRuleCall_9());
 		}
-		this_T_HOTSPOT_10=RULE_T_HOTSPOT
+		this_T_IMAGEN_10=RULE_T_IMAGEN
 		{
-			newLeafNode(this_T_HOTSPOT_10, grammarAccess.getPanoramaAccess().getT_HOTSPOTTerminalRuleCall_10());
+			newLeafNode(this_T_IMAGEN_10, grammarAccess.getPanoramaAccess().getT_IMAGENTerminalRuleCall_10());
 		}
 		this_TWOPOINTS_11=RULE_TWOPOINTS
 		{
 			newLeafNode(this_TWOPOINTS_11, grammarAccess.getPanoramaAccess().getTWOPOINTSTerminalRuleCall_11());
 		}
-		this_LPARENTISISCUADRADO_12=RULE_LPARENTISISCUADRADO
+		(
+			(
+				{
+					newCompositeNode(grammarAccess.getPanoramaAccess().getImagePathEStringParserRuleCall_12_0());
+				}
+				lv_imagePath_12_0=ruleEString
+				{
+					if ($current==null) {
+						$current = createModelElementForParent(grammarAccess.getPanoramaRule());
+					}
+					set(
+						$current,
+						"imagePath",
+						lv_imagePath_12_0,
+						"edu.uniandes.tour.tourdsl.TourDsl.EString");
+					afterParserOrEnumRuleCall();
+				}
+			)
+		)
+		this_COMA_13=RULE_COMA
 		{
-			newLeafNode(this_LPARENTISISCUADRADO_12, grammarAccess.getPanoramaAccess().getLPARENTISISCUADRADOTerminalRuleCall_12());
+			newLeafNode(this_COMA_13, grammarAccess.getPanoramaAccess().getCOMATerminalRuleCall_13());
+		}
+		this_T_HOTSPOT_14=RULE_T_HOTSPOT
+		{
+			newLeafNode(this_T_HOTSPOT_14, grammarAccess.getPanoramaAccess().getT_HOTSPOTTerminalRuleCall_14());
+		}
+		this_TWOPOINTS_15=RULE_TWOPOINTS
+		{
+			newLeafNode(this_TWOPOINTS_15, grammarAccess.getPanoramaAccess().getTWOPOINTSTerminalRuleCall_15());
+		}
+		this_LPARENTISISCUADRADO_16=RULE_LPARENTISISCUADRADO
+		{
+			newLeafNode(this_LPARENTISISCUADRADO_16, grammarAccess.getPanoramaAccess().getLPARENTISISCUADRADOTerminalRuleCall_16());
 		}
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getPanoramaAccess().getHotspotHotspotParserRuleCall_13_0());
+					newCompositeNode(grammarAccess.getPanoramaAccess().getHotspotHotspotParserRuleCall_17_0());
 				}
-				lv_hotspot_13_0=ruleHotspot
+				lv_hotspot_17_0=ruleHotspot
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getPanoramaRule());
@@ -274,24 +305,24 @@ rulePanorama returns [EObject current=null]
 					add(
 						$current,
 						"hotspot",
-						lv_hotspot_13_0,
+						lv_hotspot_17_0,
 						"edu.uniandes.tour.tourdsl.TourDsl.Hotspot");
 					afterParserOrEnumRuleCall();
 				}
 			)
 		)+
-		this_RPARENTISISCUADRADO_14=RULE_RPARENTISISCUADRADO
+		this_RPARENTISISCUADRADO_18=RULE_RPARENTISISCUADRADO
 		{
-			newLeafNode(this_RPARENTISISCUADRADO_14, grammarAccess.getPanoramaAccess().getRPARENTISISCUADRADOTerminalRuleCall_14());
+			newLeafNode(this_RPARENTISISCUADRADO_18, grammarAccess.getPanoramaAccess().getRPARENTISISCUADRADOTerminalRuleCall_18());
 		}
-		this_RBRACKET_15=RULE_RBRACKET
+		this_RBRACKET_19=RULE_RBRACKET
 		{
-			newLeafNode(this_RBRACKET_15, grammarAccess.getPanoramaAccess().getRBRACKETTerminalRuleCall_15());
+			newLeafNode(this_RBRACKET_19, grammarAccess.getPanoramaAccess().getRBRACKETTerminalRuleCall_19());
 		}
 		(
-			this_COMA_16=RULE_COMA
+			this_COMA_20=RULE_COMA
 			{
-				newLeafNode(this_COMA_16, grammarAccess.getPanoramaAccess().getCOMATerminalRuleCall_16());
+				newLeafNode(this_COMA_20, grammarAccess.getPanoramaAccess().getCOMATerminalRuleCall_20());
 			}
 		)?
 	)
@@ -823,6 +854,8 @@ RULE_COMA : ',';
 RULE_TWOPOINTS : ':';
 
 RULE_NAME : 'name';
+
+RULE_T_IMAGEN : 'imagePath';
 
 RULE_T_PANORAMA : 'panoramas';
 

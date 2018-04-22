@@ -44,7 +44,8 @@ public class TourDslParser extends AbstractContentAssistParser {
 					put(grammarAccess.getTourAccess().getPanoramaAssignment_9(), "rule__Tour__PanoramaAssignment_9");
 					put(grammarAccess.getPanoramaAccess().getNameAssignment_4(), "rule__Panorama__NameAssignment_4");
 					put(grammarAccess.getPanoramaAccess().getDescriptionAssignment_8(), "rule__Panorama__DescriptionAssignment_8");
-					put(grammarAccess.getPanoramaAccess().getHotspotAssignment_13(), "rule__Panorama__HotspotAssignment_13");
+					put(grammarAccess.getPanoramaAccess().getImagePathAssignment_12(), "rule__Panorama__ImagePathAssignment_12");
+					put(grammarAccess.getPanoramaAccess().getHotspotAssignment_17(), "rule__Panorama__HotspotAssignment_17");
 					put(grammarAccess.getHotspotAccess().getNameAssignment_4(), "rule__Hotspot__NameAssignment_4");
 					put(grammarAccess.getHotspotAccess().getToAssignment_8(), "rule__Hotspot__ToAssignment_8");
 					put(grammarAccess.getHotspotAccess().getPositionAssignment_10(), "rule__Hotspot__PositionAssignment_10");

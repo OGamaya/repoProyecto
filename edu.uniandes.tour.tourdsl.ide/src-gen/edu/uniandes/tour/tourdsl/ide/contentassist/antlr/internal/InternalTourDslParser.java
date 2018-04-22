@@ -22,38 +22,39 @@ import java.util.ArrayList;
 @SuppressWarnings("all")
 public class InternalTourDslParser extends AbstractInternalContentAssistParser {
     public static final String[] tokenNames = new String[] {
-        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_STRING", "RULE_ID", "RULE_LBRACKET", "RULE_NAME", "RULE_TWOPOINTS", "RULE_COMA", "RULE_T_PANORAMA", "RULE_LPARENTISISCUADRADO", "RULE_RPARENTISISCUADRADO", "RULE_RBRACKET", "RULE_DESCRIPTION", "RULE_T_HOTSPOT", "RULE_TO", "RULE_T_ROTATION", "RULE_ROTX", "RULE_ROTY", "RULE_ROTZ", "RULE_T_POSITION", "RULE_POSX", "RULE_POSY", "RULE_POSZ", "RULE_INT", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'E'", "'e'", "'-'", "'.'"
+        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_STRING", "RULE_ID", "RULE_LBRACKET", "RULE_NAME", "RULE_TWOPOINTS", "RULE_COMA", "RULE_T_PANORAMA", "RULE_LPARENTISISCUADRADO", "RULE_RPARENTISISCUADRADO", "RULE_RBRACKET", "RULE_DESCRIPTION", "RULE_T_IMAGEN", "RULE_T_HOTSPOT", "RULE_TO", "RULE_T_ROTATION", "RULE_ROTX", "RULE_ROTY", "RULE_ROTZ", "RULE_T_POSITION", "RULE_POSX", "RULE_POSY", "RULE_POSZ", "RULE_INT", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'E'", "'e'", "'-'", "'.'"
     };
     public static final int RULE_LBRACKET=6;
     public static final int RULE_COMA=9;
-    public static final int RULE_TO=16;
+    public static final int RULE_TO=17;
     public static final int RULE_NAME=7;
-    public static final int RULE_T_HOTSPOT=15;
+    public static final int RULE_T_HOTSPOT=16;
     public static final int RULE_STRING=4;
-    public static final int RULE_ROTX=18;
-    public static final int RULE_ROTY=19;
-    public static final int RULE_ROTZ=20;
-    public static final int RULE_SL_COMMENT=27;
+    public static final int RULE_ROTX=19;
+    public static final int RULE_ROTY=20;
+    public static final int RULE_ROTZ=21;
+    public static final int RULE_SL_COMMENT=28;
     public static final int RULE_RPARENTISISCUADRADO=12;
     public static final int T__33=33;
     public static final int RULE_LPARENTISISCUADRADO=11;
+    public static final int T__34=34;
     public static final int EOF=-1;
-    public static final int T__30=30;
     public static final int T__31=31;
     public static final int T__32=32;
     public static final int RULE_T_PANORAMA=10;
-    public static final int RULE_T_POSITION=21;
-    public static final int RULE_POSX=22;
-    public static final int RULE_T_ROTATION=17;
+    public static final int RULE_T_POSITION=22;
+    public static final int RULE_POSX=23;
+    public static final int RULE_T_ROTATION=18;
     public static final int RULE_ID=5;
-    public static final int RULE_WS=28;
+    public static final int RULE_WS=29;
     public static final int RULE_DESCRIPTION=14;
-    public static final int RULE_ANY_OTHER=29;
-    public static final int RULE_POSZ=24;
-    public static final int RULE_POSY=23;
-    public static final int RULE_INT=25;
+    public static final int RULE_T_IMAGEN=15;
+    public static final int RULE_ANY_OTHER=30;
+    public static final int RULE_POSZ=25;
+    public static final int RULE_POSY=24;
+    public static final int RULE_INT=26;
     public static final int RULE_TWOPOINTS=8;
-    public static final int RULE_ML_COMMENT=26;
+    public static final int RULE_ML_COMMENT=27;
     public static final int RULE_RBRACKET=13;
 
     // delegates
@@ -641,10 +642,10 @@ public class InternalTourDslParser extends AbstractInternalContentAssistParser {
             int alt1=2;
             int LA1_0 = input.LA(1);
 
-            if ( (LA1_0==30) ) {
+            if ( (LA1_0==31) ) {
                 alt1=1;
             }
-            else if ( (LA1_0==31) ) {
+            else if ( (LA1_0==32) ) {
                 alt1=2;
             }
             else {
@@ -661,7 +662,7 @@ public class InternalTourDslParser extends AbstractInternalContentAssistParser {
                     // InternalTourDsl.g:233:3: 'E'
                     {
                      before(grammarAccess.getEDoubleAccess().getEKeyword_4_0_0()); 
-                    match(input,30,FOLLOW_2); 
+                    match(input,31,FOLLOW_2); 
                      after(grammarAccess.getEDoubleAccess().getEKeyword_4_0_0()); 
 
                     }
@@ -676,7 +677,7 @@ public class InternalTourDslParser extends AbstractInternalContentAssistParser {
                     // InternalTourDsl.g:239:3: 'e'
                     {
                      before(grammarAccess.getEDoubleAccess().getEKeyword_4_0_1()); 
-                    match(input,31,FOLLOW_2); 
+                    match(input,32,FOLLOW_2); 
                      after(grammarAccess.getEDoubleAccess().getEKeyword_4_0_1()); 
 
                     }
@@ -2539,21 +2540,21 @@ public class InternalTourDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Panorama__Group__10__Impl"
-    // InternalTourDsl.g:882:1: rule__Panorama__Group__10__Impl : ( RULE_T_HOTSPOT ) ;
+    // InternalTourDsl.g:882:1: rule__Panorama__Group__10__Impl : ( RULE_T_IMAGEN ) ;
     public final void rule__Panorama__Group__10__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTourDsl.g:886:1: ( ( RULE_T_HOTSPOT ) )
-            // InternalTourDsl.g:887:1: ( RULE_T_HOTSPOT )
+            // InternalTourDsl.g:886:1: ( ( RULE_T_IMAGEN ) )
+            // InternalTourDsl.g:887:1: ( RULE_T_IMAGEN )
             {
-            // InternalTourDsl.g:887:1: ( RULE_T_HOTSPOT )
-            // InternalTourDsl.g:888:2: RULE_T_HOTSPOT
+            // InternalTourDsl.g:887:1: ( RULE_T_IMAGEN )
+            // InternalTourDsl.g:888:2: RULE_T_IMAGEN
             {
-             before(grammarAccess.getPanoramaAccess().getT_HOTSPOTTerminalRuleCall_10()); 
-            match(input,RULE_T_HOTSPOT,FOLLOW_2); 
-             after(grammarAccess.getPanoramaAccess().getT_HOTSPOTTerminalRuleCall_10()); 
+             before(grammarAccess.getPanoramaAccess().getT_IMAGENTerminalRuleCall_10()); 
+            match(input,RULE_T_IMAGEN,FOLLOW_2); 
+             after(grammarAccess.getPanoramaAccess().getT_IMAGENTerminalRuleCall_10()); 
 
             }
 
@@ -2585,7 +2586,7 @@ public class InternalTourDslParser extends AbstractInternalContentAssistParser {
             // InternalTourDsl.g:901:1: ( rule__Panorama__Group__11__Impl rule__Panorama__Group__12 )
             // InternalTourDsl.g:902:2: rule__Panorama__Group__11__Impl rule__Panorama__Group__12
             {
-            pushFollow(FOLLOW_9);
+            pushFollow(FOLLOW_6);
             rule__Panorama__Group__11__Impl();
 
             state._fsp--;
@@ -2660,7 +2661,7 @@ public class InternalTourDslParser extends AbstractInternalContentAssistParser {
             // InternalTourDsl.g:928:1: ( rule__Panorama__Group__12__Impl rule__Panorama__Group__13 )
             // InternalTourDsl.g:929:2: rule__Panorama__Group__12__Impl rule__Panorama__Group__13
             {
-            pushFollow(FOLLOW_3);
+            pushFollow(FOLLOW_7);
             rule__Panorama__Group__12__Impl();
 
             state._fsp--;
@@ -2689,21 +2690,31 @@ public class InternalTourDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Panorama__Group__12__Impl"
-    // InternalTourDsl.g:936:1: rule__Panorama__Group__12__Impl : ( RULE_LPARENTISISCUADRADO ) ;
+    // InternalTourDsl.g:936:1: rule__Panorama__Group__12__Impl : ( ( rule__Panorama__ImagePathAssignment_12 ) ) ;
     public final void rule__Panorama__Group__12__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTourDsl.g:940:1: ( ( RULE_LPARENTISISCUADRADO ) )
-            // InternalTourDsl.g:941:1: ( RULE_LPARENTISISCUADRADO )
+            // InternalTourDsl.g:940:1: ( ( ( rule__Panorama__ImagePathAssignment_12 ) ) )
+            // InternalTourDsl.g:941:1: ( ( rule__Panorama__ImagePathAssignment_12 ) )
             {
-            // InternalTourDsl.g:941:1: ( RULE_LPARENTISISCUADRADO )
-            // InternalTourDsl.g:942:2: RULE_LPARENTISISCUADRADO
+            // InternalTourDsl.g:941:1: ( ( rule__Panorama__ImagePathAssignment_12 ) )
+            // InternalTourDsl.g:942:2: ( rule__Panorama__ImagePathAssignment_12 )
             {
-             before(grammarAccess.getPanoramaAccess().getLPARENTISISCUADRADOTerminalRuleCall_12()); 
-            match(input,RULE_LPARENTISISCUADRADO,FOLLOW_2); 
-             after(grammarAccess.getPanoramaAccess().getLPARENTISISCUADRADOTerminalRuleCall_12()); 
+             before(grammarAccess.getPanoramaAccess().getImagePathAssignment_12()); 
+            // InternalTourDsl.g:943:2: ( rule__Panorama__ImagePathAssignment_12 )
+            // InternalTourDsl.g:943:3: rule__Panorama__ImagePathAssignment_12
+            {
+            pushFollow(FOLLOW_2);
+            rule__Panorama__ImagePathAssignment_12();
+
+            state._fsp--;
+
+
+            }
+
+             after(grammarAccess.getPanoramaAccess().getImagePathAssignment_12()); 
 
             }
 
@@ -2735,7 +2746,7 @@ public class InternalTourDslParser extends AbstractInternalContentAssistParser {
             // InternalTourDsl.g:955:1: ( rule__Panorama__Group__13__Impl rule__Panorama__Group__14 )
             // InternalTourDsl.g:956:2: rule__Panorama__Group__13__Impl rule__Panorama__Group__14
             {
-            pushFollow(FOLLOW_10);
+            pushFollow(FOLLOW_15);
             rule__Panorama__Group__13__Impl();
 
             state._fsp--;
@@ -2764,74 +2775,21 @@ public class InternalTourDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Panorama__Group__13__Impl"
-    // InternalTourDsl.g:963:1: rule__Panorama__Group__13__Impl : ( ( ( rule__Panorama__HotspotAssignment_13 ) ) ( ( rule__Panorama__HotspotAssignment_13 )* ) ) ;
+    // InternalTourDsl.g:963:1: rule__Panorama__Group__13__Impl : ( RULE_COMA ) ;
     public final void rule__Panorama__Group__13__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTourDsl.g:967:1: ( ( ( ( rule__Panorama__HotspotAssignment_13 ) ) ( ( rule__Panorama__HotspotAssignment_13 )* ) ) )
-            // InternalTourDsl.g:968:1: ( ( ( rule__Panorama__HotspotAssignment_13 ) ) ( ( rule__Panorama__HotspotAssignment_13 )* ) )
+            // InternalTourDsl.g:967:1: ( ( RULE_COMA ) )
+            // InternalTourDsl.g:968:1: ( RULE_COMA )
             {
-            // InternalTourDsl.g:968:1: ( ( ( rule__Panorama__HotspotAssignment_13 ) ) ( ( rule__Panorama__HotspotAssignment_13 )* ) )
-            // InternalTourDsl.g:969:2: ( ( rule__Panorama__HotspotAssignment_13 ) ) ( ( rule__Panorama__HotspotAssignment_13 )* )
+            // InternalTourDsl.g:968:1: ( RULE_COMA )
+            // InternalTourDsl.g:969:2: RULE_COMA
             {
-            // InternalTourDsl.g:969:2: ( ( rule__Panorama__HotspotAssignment_13 ) )
-            // InternalTourDsl.g:970:3: ( rule__Panorama__HotspotAssignment_13 )
-            {
-             before(grammarAccess.getPanoramaAccess().getHotspotAssignment_13()); 
-            // InternalTourDsl.g:971:3: ( rule__Panorama__HotspotAssignment_13 )
-            // InternalTourDsl.g:971:4: rule__Panorama__HotspotAssignment_13
-            {
-            pushFollow(FOLLOW_11);
-            rule__Panorama__HotspotAssignment_13();
-
-            state._fsp--;
-
-
-            }
-
-             after(grammarAccess.getPanoramaAccess().getHotspotAssignment_13()); 
-
-            }
-
-            // InternalTourDsl.g:974:2: ( ( rule__Panorama__HotspotAssignment_13 )* )
-            // InternalTourDsl.g:975:3: ( rule__Panorama__HotspotAssignment_13 )*
-            {
-             before(grammarAccess.getPanoramaAccess().getHotspotAssignment_13()); 
-            // InternalTourDsl.g:976:3: ( rule__Panorama__HotspotAssignment_13 )*
-            loop4:
-            do {
-                int alt4=2;
-                int LA4_0 = input.LA(1);
-
-                if ( (LA4_0==RULE_LBRACKET) ) {
-                    alt4=1;
-                }
-
-
-                switch (alt4) {
-            	case 1 :
-            	    // InternalTourDsl.g:976:4: rule__Panorama__HotspotAssignment_13
-            	    {
-            	    pushFollow(FOLLOW_11);
-            	    rule__Panorama__HotspotAssignment_13();
-
-            	    state._fsp--;
-
-
-            	    }
-            	    break;
-
-            	default :
-            	    break loop4;
-                }
-            } while (true);
-
-             after(grammarAccess.getPanoramaAccess().getHotspotAssignment_13()); 
-
-            }
-
+             before(grammarAccess.getPanoramaAccess().getCOMATerminalRuleCall_13()); 
+            match(input,RULE_COMA,FOLLOW_2); 
+             after(grammarAccess.getPanoramaAccess().getCOMATerminalRuleCall_13()); 
 
             }
 
@@ -2854,16 +2812,16 @@ public class InternalTourDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Panorama__Group__14"
-    // InternalTourDsl.g:985:1: rule__Panorama__Group__14 : rule__Panorama__Group__14__Impl rule__Panorama__Group__15 ;
+    // InternalTourDsl.g:978:1: rule__Panorama__Group__14 : rule__Panorama__Group__14__Impl rule__Panorama__Group__15 ;
     public final void rule__Panorama__Group__14() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTourDsl.g:989:1: ( rule__Panorama__Group__14__Impl rule__Panorama__Group__15 )
-            // InternalTourDsl.g:990:2: rule__Panorama__Group__14__Impl rule__Panorama__Group__15
+            // InternalTourDsl.g:982:1: ( rule__Panorama__Group__14__Impl rule__Panorama__Group__15 )
+            // InternalTourDsl.g:983:2: rule__Panorama__Group__14__Impl rule__Panorama__Group__15
             {
-            pushFollow(FOLLOW_12);
+            pushFollow(FOLLOW_5);
             rule__Panorama__Group__14__Impl();
 
             state._fsp--;
@@ -2892,21 +2850,21 @@ public class InternalTourDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Panorama__Group__14__Impl"
-    // InternalTourDsl.g:997:1: rule__Panorama__Group__14__Impl : ( RULE_RPARENTISISCUADRADO ) ;
+    // InternalTourDsl.g:990:1: rule__Panorama__Group__14__Impl : ( RULE_T_HOTSPOT ) ;
     public final void rule__Panorama__Group__14__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTourDsl.g:1001:1: ( ( RULE_RPARENTISISCUADRADO ) )
-            // InternalTourDsl.g:1002:1: ( RULE_RPARENTISISCUADRADO )
+            // InternalTourDsl.g:994:1: ( ( RULE_T_HOTSPOT ) )
+            // InternalTourDsl.g:995:1: ( RULE_T_HOTSPOT )
             {
-            // InternalTourDsl.g:1002:1: ( RULE_RPARENTISISCUADRADO )
-            // InternalTourDsl.g:1003:2: RULE_RPARENTISISCUADRADO
+            // InternalTourDsl.g:995:1: ( RULE_T_HOTSPOT )
+            // InternalTourDsl.g:996:2: RULE_T_HOTSPOT
             {
-             before(grammarAccess.getPanoramaAccess().getRPARENTISISCUADRADOTerminalRuleCall_14()); 
-            match(input,RULE_RPARENTISISCUADRADO,FOLLOW_2); 
-             after(grammarAccess.getPanoramaAccess().getRPARENTISISCUADRADOTerminalRuleCall_14()); 
+             before(grammarAccess.getPanoramaAccess().getT_HOTSPOTTerminalRuleCall_14()); 
+            match(input,RULE_T_HOTSPOT,FOLLOW_2); 
+             after(grammarAccess.getPanoramaAccess().getT_HOTSPOTTerminalRuleCall_14()); 
 
             }
 
@@ -2929,16 +2887,16 @@ public class InternalTourDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Panorama__Group__15"
-    // InternalTourDsl.g:1012:1: rule__Panorama__Group__15 : rule__Panorama__Group__15__Impl rule__Panorama__Group__16 ;
+    // InternalTourDsl.g:1005:1: rule__Panorama__Group__15 : rule__Panorama__Group__15__Impl rule__Panorama__Group__16 ;
     public final void rule__Panorama__Group__15() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTourDsl.g:1016:1: ( rule__Panorama__Group__15__Impl rule__Panorama__Group__16 )
-            // InternalTourDsl.g:1017:2: rule__Panorama__Group__15__Impl rule__Panorama__Group__16
+            // InternalTourDsl.g:1009:1: ( rule__Panorama__Group__15__Impl rule__Panorama__Group__16 )
+            // InternalTourDsl.g:1010:2: rule__Panorama__Group__15__Impl rule__Panorama__Group__16
             {
-            pushFollow(FOLLOW_7);
+            pushFollow(FOLLOW_9);
             rule__Panorama__Group__15__Impl();
 
             state._fsp--;
@@ -2967,21 +2925,21 @@ public class InternalTourDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Panorama__Group__15__Impl"
-    // InternalTourDsl.g:1024:1: rule__Panorama__Group__15__Impl : ( RULE_RBRACKET ) ;
+    // InternalTourDsl.g:1017:1: rule__Panorama__Group__15__Impl : ( RULE_TWOPOINTS ) ;
     public final void rule__Panorama__Group__15__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTourDsl.g:1028:1: ( ( RULE_RBRACKET ) )
-            // InternalTourDsl.g:1029:1: ( RULE_RBRACKET )
+            // InternalTourDsl.g:1021:1: ( ( RULE_TWOPOINTS ) )
+            // InternalTourDsl.g:1022:1: ( RULE_TWOPOINTS )
             {
-            // InternalTourDsl.g:1029:1: ( RULE_RBRACKET )
-            // InternalTourDsl.g:1030:2: RULE_RBRACKET
+            // InternalTourDsl.g:1022:1: ( RULE_TWOPOINTS )
+            // InternalTourDsl.g:1023:2: RULE_TWOPOINTS
             {
-             before(grammarAccess.getPanoramaAccess().getRBRACKETTerminalRuleCall_15()); 
-            match(input,RULE_RBRACKET,FOLLOW_2); 
-             after(grammarAccess.getPanoramaAccess().getRBRACKETTerminalRuleCall_15()); 
+             before(grammarAccess.getPanoramaAccess().getTWOPOINTSTerminalRuleCall_15()); 
+            match(input,RULE_TWOPOINTS,FOLLOW_2); 
+             after(grammarAccess.getPanoramaAccess().getTWOPOINTSTerminalRuleCall_15()); 
 
             }
 
@@ -3004,17 +2962,22 @@ public class InternalTourDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Panorama__Group__16"
-    // InternalTourDsl.g:1039:1: rule__Panorama__Group__16 : rule__Panorama__Group__16__Impl ;
+    // InternalTourDsl.g:1032:1: rule__Panorama__Group__16 : rule__Panorama__Group__16__Impl rule__Panorama__Group__17 ;
     public final void rule__Panorama__Group__16() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTourDsl.g:1043:1: ( rule__Panorama__Group__16__Impl )
-            // InternalTourDsl.g:1044:2: rule__Panorama__Group__16__Impl
+            // InternalTourDsl.g:1036:1: ( rule__Panorama__Group__16__Impl rule__Panorama__Group__17 )
+            // InternalTourDsl.g:1037:2: rule__Panorama__Group__16__Impl rule__Panorama__Group__17
             {
-            pushFollow(FOLLOW_2);
+            pushFollow(FOLLOW_3);
             rule__Panorama__Group__16__Impl();
+
+            state._fsp--;
+
+            pushFollow(FOLLOW_2);
+            rule__Panorama__Group__17();
 
             state._fsp--;
 
@@ -3037,38 +3000,21 @@ public class InternalTourDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Panorama__Group__16__Impl"
-    // InternalTourDsl.g:1050:1: rule__Panorama__Group__16__Impl : ( ( RULE_COMA )? ) ;
+    // InternalTourDsl.g:1044:1: rule__Panorama__Group__16__Impl : ( RULE_LPARENTISISCUADRADO ) ;
     public final void rule__Panorama__Group__16__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTourDsl.g:1054:1: ( ( ( RULE_COMA )? ) )
-            // InternalTourDsl.g:1055:1: ( ( RULE_COMA )? )
+            // InternalTourDsl.g:1048:1: ( ( RULE_LPARENTISISCUADRADO ) )
+            // InternalTourDsl.g:1049:1: ( RULE_LPARENTISISCUADRADO )
             {
-            // InternalTourDsl.g:1055:1: ( ( RULE_COMA )? )
-            // InternalTourDsl.g:1056:2: ( RULE_COMA )?
+            // InternalTourDsl.g:1049:1: ( RULE_LPARENTISISCUADRADO )
+            // InternalTourDsl.g:1050:2: RULE_LPARENTISISCUADRADO
             {
-             before(grammarAccess.getPanoramaAccess().getCOMATerminalRuleCall_16()); 
-            // InternalTourDsl.g:1057:2: ( RULE_COMA )?
-            int alt5=2;
-            int LA5_0 = input.LA(1);
-
-            if ( (LA5_0==RULE_COMA) ) {
-                alt5=1;
-            }
-            switch (alt5) {
-                case 1 :
-                    // InternalTourDsl.g:1057:3: RULE_COMA
-                    {
-                    match(input,RULE_COMA,FOLLOW_2); 
-
-                    }
-                    break;
-
-            }
-
-             after(grammarAccess.getPanoramaAccess().getCOMATerminalRuleCall_16()); 
+             before(grammarAccess.getPanoramaAccess().getLPARENTISISCUADRADOTerminalRuleCall_16()); 
+            match(input,RULE_LPARENTISISCUADRADO,FOLLOW_2); 
+             after(grammarAccess.getPanoramaAccess().getLPARENTISISCUADRADOTerminalRuleCall_16()); 
 
             }
 
@@ -3090,15 +3036,380 @@ public class InternalTourDslParser extends AbstractInternalContentAssistParser {
     // $ANTLR end "rule__Panorama__Group__16__Impl"
 
 
+    // $ANTLR start "rule__Panorama__Group__17"
+    // InternalTourDsl.g:1059:1: rule__Panorama__Group__17 : rule__Panorama__Group__17__Impl rule__Panorama__Group__18 ;
+    public final void rule__Panorama__Group__17() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+        	
+        try {
+            // InternalTourDsl.g:1063:1: ( rule__Panorama__Group__17__Impl rule__Panorama__Group__18 )
+            // InternalTourDsl.g:1064:2: rule__Panorama__Group__17__Impl rule__Panorama__Group__18
+            {
+            pushFollow(FOLLOW_10);
+            rule__Panorama__Group__17__Impl();
+
+            state._fsp--;
+
+            pushFollow(FOLLOW_2);
+            rule__Panorama__Group__18();
+
+            state._fsp--;
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Panorama__Group__17"
+
+
+    // $ANTLR start "rule__Panorama__Group__17__Impl"
+    // InternalTourDsl.g:1071:1: rule__Panorama__Group__17__Impl : ( ( ( rule__Panorama__HotspotAssignment_17 ) ) ( ( rule__Panorama__HotspotAssignment_17 )* ) ) ;
+    public final void rule__Panorama__Group__17__Impl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+        	
+        try {
+            // InternalTourDsl.g:1075:1: ( ( ( ( rule__Panorama__HotspotAssignment_17 ) ) ( ( rule__Panorama__HotspotAssignment_17 )* ) ) )
+            // InternalTourDsl.g:1076:1: ( ( ( rule__Panorama__HotspotAssignment_17 ) ) ( ( rule__Panorama__HotspotAssignment_17 )* ) )
+            {
+            // InternalTourDsl.g:1076:1: ( ( ( rule__Panorama__HotspotAssignment_17 ) ) ( ( rule__Panorama__HotspotAssignment_17 )* ) )
+            // InternalTourDsl.g:1077:2: ( ( rule__Panorama__HotspotAssignment_17 ) ) ( ( rule__Panorama__HotspotAssignment_17 )* )
+            {
+            // InternalTourDsl.g:1077:2: ( ( rule__Panorama__HotspotAssignment_17 ) )
+            // InternalTourDsl.g:1078:3: ( rule__Panorama__HotspotAssignment_17 )
+            {
+             before(grammarAccess.getPanoramaAccess().getHotspotAssignment_17()); 
+            // InternalTourDsl.g:1079:3: ( rule__Panorama__HotspotAssignment_17 )
+            // InternalTourDsl.g:1079:4: rule__Panorama__HotspotAssignment_17
+            {
+            pushFollow(FOLLOW_11);
+            rule__Panorama__HotspotAssignment_17();
+
+            state._fsp--;
+
+
+            }
+
+             after(grammarAccess.getPanoramaAccess().getHotspotAssignment_17()); 
+
+            }
+
+            // InternalTourDsl.g:1082:2: ( ( rule__Panorama__HotspotAssignment_17 )* )
+            // InternalTourDsl.g:1083:3: ( rule__Panorama__HotspotAssignment_17 )*
+            {
+             before(grammarAccess.getPanoramaAccess().getHotspotAssignment_17()); 
+            // InternalTourDsl.g:1084:3: ( rule__Panorama__HotspotAssignment_17 )*
+            loop4:
+            do {
+                int alt4=2;
+                int LA4_0 = input.LA(1);
+
+                if ( (LA4_0==RULE_LBRACKET) ) {
+                    alt4=1;
+                }
+
+
+                switch (alt4) {
+            	case 1 :
+            	    // InternalTourDsl.g:1084:4: rule__Panorama__HotspotAssignment_17
+            	    {
+            	    pushFollow(FOLLOW_11);
+            	    rule__Panorama__HotspotAssignment_17();
+
+            	    state._fsp--;
+
+
+            	    }
+            	    break;
+
+            	default :
+            	    break loop4;
+                }
+            } while (true);
+
+             after(grammarAccess.getPanoramaAccess().getHotspotAssignment_17()); 
+
+            }
+
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Panorama__Group__17__Impl"
+
+
+    // $ANTLR start "rule__Panorama__Group__18"
+    // InternalTourDsl.g:1093:1: rule__Panorama__Group__18 : rule__Panorama__Group__18__Impl rule__Panorama__Group__19 ;
+    public final void rule__Panorama__Group__18() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+        	
+        try {
+            // InternalTourDsl.g:1097:1: ( rule__Panorama__Group__18__Impl rule__Panorama__Group__19 )
+            // InternalTourDsl.g:1098:2: rule__Panorama__Group__18__Impl rule__Panorama__Group__19
+            {
+            pushFollow(FOLLOW_12);
+            rule__Panorama__Group__18__Impl();
+
+            state._fsp--;
+
+            pushFollow(FOLLOW_2);
+            rule__Panorama__Group__19();
+
+            state._fsp--;
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Panorama__Group__18"
+
+
+    // $ANTLR start "rule__Panorama__Group__18__Impl"
+    // InternalTourDsl.g:1105:1: rule__Panorama__Group__18__Impl : ( RULE_RPARENTISISCUADRADO ) ;
+    public final void rule__Panorama__Group__18__Impl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+        	
+        try {
+            // InternalTourDsl.g:1109:1: ( ( RULE_RPARENTISISCUADRADO ) )
+            // InternalTourDsl.g:1110:1: ( RULE_RPARENTISISCUADRADO )
+            {
+            // InternalTourDsl.g:1110:1: ( RULE_RPARENTISISCUADRADO )
+            // InternalTourDsl.g:1111:2: RULE_RPARENTISISCUADRADO
+            {
+             before(grammarAccess.getPanoramaAccess().getRPARENTISISCUADRADOTerminalRuleCall_18()); 
+            match(input,RULE_RPARENTISISCUADRADO,FOLLOW_2); 
+             after(grammarAccess.getPanoramaAccess().getRPARENTISISCUADRADOTerminalRuleCall_18()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Panorama__Group__18__Impl"
+
+
+    // $ANTLR start "rule__Panorama__Group__19"
+    // InternalTourDsl.g:1120:1: rule__Panorama__Group__19 : rule__Panorama__Group__19__Impl rule__Panorama__Group__20 ;
+    public final void rule__Panorama__Group__19() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+        	
+        try {
+            // InternalTourDsl.g:1124:1: ( rule__Panorama__Group__19__Impl rule__Panorama__Group__20 )
+            // InternalTourDsl.g:1125:2: rule__Panorama__Group__19__Impl rule__Panorama__Group__20
+            {
+            pushFollow(FOLLOW_7);
+            rule__Panorama__Group__19__Impl();
+
+            state._fsp--;
+
+            pushFollow(FOLLOW_2);
+            rule__Panorama__Group__20();
+
+            state._fsp--;
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Panorama__Group__19"
+
+
+    // $ANTLR start "rule__Panorama__Group__19__Impl"
+    // InternalTourDsl.g:1132:1: rule__Panorama__Group__19__Impl : ( RULE_RBRACKET ) ;
+    public final void rule__Panorama__Group__19__Impl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+        	
+        try {
+            // InternalTourDsl.g:1136:1: ( ( RULE_RBRACKET ) )
+            // InternalTourDsl.g:1137:1: ( RULE_RBRACKET )
+            {
+            // InternalTourDsl.g:1137:1: ( RULE_RBRACKET )
+            // InternalTourDsl.g:1138:2: RULE_RBRACKET
+            {
+             before(grammarAccess.getPanoramaAccess().getRBRACKETTerminalRuleCall_19()); 
+            match(input,RULE_RBRACKET,FOLLOW_2); 
+             after(grammarAccess.getPanoramaAccess().getRBRACKETTerminalRuleCall_19()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Panorama__Group__19__Impl"
+
+
+    // $ANTLR start "rule__Panorama__Group__20"
+    // InternalTourDsl.g:1147:1: rule__Panorama__Group__20 : rule__Panorama__Group__20__Impl ;
+    public final void rule__Panorama__Group__20() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+        	
+        try {
+            // InternalTourDsl.g:1151:1: ( rule__Panorama__Group__20__Impl )
+            // InternalTourDsl.g:1152:2: rule__Panorama__Group__20__Impl
+            {
+            pushFollow(FOLLOW_2);
+            rule__Panorama__Group__20__Impl();
+
+            state._fsp--;
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Panorama__Group__20"
+
+
+    // $ANTLR start "rule__Panorama__Group__20__Impl"
+    // InternalTourDsl.g:1158:1: rule__Panorama__Group__20__Impl : ( ( RULE_COMA )? ) ;
+    public final void rule__Panorama__Group__20__Impl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+        	
+        try {
+            // InternalTourDsl.g:1162:1: ( ( ( RULE_COMA )? ) )
+            // InternalTourDsl.g:1163:1: ( ( RULE_COMA )? )
+            {
+            // InternalTourDsl.g:1163:1: ( ( RULE_COMA )? )
+            // InternalTourDsl.g:1164:2: ( RULE_COMA )?
+            {
+             before(grammarAccess.getPanoramaAccess().getCOMATerminalRuleCall_20()); 
+            // InternalTourDsl.g:1165:2: ( RULE_COMA )?
+            int alt5=2;
+            int LA5_0 = input.LA(1);
+
+            if ( (LA5_0==RULE_COMA) ) {
+                alt5=1;
+            }
+            switch (alt5) {
+                case 1 :
+                    // InternalTourDsl.g:1165:3: RULE_COMA
+                    {
+                    match(input,RULE_COMA,FOLLOW_2); 
+
+                    }
+                    break;
+
+            }
+
+             after(grammarAccess.getPanoramaAccess().getCOMATerminalRuleCall_20()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Panorama__Group__20__Impl"
+
+
     // $ANTLR start "rule__Hotspot__Group__0"
-    // InternalTourDsl.g:1066:1: rule__Hotspot__Group__0 : rule__Hotspot__Group__0__Impl rule__Hotspot__Group__1 ;
+    // InternalTourDsl.g:1174:1: rule__Hotspot__Group__0 : rule__Hotspot__Group__0__Impl rule__Hotspot__Group__1 ;
     public final void rule__Hotspot__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTourDsl.g:1070:1: ( rule__Hotspot__Group__0__Impl rule__Hotspot__Group__1 )
-            // InternalTourDsl.g:1071:2: rule__Hotspot__Group__0__Impl rule__Hotspot__Group__1
+            // InternalTourDsl.g:1178:1: ( rule__Hotspot__Group__0__Impl rule__Hotspot__Group__1 )
+            // InternalTourDsl.g:1179:2: rule__Hotspot__Group__0__Impl rule__Hotspot__Group__1
             {
             pushFollow(FOLLOW_3);
             rule__Hotspot__Group__0__Impl();
@@ -3129,21 +3440,21 @@ public class InternalTourDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Hotspot__Group__0__Impl"
-    // InternalTourDsl.g:1078:1: rule__Hotspot__Group__0__Impl : ( () ) ;
+    // InternalTourDsl.g:1186:1: rule__Hotspot__Group__0__Impl : ( () ) ;
     public final void rule__Hotspot__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTourDsl.g:1082:1: ( ( () ) )
-            // InternalTourDsl.g:1083:1: ( () )
+            // InternalTourDsl.g:1190:1: ( ( () ) )
+            // InternalTourDsl.g:1191:1: ( () )
             {
-            // InternalTourDsl.g:1083:1: ( () )
-            // InternalTourDsl.g:1084:2: ()
+            // InternalTourDsl.g:1191:1: ( () )
+            // InternalTourDsl.g:1192:2: ()
             {
              before(grammarAccess.getHotspotAccess().getHotspotAction_0()); 
-            // InternalTourDsl.g:1085:2: ()
-            // InternalTourDsl.g:1085:3: 
+            // InternalTourDsl.g:1193:2: ()
+            // InternalTourDsl.g:1193:3: 
             {
             }
 
@@ -3166,14 +3477,14 @@ public class InternalTourDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Hotspot__Group__1"
-    // InternalTourDsl.g:1093:1: rule__Hotspot__Group__1 : rule__Hotspot__Group__1__Impl rule__Hotspot__Group__2 ;
+    // InternalTourDsl.g:1201:1: rule__Hotspot__Group__1 : rule__Hotspot__Group__1__Impl rule__Hotspot__Group__2 ;
     public final void rule__Hotspot__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTourDsl.g:1097:1: ( rule__Hotspot__Group__1__Impl rule__Hotspot__Group__2 )
-            // InternalTourDsl.g:1098:2: rule__Hotspot__Group__1__Impl rule__Hotspot__Group__2
+            // InternalTourDsl.g:1205:1: ( rule__Hotspot__Group__1__Impl rule__Hotspot__Group__2 )
+            // InternalTourDsl.g:1206:2: rule__Hotspot__Group__1__Impl rule__Hotspot__Group__2
             {
             pushFollow(FOLLOW_4);
             rule__Hotspot__Group__1__Impl();
@@ -3204,17 +3515,17 @@ public class InternalTourDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Hotspot__Group__1__Impl"
-    // InternalTourDsl.g:1105:1: rule__Hotspot__Group__1__Impl : ( RULE_LBRACKET ) ;
+    // InternalTourDsl.g:1213:1: rule__Hotspot__Group__1__Impl : ( RULE_LBRACKET ) ;
     public final void rule__Hotspot__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTourDsl.g:1109:1: ( ( RULE_LBRACKET ) )
-            // InternalTourDsl.g:1110:1: ( RULE_LBRACKET )
+            // InternalTourDsl.g:1217:1: ( ( RULE_LBRACKET ) )
+            // InternalTourDsl.g:1218:1: ( RULE_LBRACKET )
             {
-            // InternalTourDsl.g:1110:1: ( RULE_LBRACKET )
-            // InternalTourDsl.g:1111:2: RULE_LBRACKET
+            // InternalTourDsl.g:1218:1: ( RULE_LBRACKET )
+            // InternalTourDsl.g:1219:2: RULE_LBRACKET
             {
              before(grammarAccess.getHotspotAccess().getLBRACKETTerminalRuleCall_1()); 
             match(input,RULE_LBRACKET,FOLLOW_2); 
@@ -3241,14 +3552,14 @@ public class InternalTourDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Hotspot__Group__2"
-    // InternalTourDsl.g:1120:1: rule__Hotspot__Group__2 : rule__Hotspot__Group__2__Impl rule__Hotspot__Group__3 ;
+    // InternalTourDsl.g:1228:1: rule__Hotspot__Group__2 : rule__Hotspot__Group__2__Impl rule__Hotspot__Group__3 ;
     public final void rule__Hotspot__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTourDsl.g:1124:1: ( rule__Hotspot__Group__2__Impl rule__Hotspot__Group__3 )
-            // InternalTourDsl.g:1125:2: rule__Hotspot__Group__2__Impl rule__Hotspot__Group__3
+            // InternalTourDsl.g:1232:1: ( rule__Hotspot__Group__2__Impl rule__Hotspot__Group__3 )
+            // InternalTourDsl.g:1233:2: rule__Hotspot__Group__2__Impl rule__Hotspot__Group__3
             {
             pushFollow(FOLLOW_5);
             rule__Hotspot__Group__2__Impl();
@@ -3279,17 +3590,17 @@ public class InternalTourDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Hotspot__Group__2__Impl"
-    // InternalTourDsl.g:1132:1: rule__Hotspot__Group__2__Impl : ( RULE_NAME ) ;
+    // InternalTourDsl.g:1240:1: rule__Hotspot__Group__2__Impl : ( RULE_NAME ) ;
     public final void rule__Hotspot__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTourDsl.g:1136:1: ( ( RULE_NAME ) )
-            // InternalTourDsl.g:1137:1: ( RULE_NAME )
+            // InternalTourDsl.g:1244:1: ( ( RULE_NAME ) )
+            // InternalTourDsl.g:1245:1: ( RULE_NAME )
             {
-            // InternalTourDsl.g:1137:1: ( RULE_NAME )
-            // InternalTourDsl.g:1138:2: RULE_NAME
+            // InternalTourDsl.g:1245:1: ( RULE_NAME )
+            // InternalTourDsl.g:1246:2: RULE_NAME
             {
              before(grammarAccess.getHotspotAccess().getNAMETerminalRuleCall_2()); 
             match(input,RULE_NAME,FOLLOW_2); 
@@ -3316,14 +3627,14 @@ public class InternalTourDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Hotspot__Group__3"
-    // InternalTourDsl.g:1147:1: rule__Hotspot__Group__3 : rule__Hotspot__Group__3__Impl rule__Hotspot__Group__4 ;
+    // InternalTourDsl.g:1255:1: rule__Hotspot__Group__3 : rule__Hotspot__Group__3__Impl rule__Hotspot__Group__4 ;
     public final void rule__Hotspot__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTourDsl.g:1151:1: ( rule__Hotspot__Group__3__Impl rule__Hotspot__Group__4 )
-            // InternalTourDsl.g:1152:2: rule__Hotspot__Group__3__Impl rule__Hotspot__Group__4
+            // InternalTourDsl.g:1259:1: ( rule__Hotspot__Group__3__Impl rule__Hotspot__Group__4 )
+            // InternalTourDsl.g:1260:2: rule__Hotspot__Group__3__Impl rule__Hotspot__Group__4
             {
             pushFollow(FOLLOW_6);
             rule__Hotspot__Group__3__Impl();
@@ -3354,17 +3665,17 @@ public class InternalTourDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Hotspot__Group__3__Impl"
-    // InternalTourDsl.g:1159:1: rule__Hotspot__Group__3__Impl : ( RULE_TWOPOINTS ) ;
+    // InternalTourDsl.g:1267:1: rule__Hotspot__Group__3__Impl : ( RULE_TWOPOINTS ) ;
     public final void rule__Hotspot__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTourDsl.g:1163:1: ( ( RULE_TWOPOINTS ) )
-            // InternalTourDsl.g:1164:1: ( RULE_TWOPOINTS )
+            // InternalTourDsl.g:1271:1: ( ( RULE_TWOPOINTS ) )
+            // InternalTourDsl.g:1272:1: ( RULE_TWOPOINTS )
             {
-            // InternalTourDsl.g:1164:1: ( RULE_TWOPOINTS )
-            // InternalTourDsl.g:1165:2: RULE_TWOPOINTS
+            // InternalTourDsl.g:1272:1: ( RULE_TWOPOINTS )
+            // InternalTourDsl.g:1273:2: RULE_TWOPOINTS
             {
              before(grammarAccess.getHotspotAccess().getTWOPOINTSTerminalRuleCall_3()); 
             match(input,RULE_TWOPOINTS,FOLLOW_2); 
@@ -3391,14 +3702,14 @@ public class InternalTourDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Hotspot__Group__4"
-    // InternalTourDsl.g:1174:1: rule__Hotspot__Group__4 : rule__Hotspot__Group__4__Impl rule__Hotspot__Group__5 ;
+    // InternalTourDsl.g:1282:1: rule__Hotspot__Group__4 : rule__Hotspot__Group__4__Impl rule__Hotspot__Group__5 ;
     public final void rule__Hotspot__Group__4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTourDsl.g:1178:1: ( rule__Hotspot__Group__4__Impl rule__Hotspot__Group__5 )
-            // InternalTourDsl.g:1179:2: rule__Hotspot__Group__4__Impl rule__Hotspot__Group__5
+            // InternalTourDsl.g:1286:1: ( rule__Hotspot__Group__4__Impl rule__Hotspot__Group__5 )
+            // InternalTourDsl.g:1287:2: rule__Hotspot__Group__4__Impl rule__Hotspot__Group__5
             {
             pushFollow(FOLLOW_7);
             rule__Hotspot__Group__4__Impl();
@@ -3429,21 +3740,21 @@ public class InternalTourDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Hotspot__Group__4__Impl"
-    // InternalTourDsl.g:1186:1: rule__Hotspot__Group__4__Impl : ( ( rule__Hotspot__NameAssignment_4 ) ) ;
+    // InternalTourDsl.g:1294:1: rule__Hotspot__Group__4__Impl : ( ( rule__Hotspot__NameAssignment_4 ) ) ;
     public final void rule__Hotspot__Group__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTourDsl.g:1190:1: ( ( ( rule__Hotspot__NameAssignment_4 ) ) )
-            // InternalTourDsl.g:1191:1: ( ( rule__Hotspot__NameAssignment_4 ) )
+            // InternalTourDsl.g:1298:1: ( ( ( rule__Hotspot__NameAssignment_4 ) ) )
+            // InternalTourDsl.g:1299:1: ( ( rule__Hotspot__NameAssignment_4 ) )
             {
-            // InternalTourDsl.g:1191:1: ( ( rule__Hotspot__NameAssignment_4 ) )
-            // InternalTourDsl.g:1192:2: ( rule__Hotspot__NameAssignment_4 )
+            // InternalTourDsl.g:1299:1: ( ( rule__Hotspot__NameAssignment_4 ) )
+            // InternalTourDsl.g:1300:2: ( rule__Hotspot__NameAssignment_4 )
             {
              before(grammarAccess.getHotspotAccess().getNameAssignment_4()); 
-            // InternalTourDsl.g:1193:2: ( rule__Hotspot__NameAssignment_4 )
-            // InternalTourDsl.g:1193:3: rule__Hotspot__NameAssignment_4
+            // InternalTourDsl.g:1301:2: ( rule__Hotspot__NameAssignment_4 )
+            // InternalTourDsl.g:1301:3: rule__Hotspot__NameAssignment_4
             {
             pushFollow(FOLLOW_2);
             rule__Hotspot__NameAssignment_4();
@@ -3476,16 +3787,16 @@ public class InternalTourDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Hotspot__Group__5"
-    // InternalTourDsl.g:1201:1: rule__Hotspot__Group__5 : rule__Hotspot__Group__5__Impl rule__Hotspot__Group__6 ;
+    // InternalTourDsl.g:1309:1: rule__Hotspot__Group__5 : rule__Hotspot__Group__5__Impl rule__Hotspot__Group__6 ;
     public final void rule__Hotspot__Group__5() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTourDsl.g:1205:1: ( rule__Hotspot__Group__5__Impl rule__Hotspot__Group__6 )
-            // InternalTourDsl.g:1206:2: rule__Hotspot__Group__5__Impl rule__Hotspot__Group__6
+            // InternalTourDsl.g:1313:1: ( rule__Hotspot__Group__5__Impl rule__Hotspot__Group__6 )
+            // InternalTourDsl.g:1314:2: rule__Hotspot__Group__5__Impl rule__Hotspot__Group__6
             {
-            pushFollow(FOLLOW_15);
+            pushFollow(FOLLOW_16);
             rule__Hotspot__Group__5__Impl();
 
             state._fsp--;
@@ -3514,17 +3825,17 @@ public class InternalTourDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Hotspot__Group__5__Impl"
-    // InternalTourDsl.g:1213:1: rule__Hotspot__Group__5__Impl : ( RULE_COMA ) ;
+    // InternalTourDsl.g:1321:1: rule__Hotspot__Group__5__Impl : ( RULE_COMA ) ;
     public final void rule__Hotspot__Group__5__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTourDsl.g:1217:1: ( ( RULE_COMA ) )
-            // InternalTourDsl.g:1218:1: ( RULE_COMA )
+            // InternalTourDsl.g:1325:1: ( ( RULE_COMA ) )
+            // InternalTourDsl.g:1326:1: ( RULE_COMA )
             {
-            // InternalTourDsl.g:1218:1: ( RULE_COMA )
-            // InternalTourDsl.g:1219:2: RULE_COMA
+            // InternalTourDsl.g:1326:1: ( RULE_COMA )
+            // InternalTourDsl.g:1327:2: RULE_COMA
             {
              before(grammarAccess.getHotspotAccess().getCOMATerminalRuleCall_5()); 
             match(input,RULE_COMA,FOLLOW_2); 
@@ -3551,14 +3862,14 @@ public class InternalTourDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Hotspot__Group__6"
-    // InternalTourDsl.g:1228:1: rule__Hotspot__Group__6 : rule__Hotspot__Group__6__Impl rule__Hotspot__Group__7 ;
+    // InternalTourDsl.g:1336:1: rule__Hotspot__Group__6 : rule__Hotspot__Group__6__Impl rule__Hotspot__Group__7 ;
     public final void rule__Hotspot__Group__6() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTourDsl.g:1232:1: ( rule__Hotspot__Group__6__Impl rule__Hotspot__Group__7 )
-            // InternalTourDsl.g:1233:2: rule__Hotspot__Group__6__Impl rule__Hotspot__Group__7
+            // InternalTourDsl.g:1340:1: ( rule__Hotspot__Group__6__Impl rule__Hotspot__Group__7 )
+            // InternalTourDsl.g:1341:2: rule__Hotspot__Group__6__Impl rule__Hotspot__Group__7
             {
             pushFollow(FOLLOW_5);
             rule__Hotspot__Group__6__Impl();
@@ -3589,17 +3900,17 @@ public class InternalTourDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Hotspot__Group__6__Impl"
-    // InternalTourDsl.g:1240:1: rule__Hotspot__Group__6__Impl : ( RULE_TO ) ;
+    // InternalTourDsl.g:1348:1: rule__Hotspot__Group__6__Impl : ( RULE_TO ) ;
     public final void rule__Hotspot__Group__6__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTourDsl.g:1244:1: ( ( RULE_TO ) )
-            // InternalTourDsl.g:1245:1: ( RULE_TO )
+            // InternalTourDsl.g:1352:1: ( ( RULE_TO ) )
+            // InternalTourDsl.g:1353:1: ( RULE_TO )
             {
-            // InternalTourDsl.g:1245:1: ( RULE_TO )
-            // InternalTourDsl.g:1246:2: RULE_TO
+            // InternalTourDsl.g:1353:1: ( RULE_TO )
+            // InternalTourDsl.g:1354:2: RULE_TO
             {
              before(grammarAccess.getHotspotAccess().getTOTerminalRuleCall_6()); 
             match(input,RULE_TO,FOLLOW_2); 
@@ -3626,14 +3937,14 @@ public class InternalTourDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Hotspot__Group__7"
-    // InternalTourDsl.g:1255:1: rule__Hotspot__Group__7 : rule__Hotspot__Group__7__Impl rule__Hotspot__Group__8 ;
+    // InternalTourDsl.g:1363:1: rule__Hotspot__Group__7 : rule__Hotspot__Group__7__Impl rule__Hotspot__Group__8 ;
     public final void rule__Hotspot__Group__7() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTourDsl.g:1259:1: ( rule__Hotspot__Group__7__Impl rule__Hotspot__Group__8 )
-            // InternalTourDsl.g:1260:2: rule__Hotspot__Group__7__Impl rule__Hotspot__Group__8
+            // InternalTourDsl.g:1367:1: ( rule__Hotspot__Group__7__Impl rule__Hotspot__Group__8 )
+            // InternalTourDsl.g:1368:2: rule__Hotspot__Group__7__Impl rule__Hotspot__Group__8
             {
             pushFollow(FOLLOW_6);
             rule__Hotspot__Group__7__Impl();
@@ -3664,17 +3975,17 @@ public class InternalTourDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Hotspot__Group__7__Impl"
-    // InternalTourDsl.g:1267:1: rule__Hotspot__Group__7__Impl : ( RULE_TWOPOINTS ) ;
+    // InternalTourDsl.g:1375:1: rule__Hotspot__Group__7__Impl : ( RULE_TWOPOINTS ) ;
     public final void rule__Hotspot__Group__7__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTourDsl.g:1271:1: ( ( RULE_TWOPOINTS ) )
-            // InternalTourDsl.g:1272:1: ( RULE_TWOPOINTS )
+            // InternalTourDsl.g:1379:1: ( ( RULE_TWOPOINTS ) )
+            // InternalTourDsl.g:1380:1: ( RULE_TWOPOINTS )
             {
-            // InternalTourDsl.g:1272:1: ( RULE_TWOPOINTS )
-            // InternalTourDsl.g:1273:2: RULE_TWOPOINTS
+            // InternalTourDsl.g:1380:1: ( RULE_TWOPOINTS )
+            // InternalTourDsl.g:1381:2: RULE_TWOPOINTS
             {
              before(grammarAccess.getHotspotAccess().getTWOPOINTSTerminalRuleCall_7()); 
             match(input,RULE_TWOPOINTS,FOLLOW_2); 
@@ -3701,14 +4012,14 @@ public class InternalTourDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Hotspot__Group__8"
-    // InternalTourDsl.g:1282:1: rule__Hotspot__Group__8 : rule__Hotspot__Group__8__Impl rule__Hotspot__Group__9 ;
+    // InternalTourDsl.g:1390:1: rule__Hotspot__Group__8 : rule__Hotspot__Group__8__Impl rule__Hotspot__Group__9 ;
     public final void rule__Hotspot__Group__8() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTourDsl.g:1286:1: ( rule__Hotspot__Group__8__Impl rule__Hotspot__Group__9 )
-            // InternalTourDsl.g:1287:2: rule__Hotspot__Group__8__Impl rule__Hotspot__Group__9
+            // InternalTourDsl.g:1394:1: ( rule__Hotspot__Group__8__Impl rule__Hotspot__Group__9 )
+            // InternalTourDsl.g:1395:2: rule__Hotspot__Group__8__Impl rule__Hotspot__Group__9
             {
             pushFollow(FOLLOW_7);
             rule__Hotspot__Group__8__Impl();
@@ -3739,21 +4050,21 @@ public class InternalTourDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Hotspot__Group__8__Impl"
-    // InternalTourDsl.g:1294:1: rule__Hotspot__Group__8__Impl : ( ( rule__Hotspot__ToAssignment_8 ) ) ;
+    // InternalTourDsl.g:1402:1: rule__Hotspot__Group__8__Impl : ( ( rule__Hotspot__ToAssignment_8 ) ) ;
     public final void rule__Hotspot__Group__8__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTourDsl.g:1298:1: ( ( ( rule__Hotspot__ToAssignment_8 ) ) )
-            // InternalTourDsl.g:1299:1: ( ( rule__Hotspot__ToAssignment_8 ) )
+            // InternalTourDsl.g:1406:1: ( ( ( rule__Hotspot__ToAssignment_8 ) ) )
+            // InternalTourDsl.g:1407:1: ( ( rule__Hotspot__ToAssignment_8 ) )
             {
-            // InternalTourDsl.g:1299:1: ( ( rule__Hotspot__ToAssignment_8 ) )
-            // InternalTourDsl.g:1300:2: ( rule__Hotspot__ToAssignment_8 )
+            // InternalTourDsl.g:1407:1: ( ( rule__Hotspot__ToAssignment_8 ) )
+            // InternalTourDsl.g:1408:2: ( rule__Hotspot__ToAssignment_8 )
             {
              before(grammarAccess.getHotspotAccess().getToAssignment_8()); 
-            // InternalTourDsl.g:1301:2: ( rule__Hotspot__ToAssignment_8 )
-            // InternalTourDsl.g:1301:3: rule__Hotspot__ToAssignment_8
+            // InternalTourDsl.g:1409:2: ( rule__Hotspot__ToAssignment_8 )
+            // InternalTourDsl.g:1409:3: rule__Hotspot__ToAssignment_8
             {
             pushFollow(FOLLOW_2);
             rule__Hotspot__ToAssignment_8();
@@ -3786,16 +4097,16 @@ public class InternalTourDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Hotspot__Group__9"
-    // InternalTourDsl.g:1309:1: rule__Hotspot__Group__9 : rule__Hotspot__Group__9__Impl rule__Hotspot__Group__10 ;
+    // InternalTourDsl.g:1417:1: rule__Hotspot__Group__9 : rule__Hotspot__Group__9__Impl rule__Hotspot__Group__10 ;
     public final void rule__Hotspot__Group__9() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTourDsl.g:1313:1: ( rule__Hotspot__Group__9__Impl rule__Hotspot__Group__10 )
-            // InternalTourDsl.g:1314:2: rule__Hotspot__Group__9__Impl rule__Hotspot__Group__10
+            // InternalTourDsl.g:1421:1: ( rule__Hotspot__Group__9__Impl rule__Hotspot__Group__10 )
+            // InternalTourDsl.g:1422:2: rule__Hotspot__Group__9__Impl rule__Hotspot__Group__10
             {
-            pushFollow(FOLLOW_16);
+            pushFollow(FOLLOW_17);
             rule__Hotspot__Group__9__Impl();
 
             state._fsp--;
@@ -3824,17 +4135,17 @@ public class InternalTourDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Hotspot__Group__9__Impl"
-    // InternalTourDsl.g:1321:1: rule__Hotspot__Group__9__Impl : ( RULE_COMA ) ;
+    // InternalTourDsl.g:1429:1: rule__Hotspot__Group__9__Impl : ( RULE_COMA ) ;
     public final void rule__Hotspot__Group__9__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTourDsl.g:1325:1: ( ( RULE_COMA ) )
-            // InternalTourDsl.g:1326:1: ( RULE_COMA )
+            // InternalTourDsl.g:1433:1: ( ( RULE_COMA ) )
+            // InternalTourDsl.g:1434:1: ( RULE_COMA )
             {
-            // InternalTourDsl.g:1326:1: ( RULE_COMA )
-            // InternalTourDsl.g:1327:2: RULE_COMA
+            // InternalTourDsl.g:1434:1: ( RULE_COMA )
+            // InternalTourDsl.g:1435:2: RULE_COMA
             {
              before(grammarAccess.getHotspotAccess().getCOMATerminalRuleCall_9()); 
             match(input,RULE_COMA,FOLLOW_2); 
@@ -3861,14 +4172,14 @@ public class InternalTourDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Hotspot__Group__10"
-    // InternalTourDsl.g:1336:1: rule__Hotspot__Group__10 : rule__Hotspot__Group__10__Impl rule__Hotspot__Group__11 ;
+    // InternalTourDsl.g:1444:1: rule__Hotspot__Group__10 : rule__Hotspot__Group__10__Impl rule__Hotspot__Group__11 ;
     public final void rule__Hotspot__Group__10() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTourDsl.g:1340:1: ( rule__Hotspot__Group__10__Impl rule__Hotspot__Group__11 )
-            // InternalTourDsl.g:1341:2: rule__Hotspot__Group__10__Impl rule__Hotspot__Group__11
+            // InternalTourDsl.g:1448:1: ( rule__Hotspot__Group__10__Impl rule__Hotspot__Group__11 )
+            // InternalTourDsl.g:1449:2: rule__Hotspot__Group__10__Impl rule__Hotspot__Group__11
             {
             pushFollow(FOLLOW_7);
             rule__Hotspot__Group__10__Impl();
@@ -3899,21 +4210,21 @@ public class InternalTourDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Hotspot__Group__10__Impl"
-    // InternalTourDsl.g:1348:1: rule__Hotspot__Group__10__Impl : ( ( rule__Hotspot__PositionAssignment_10 ) ) ;
+    // InternalTourDsl.g:1456:1: rule__Hotspot__Group__10__Impl : ( ( rule__Hotspot__PositionAssignment_10 ) ) ;
     public final void rule__Hotspot__Group__10__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTourDsl.g:1352:1: ( ( ( rule__Hotspot__PositionAssignment_10 ) ) )
-            // InternalTourDsl.g:1353:1: ( ( rule__Hotspot__PositionAssignment_10 ) )
+            // InternalTourDsl.g:1460:1: ( ( ( rule__Hotspot__PositionAssignment_10 ) ) )
+            // InternalTourDsl.g:1461:1: ( ( rule__Hotspot__PositionAssignment_10 ) )
             {
-            // InternalTourDsl.g:1353:1: ( ( rule__Hotspot__PositionAssignment_10 ) )
-            // InternalTourDsl.g:1354:2: ( rule__Hotspot__PositionAssignment_10 )
+            // InternalTourDsl.g:1461:1: ( ( rule__Hotspot__PositionAssignment_10 ) )
+            // InternalTourDsl.g:1462:2: ( rule__Hotspot__PositionAssignment_10 )
             {
              before(grammarAccess.getHotspotAccess().getPositionAssignment_10()); 
-            // InternalTourDsl.g:1355:2: ( rule__Hotspot__PositionAssignment_10 )
-            // InternalTourDsl.g:1355:3: rule__Hotspot__PositionAssignment_10
+            // InternalTourDsl.g:1463:2: ( rule__Hotspot__PositionAssignment_10 )
+            // InternalTourDsl.g:1463:3: rule__Hotspot__PositionAssignment_10
             {
             pushFollow(FOLLOW_2);
             rule__Hotspot__PositionAssignment_10();
@@ -3946,16 +4257,16 @@ public class InternalTourDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Hotspot__Group__11"
-    // InternalTourDsl.g:1363:1: rule__Hotspot__Group__11 : rule__Hotspot__Group__11__Impl rule__Hotspot__Group__12 ;
+    // InternalTourDsl.g:1471:1: rule__Hotspot__Group__11 : rule__Hotspot__Group__11__Impl rule__Hotspot__Group__12 ;
     public final void rule__Hotspot__Group__11() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTourDsl.g:1367:1: ( rule__Hotspot__Group__11__Impl rule__Hotspot__Group__12 )
-            // InternalTourDsl.g:1368:2: rule__Hotspot__Group__11__Impl rule__Hotspot__Group__12
+            // InternalTourDsl.g:1475:1: ( rule__Hotspot__Group__11__Impl rule__Hotspot__Group__12 )
+            // InternalTourDsl.g:1476:2: rule__Hotspot__Group__11__Impl rule__Hotspot__Group__12
             {
-            pushFollow(FOLLOW_17);
+            pushFollow(FOLLOW_18);
             rule__Hotspot__Group__11__Impl();
 
             state._fsp--;
@@ -3984,17 +4295,17 @@ public class InternalTourDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Hotspot__Group__11__Impl"
-    // InternalTourDsl.g:1375:1: rule__Hotspot__Group__11__Impl : ( RULE_COMA ) ;
+    // InternalTourDsl.g:1483:1: rule__Hotspot__Group__11__Impl : ( RULE_COMA ) ;
     public final void rule__Hotspot__Group__11__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTourDsl.g:1379:1: ( ( RULE_COMA ) )
-            // InternalTourDsl.g:1380:1: ( RULE_COMA )
+            // InternalTourDsl.g:1487:1: ( ( RULE_COMA ) )
+            // InternalTourDsl.g:1488:1: ( RULE_COMA )
             {
-            // InternalTourDsl.g:1380:1: ( RULE_COMA )
-            // InternalTourDsl.g:1381:2: RULE_COMA
+            // InternalTourDsl.g:1488:1: ( RULE_COMA )
+            // InternalTourDsl.g:1489:2: RULE_COMA
             {
              before(grammarAccess.getHotspotAccess().getCOMATerminalRuleCall_11()); 
             match(input,RULE_COMA,FOLLOW_2); 
@@ -4021,14 +4332,14 @@ public class InternalTourDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Hotspot__Group__12"
-    // InternalTourDsl.g:1390:1: rule__Hotspot__Group__12 : rule__Hotspot__Group__12__Impl rule__Hotspot__Group__13 ;
+    // InternalTourDsl.g:1498:1: rule__Hotspot__Group__12 : rule__Hotspot__Group__12__Impl rule__Hotspot__Group__13 ;
     public final void rule__Hotspot__Group__12() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTourDsl.g:1394:1: ( rule__Hotspot__Group__12__Impl rule__Hotspot__Group__13 )
-            // InternalTourDsl.g:1395:2: rule__Hotspot__Group__12__Impl rule__Hotspot__Group__13
+            // InternalTourDsl.g:1502:1: ( rule__Hotspot__Group__12__Impl rule__Hotspot__Group__13 )
+            // InternalTourDsl.g:1503:2: rule__Hotspot__Group__12__Impl rule__Hotspot__Group__13
             {
             pushFollow(FOLLOW_12);
             rule__Hotspot__Group__12__Impl();
@@ -4059,21 +4370,21 @@ public class InternalTourDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Hotspot__Group__12__Impl"
-    // InternalTourDsl.g:1402:1: rule__Hotspot__Group__12__Impl : ( ( rule__Hotspot__RotationAssignment_12 ) ) ;
+    // InternalTourDsl.g:1510:1: rule__Hotspot__Group__12__Impl : ( ( rule__Hotspot__RotationAssignment_12 ) ) ;
     public final void rule__Hotspot__Group__12__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTourDsl.g:1406:1: ( ( ( rule__Hotspot__RotationAssignment_12 ) ) )
-            // InternalTourDsl.g:1407:1: ( ( rule__Hotspot__RotationAssignment_12 ) )
+            // InternalTourDsl.g:1514:1: ( ( ( rule__Hotspot__RotationAssignment_12 ) ) )
+            // InternalTourDsl.g:1515:1: ( ( rule__Hotspot__RotationAssignment_12 ) )
             {
-            // InternalTourDsl.g:1407:1: ( ( rule__Hotspot__RotationAssignment_12 ) )
-            // InternalTourDsl.g:1408:2: ( rule__Hotspot__RotationAssignment_12 )
+            // InternalTourDsl.g:1515:1: ( ( rule__Hotspot__RotationAssignment_12 ) )
+            // InternalTourDsl.g:1516:2: ( rule__Hotspot__RotationAssignment_12 )
             {
              before(grammarAccess.getHotspotAccess().getRotationAssignment_12()); 
-            // InternalTourDsl.g:1409:2: ( rule__Hotspot__RotationAssignment_12 )
-            // InternalTourDsl.g:1409:3: rule__Hotspot__RotationAssignment_12
+            // InternalTourDsl.g:1517:2: ( rule__Hotspot__RotationAssignment_12 )
+            // InternalTourDsl.g:1517:3: rule__Hotspot__RotationAssignment_12
             {
             pushFollow(FOLLOW_2);
             rule__Hotspot__RotationAssignment_12();
@@ -4106,14 +4417,14 @@ public class InternalTourDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Hotspot__Group__13"
-    // InternalTourDsl.g:1417:1: rule__Hotspot__Group__13 : rule__Hotspot__Group__13__Impl rule__Hotspot__Group__14 ;
+    // InternalTourDsl.g:1525:1: rule__Hotspot__Group__13 : rule__Hotspot__Group__13__Impl rule__Hotspot__Group__14 ;
     public final void rule__Hotspot__Group__13() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTourDsl.g:1421:1: ( rule__Hotspot__Group__13__Impl rule__Hotspot__Group__14 )
-            // InternalTourDsl.g:1422:2: rule__Hotspot__Group__13__Impl rule__Hotspot__Group__14
+            // InternalTourDsl.g:1529:1: ( rule__Hotspot__Group__13__Impl rule__Hotspot__Group__14 )
+            // InternalTourDsl.g:1530:2: rule__Hotspot__Group__13__Impl rule__Hotspot__Group__14
             {
             pushFollow(FOLLOW_7);
             rule__Hotspot__Group__13__Impl();
@@ -4144,17 +4455,17 @@ public class InternalTourDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Hotspot__Group__13__Impl"
-    // InternalTourDsl.g:1429:1: rule__Hotspot__Group__13__Impl : ( RULE_RBRACKET ) ;
+    // InternalTourDsl.g:1537:1: rule__Hotspot__Group__13__Impl : ( RULE_RBRACKET ) ;
     public final void rule__Hotspot__Group__13__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTourDsl.g:1433:1: ( ( RULE_RBRACKET ) )
-            // InternalTourDsl.g:1434:1: ( RULE_RBRACKET )
+            // InternalTourDsl.g:1541:1: ( ( RULE_RBRACKET ) )
+            // InternalTourDsl.g:1542:1: ( RULE_RBRACKET )
             {
-            // InternalTourDsl.g:1434:1: ( RULE_RBRACKET )
-            // InternalTourDsl.g:1435:2: RULE_RBRACKET
+            // InternalTourDsl.g:1542:1: ( RULE_RBRACKET )
+            // InternalTourDsl.g:1543:2: RULE_RBRACKET
             {
              before(grammarAccess.getHotspotAccess().getRBRACKETTerminalRuleCall_13()); 
             match(input,RULE_RBRACKET,FOLLOW_2); 
@@ -4181,14 +4492,14 @@ public class InternalTourDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Hotspot__Group__14"
-    // InternalTourDsl.g:1444:1: rule__Hotspot__Group__14 : rule__Hotspot__Group__14__Impl ;
+    // InternalTourDsl.g:1552:1: rule__Hotspot__Group__14 : rule__Hotspot__Group__14__Impl ;
     public final void rule__Hotspot__Group__14() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTourDsl.g:1448:1: ( rule__Hotspot__Group__14__Impl )
-            // InternalTourDsl.g:1449:2: rule__Hotspot__Group__14__Impl
+            // InternalTourDsl.g:1556:1: ( rule__Hotspot__Group__14__Impl )
+            // InternalTourDsl.g:1557:2: rule__Hotspot__Group__14__Impl
             {
             pushFollow(FOLLOW_2);
             rule__Hotspot__Group__14__Impl();
@@ -4214,20 +4525,20 @@ public class InternalTourDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Hotspot__Group__14__Impl"
-    // InternalTourDsl.g:1455:1: rule__Hotspot__Group__14__Impl : ( ( RULE_COMA )? ) ;
+    // InternalTourDsl.g:1563:1: rule__Hotspot__Group__14__Impl : ( ( RULE_COMA )? ) ;
     public final void rule__Hotspot__Group__14__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTourDsl.g:1459:1: ( ( ( RULE_COMA )? ) )
-            // InternalTourDsl.g:1460:1: ( ( RULE_COMA )? )
+            // InternalTourDsl.g:1567:1: ( ( ( RULE_COMA )? ) )
+            // InternalTourDsl.g:1568:1: ( ( RULE_COMA )? )
             {
-            // InternalTourDsl.g:1460:1: ( ( RULE_COMA )? )
-            // InternalTourDsl.g:1461:2: ( RULE_COMA )?
+            // InternalTourDsl.g:1568:1: ( ( RULE_COMA )? )
+            // InternalTourDsl.g:1569:2: ( RULE_COMA )?
             {
              before(grammarAccess.getHotspotAccess().getCOMATerminalRuleCall_14()); 
-            // InternalTourDsl.g:1462:2: ( RULE_COMA )?
+            // InternalTourDsl.g:1570:2: ( RULE_COMA )?
             int alt6=2;
             int LA6_0 = input.LA(1);
 
@@ -4236,7 +4547,7 @@ public class InternalTourDslParser extends AbstractInternalContentAssistParser {
             }
             switch (alt6) {
                 case 1 :
-                    // InternalTourDsl.g:1462:3: RULE_COMA
+                    // InternalTourDsl.g:1570:3: RULE_COMA
                     {
                     match(input,RULE_COMA,FOLLOW_2); 
 
@@ -4268,16 +4579,16 @@ public class InternalTourDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Rotation__Group__0"
-    // InternalTourDsl.g:1471:1: rule__Rotation__Group__0 : rule__Rotation__Group__0__Impl rule__Rotation__Group__1 ;
+    // InternalTourDsl.g:1579:1: rule__Rotation__Group__0 : rule__Rotation__Group__0__Impl rule__Rotation__Group__1 ;
     public final void rule__Rotation__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTourDsl.g:1475:1: ( rule__Rotation__Group__0__Impl rule__Rotation__Group__1 )
-            // InternalTourDsl.g:1476:2: rule__Rotation__Group__0__Impl rule__Rotation__Group__1
+            // InternalTourDsl.g:1583:1: ( rule__Rotation__Group__0__Impl rule__Rotation__Group__1 )
+            // InternalTourDsl.g:1584:2: rule__Rotation__Group__0__Impl rule__Rotation__Group__1
             {
-            pushFollow(FOLLOW_17);
+            pushFollow(FOLLOW_18);
             rule__Rotation__Group__0__Impl();
 
             state._fsp--;
@@ -4306,21 +4617,21 @@ public class InternalTourDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Rotation__Group__0__Impl"
-    // InternalTourDsl.g:1483:1: rule__Rotation__Group__0__Impl : ( () ) ;
+    // InternalTourDsl.g:1591:1: rule__Rotation__Group__0__Impl : ( () ) ;
     public final void rule__Rotation__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTourDsl.g:1487:1: ( ( () ) )
-            // InternalTourDsl.g:1488:1: ( () )
+            // InternalTourDsl.g:1595:1: ( ( () ) )
+            // InternalTourDsl.g:1596:1: ( () )
             {
-            // InternalTourDsl.g:1488:1: ( () )
-            // InternalTourDsl.g:1489:2: ()
+            // InternalTourDsl.g:1596:1: ( () )
+            // InternalTourDsl.g:1597:2: ()
             {
              before(grammarAccess.getRotationAccess().getRotationAction_0()); 
-            // InternalTourDsl.g:1490:2: ()
-            // InternalTourDsl.g:1490:3: 
+            // InternalTourDsl.g:1598:2: ()
+            // InternalTourDsl.g:1598:3: 
             {
             }
 
@@ -4343,14 +4654,14 @@ public class InternalTourDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Rotation__Group__1"
-    // InternalTourDsl.g:1498:1: rule__Rotation__Group__1 : rule__Rotation__Group__1__Impl rule__Rotation__Group__2 ;
+    // InternalTourDsl.g:1606:1: rule__Rotation__Group__1 : rule__Rotation__Group__1__Impl rule__Rotation__Group__2 ;
     public final void rule__Rotation__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTourDsl.g:1502:1: ( rule__Rotation__Group__1__Impl rule__Rotation__Group__2 )
-            // InternalTourDsl.g:1503:2: rule__Rotation__Group__1__Impl rule__Rotation__Group__2
+            // InternalTourDsl.g:1610:1: ( rule__Rotation__Group__1__Impl rule__Rotation__Group__2 )
+            // InternalTourDsl.g:1611:2: rule__Rotation__Group__1__Impl rule__Rotation__Group__2
             {
             pushFollow(FOLLOW_5);
             rule__Rotation__Group__1__Impl();
@@ -4381,17 +4692,17 @@ public class InternalTourDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Rotation__Group__1__Impl"
-    // InternalTourDsl.g:1510:1: rule__Rotation__Group__1__Impl : ( RULE_T_ROTATION ) ;
+    // InternalTourDsl.g:1618:1: rule__Rotation__Group__1__Impl : ( RULE_T_ROTATION ) ;
     public final void rule__Rotation__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTourDsl.g:1514:1: ( ( RULE_T_ROTATION ) )
-            // InternalTourDsl.g:1515:1: ( RULE_T_ROTATION )
+            // InternalTourDsl.g:1622:1: ( ( RULE_T_ROTATION ) )
+            // InternalTourDsl.g:1623:1: ( RULE_T_ROTATION )
             {
-            // InternalTourDsl.g:1515:1: ( RULE_T_ROTATION )
-            // InternalTourDsl.g:1516:2: RULE_T_ROTATION
+            // InternalTourDsl.g:1623:1: ( RULE_T_ROTATION )
+            // InternalTourDsl.g:1624:2: RULE_T_ROTATION
             {
              before(grammarAccess.getRotationAccess().getT_ROTATIONTerminalRuleCall_1()); 
             match(input,RULE_T_ROTATION,FOLLOW_2); 
@@ -4418,14 +4729,14 @@ public class InternalTourDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Rotation__Group__2"
-    // InternalTourDsl.g:1525:1: rule__Rotation__Group__2 : rule__Rotation__Group__2__Impl rule__Rotation__Group__3 ;
+    // InternalTourDsl.g:1633:1: rule__Rotation__Group__2 : rule__Rotation__Group__2__Impl rule__Rotation__Group__3 ;
     public final void rule__Rotation__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTourDsl.g:1529:1: ( rule__Rotation__Group__2__Impl rule__Rotation__Group__3 )
-            // InternalTourDsl.g:1530:2: rule__Rotation__Group__2__Impl rule__Rotation__Group__3
+            // InternalTourDsl.g:1637:1: ( rule__Rotation__Group__2__Impl rule__Rotation__Group__3 )
+            // InternalTourDsl.g:1638:2: rule__Rotation__Group__2__Impl rule__Rotation__Group__3
             {
             pushFollow(FOLLOW_3);
             rule__Rotation__Group__2__Impl();
@@ -4456,17 +4767,17 @@ public class InternalTourDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Rotation__Group__2__Impl"
-    // InternalTourDsl.g:1537:1: rule__Rotation__Group__2__Impl : ( RULE_TWOPOINTS ) ;
+    // InternalTourDsl.g:1645:1: rule__Rotation__Group__2__Impl : ( RULE_TWOPOINTS ) ;
     public final void rule__Rotation__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTourDsl.g:1541:1: ( ( RULE_TWOPOINTS ) )
-            // InternalTourDsl.g:1542:1: ( RULE_TWOPOINTS )
+            // InternalTourDsl.g:1649:1: ( ( RULE_TWOPOINTS ) )
+            // InternalTourDsl.g:1650:1: ( RULE_TWOPOINTS )
             {
-            // InternalTourDsl.g:1542:1: ( RULE_TWOPOINTS )
-            // InternalTourDsl.g:1543:2: RULE_TWOPOINTS
+            // InternalTourDsl.g:1650:1: ( RULE_TWOPOINTS )
+            // InternalTourDsl.g:1651:2: RULE_TWOPOINTS
             {
              before(grammarAccess.getRotationAccess().getTWOPOINTSTerminalRuleCall_2()); 
             match(input,RULE_TWOPOINTS,FOLLOW_2); 
@@ -4493,16 +4804,16 @@ public class InternalTourDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Rotation__Group__3"
-    // InternalTourDsl.g:1552:1: rule__Rotation__Group__3 : rule__Rotation__Group__3__Impl rule__Rotation__Group__4 ;
+    // InternalTourDsl.g:1660:1: rule__Rotation__Group__3 : rule__Rotation__Group__3__Impl rule__Rotation__Group__4 ;
     public final void rule__Rotation__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTourDsl.g:1556:1: ( rule__Rotation__Group__3__Impl rule__Rotation__Group__4 )
-            // InternalTourDsl.g:1557:2: rule__Rotation__Group__3__Impl rule__Rotation__Group__4
+            // InternalTourDsl.g:1664:1: ( rule__Rotation__Group__3__Impl rule__Rotation__Group__4 )
+            // InternalTourDsl.g:1665:2: rule__Rotation__Group__3__Impl rule__Rotation__Group__4
             {
-            pushFollow(FOLLOW_18);
+            pushFollow(FOLLOW_19);
             rule__Rotation__Group__3__Impl();
 
             state._fsp--;
@@ -4531,17 +4842,17 @@ public class InternalTourDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Rotation__Group__3__Impl"
-    // InternalTourDsl.g:1564:1: rule__Rotation__Group__3__Impl : ( RULE_LBRACKET ) ;
+    // InternalTourDsl.g:1672:1: rule__Rotation__Group__3__Impl : ( RULE_LBRACKET ) ;
     public final void rule__Rotation__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTourDsl.g:1568:1: ( ( RULE_LBRACKET ) )
-            // InternalTourDsl.g:1569:1: ( RULE_LBRACKET )
+            // InternalTourDsl.g:1676:1: ( ( RULE_LBRACKET ) )
+            // InternalTourDsl.g:1677:1: ( RULE_LBRACKET )
             {
-            // InternalTourDsl.g:1569:1: ( RULE_LBRACKET )
-            // InternalTourDsl.g:1570:2: RULE_LBRACKET
+            // InternalTourDsl.g:1677:1: ( RULE_LBRACKET )
+            // InternalTourDsl.g:1678:2: RULE_LBRACKET
             {
              before(grammarAccess.getRotationAccess().getLBRACKETTerminalRuleCall_3()); 
             match(input,RULE_LBRACKET,FOLLOW_2); 
@@ -4568,14 +4879,14 @@ public class InternalTourDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Rotation__Group__4"
-    // InternalTourDsl.g:1579:1: rule__Rotation__Group__4 : rule__Rotation__Group__4__Impl rule__Rotation__Group__5 ;
+    // InternalTourDsl.g:1687:1: rule__Rotation__Group__4 : rule__Rotation__Group__4__Impl rule__Rotation__Group__5 ;
     public final void rule__Rotation__Group__4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTourDsl.g:1583:1: ( rule__Rotation__Group__4__Impl rule__Rotation__Group__5 )
-            // InternalTourDsl.g:1584:2: rule__Rotation__Group__4__Impl rule__Rotation__Group__5
+            // InternalTourDsl.g:1691:1: ( rule__Rotation__Group__4__Impl rule__Rotation__Group__5 )
+            // InternalTourDsl.g:1692:2: rule__Rotation__Group__4__Impl rule__Rotation__Group__5
             {
             pushFollow(FOLLOW_5);
             rule__Rotation__Group__4__Impl();
@@ -4606,17 +4917,17 @@ public class InternalTourDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Rotation__Group__4__Impl"
-    // InternalTourDsl.g:1591:1: rule__Rotation__Group__4__Impl : ( RULE_ROTX ) ;
+    // InternalTourDsl.g:1699:1: rule__Rotation__Group__4__Impl : ( RULE_ROTX ) ;
     public final void rule__Rotation__Group__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTourDsl.g:1595:1: ( ( RULE_ROTX ) )
-            // InternalTourDsl.g:1596:1: ( RULE_ROTX )
+            // InternalTourDsl.g:1703:1: ( ( RULE_ROTX ) )
+            // InternalTourDsl.g:1704:1: ( RULE_ROTX )
             {
-            // InternalTourDsl.g:1596:1: ( RULE_ROTX )
-            // InternalTourDsl.g:1597:2: RULE_ROTX
+            // InternalTourDsl.g:1704:1: ( RULE_ROTX )
+            // InternalTourDsl.g:1705:2: RULE_ROTX
             {
              before(grammarAccess.getRotationAccess().getROTXTerminalRuleCall_4()); 
             match(input,RULE_ROTX,FOLLOW_2); 
@@ -4643,16 +4954,16 @@ public class InternalTourDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Rotation__Group__5"
-    // InternalTourDsl.g:1606:1: rule__Rotation__Group__5 : rule__Rotation__Group__5__Impl rule__Rotation__Group__6 ;
+    // InternalTourDsl.g:1714:1: rule__Rotation__Group__5 : rule__Rotation__Group__5__Impl rule__Rotation__Group__6 ;
     public final void rule__Rotation__Group__5() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTourDsl.g:1610:1: ( rule__Rotation__Group__5__Impl rule__Rotation__Group__6 )
-            // InternalTourDsl.g:1611:2: rule__Rotation__Group__5__Impl rule__Rotation__Group__6
+            // InternalTourDsl.g:1718:1: ( rule__Rotation__Group__5__Impl rule__Rotation__Group__6 )
+            // InternalTourDsl.g:1719:2: rule__Rotation__Group__5__Impl rule__Rotation__Group__6
             {
-            pushFollow(FOLLOW_19);
+            pushFollow(FOLLOW_20);
             rule__Rotation__Group__5__Impl();
 
             state._fsp--;
@@ -4681,17 +4992,17 @@ public class InternalTourDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Rotation__Group__5__Impl"
-    // InternalTourDsl.g:1618:1: rule__Rotation__Group__5__Impl : ( RULE_TWOPOINTS ) ;
+    // InternalTourDsl.g:1726:1: rule__Rotation__Group__5__Impl : ( RULE_TWOPOINTS ) ;
     public final void rule__Rotation__Group__5__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTourDsl.g:1622:1: ( ( RULE_TWOPOINTS ) )
-            // InternalTourDsl.g:1623:1: ( RULE_TWOPOINTS )
+            // InternalTourDsl.g:1730:1: ( ( RULE_TWOPOINTS ) )
+            // InternalTourDsl.g:1731:1: ( RULE_TWOPOINTS )
             {
-            // InternalTourDsl.g:1623:1: ( RULE_TWOPOINTS )
-            // InternalTourDsl.g:1624:2: RULE_TWOPOINTS
+            // InternalTourDsl.g:1731:1: ( RULE_TWOPOINTS )
+            // InternalTourDsl.g:1732:2: RULE_TWOPOINTS
             {
              before(grammarAccess.getRotationAccess().getTWOPOINTSTerminalRuleCall_5()); 
             match(input,RULE_TWOPOINTS,FOLLOW_2); 
@@ -4718,16 +5029,16 @@ public class InternalTourDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Rotation__Group__6"
-    // InternalTourDsl.g:1633:1: rule__Rotation__Group__6 : rule__Rotation__Group__6__Impl rule__Rotation__Group__7 ;
+    // InternalTourDsl.g:1741:1: rule__Rotation__Group__6 : rule__Rotation__Group__6__Impl rule__Rotation__Group__7 ;
     public final void rule__Rotation__Group__6() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTourDsl.g:1637:1: ( rule__Rotation__Group__6__Impl rule__Rotation__Group__7 )
-            // InternalTourDsl.g:1638:2: rule__Rotation__Group__6__Impl rule__Rotation__Group__7
+            // InternalTourDsl.g:1745:1: ( rule__Rotation__Group__6__Impl rule__Rotation__Group__7 )
+            // InternalTourDsl.g:1746:2: rule__Rotation__Group__6__Impl rule__Rotation__Group__7
             {
-            pushFollow(FOLLOW_19);
+            pushFollow(FOLLOW_20);
             rule__Rotation__Group__6__Impl();
 
             state._fsp--;
@@ -4756,29 +5067,29 @@ public class InternalTourDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Rotation__Group__6__Impl"
-    // InternalTourDsl.g:1645:1: rule__Rotation__Group__6__Impl : ( ( rule__Rotation__XAssignment_6 )? ) ;
+    // InternalTourDsl.g:1753:1: rule__Rotation__Group__6__Impl : ( ( rule__Rotation__XAssignment_6 )? ) ;
     public final void rule__Rotation__Group__6__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTourDsl.g:1649:1: ( ( ( rule__Rotation__XAssignment_6 )? ) )
-            // InternalTourDsl.g:1650:1: ( ( rule__Rotation__XAssignment_6 )? )
+            // InternalTourDsl.g:1757:1: ( ( ( rule__Rotation__XAssignment_6 )? ) )
+            // InternalTourDsl.g:1758:1: ( ( rule__Rotation__XAssignment_6 )? )
             {
-            // InternalTourDsl.g:1650:1: ( ( rule__Rotation__XAssignment_6 )? )
-            // InternalTourDsl.g:1651:2: ( rule__Rotation__XAssignment_6 )?
+            // InternalTourDsl.g:1758:1: ( ( rule__Rotation__XAssignment_6 )? )
+            // InternalTourDsl.g:1759:2: ( rule__Rotation__XAssignment_6 )?
             {
              before(grammarAccess.getRotationAccess().getXAssignment_6()); 
-            // InternalTourDsl.g:1652:2: ( rule__Rotation__XAssignment_6 )?
+            // InternalTourDsl.g:1760:2: ( rule__Rotation__XAssignment_6 )?
             int alt7=2;
             int LA7_0 = input.LA(1);
 
-            if ( (LA7_0==RULE_INT||(LA7_0>=32 && LA7_0<=33)) ) {
+            if ( (LA7_0==RULE_INT||(LA7_0>=33 && LA7_0<=34)) ) {
                 alt7=1;
             }
             switch (alt7) {
                 case 1 :
-                    // InternalTourDsl.g:1652:3: rule__Rotation__XAssignment_6
+                    // InternalTourDsl.g:1760:3: rule__Rotation__XAssignment_6
                     {
                     pushFollow(FOLLOW_2);
                     rule__Rotation__XAssignment_6();
@@ -4814,16 +5125,16 @@ public class InternalTourDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Rotation__Group__7"
-    // InternalTourDsl.g:1660:1: rule__Rotation__Group__7 : rule__Rotation__Group__7__Impl rule__Rotation__Group__8 ;
+    // InternalTourDsl.g:1768:1: rule__Rotation__Group__7 : rule__Rotation__Group__7__Impl rule__Rotation__Group__8 ;
     public final void rule__Rotation__Group__7() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTourDsl.g:1664:1: ( rule__Rotation__Group__7__Impl rule__Rotation__Group__8 )
-            // InternalTourDsl.g:1665:2: rule__Rotation__Group__7__Impl rule__Rotation__Group__8
+            // InternalTourDsl.g:1772:1: ( rule__Rotation__Group__7__Impl rule__Rotation__Group__8 )
+            // InternalTourDsl.g:1773:2: rule__Rotation__Group__7__Impl rule__Rotation__Group__8
             {
-            pushFollow(FOLLOW_20);
+            pushFollow(FOLLOW_21);
             rule__Rotation__Group__7__Impl();
 
             state._fsp--;
@@ -4852,17 +5163,17 @@ public class InternalTourDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Rotation__Group__7__Impl"
-    // InternalTourDsl.g:1672:1: rule__Rotation__Group__7__Impl : ( RULE_COMA ) ;
+    // InternalTourDsl.g:1780:1: rule__Rotation__Group__7__Impl : ( RULE_COMA ) ;
     public final void rule__Rotation__Group__7__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTourDsl.g:1676:1: ( ( RULE_COMA ) )
-            // InternalTourDsl.g:1677:1: ( RULE_COMA )
+            // InternalTourDsl.g:1784:1: ( ( RULE_COMA ) )
+            // InternalTourDsl.g:1785:1: ( RULE_COMA )
             {
-            // InternalTourDsl.g:1677:1: ( RULE_COMA )
-            // InternalTourDsl.g:1678:2: RULE_COMA
+            // InternalTourDsl.g:1785:1: ( RULE_COMA )
+            // InternalTourDsl.g:1786:2: RULE_COMA
             {
              before(grammarAccess.getRotationAccess().getCOMATerminalRuleCall_7()); 
             match(input,RULE_COMA,FOLLOW_2); 
@@ -4889,14 +5200,14 @@ public class InternalTourDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Rotation__Group__8"
-    // InternalTourDsl.g:1687:1: rule__Rotation__Group__8 : rule__Rotation__Group__8__Impl rule__Rotation__Group__9 ;
+    // InternalTourDsl.g:1795:1: rule__Rotation__Group__8 : rule__Rotation__Group__8__Impl rule__Rotation__Group__9 ;
     public final void rule__Rotation__Group__8() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTourDsl.g:1691:1: ( rule__Rotation__Group__8__Impl rule__Rotation__Group__9 )
-            // InternalTourDsl.g:1692:2: rule__Rotation__Group__8__Impl rule__Rotation__Group__9
+            // InternalTourDsl.g:1799:1: ( rule__Rotation__Group__8__Impl rule__Rotation__Group__9 )
+            // InternalTourDsl.g:1800:2: rule__Rotation__Group__8__Impl rule__Rotation__Group__9
             {
             pushFollow(FOLLOW_5);
             rule__Rotation__Group__8__Impl();
@@ -4927,17 +5238,17 @@ public class InternalTourDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Rotation__Group__8__Impl"
-    // InternalTourDsl.g:1699:1: rule__Rotation__Group__8__Impl : ( RULE_ROTY ) ;
+    // InternalTourDsl.g:1807:1: rule__Rotation__Group__8__Impl : ( RULE_ROTY ) ;
     public final void rule__Rotation__Group__8__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTourDsl.g:1703:1: ( ( RULE_ROTY ) )
-            // InternalTourDsl.g:1704:1: ( RULE_ROTY )
+            // InternalTourDsl.g:1811:1: ( ( RULE_ROTY ) )
+            // InternalTourDsl.g:1812:1: ( RULE_ROTY )
             {
-            // InternalTourDsl.g:1704:1: ( RULE_ROTY )
-            // InternalTourDsl.g:1705:2: RULE_ROTY
+            // InternalTourDsl.g:1812:1: ( RULE_ROTY )
+            // InternalTourDsl.g:1813:2: RULE_ROTY
             {
              before(grammarAccess.getRotationAccess().getROTYTerminalRuleCall_8()); 
             match(input,RULE_ROTY,FOLLOW_2); 
@@ -4964,16 +5275,16 @@ public class InternalTourDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Rotation__Group__9"
-    // InternalTourDsl.g:1714:1: rule__Rotation__Group__9 : rule__Rotation__Group__9__Impl rule__Rotation__Group__10 ;
+    // InternalTourDsl.g:1822:1: rule__Rotation__Group__9 : rule__Rotation__Group__9__Impl rule__Rotation__Group__10 ;
     public final void rule__Rotation__Group__9() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTourDsl.g:1718:1: ( rule__Rotation__Group__9__Impl rule__Rotation__Group__10 )
-            // InternalTourDsl.g:1719:2: rule__Rotation__Group__9__Impl rule__Rotation__Group__10
+            // InternalTourDsl.g:1826:1: ( rule__Rotation__Group__9__Impl rule__Rotation__Group__10 )
+            // InternalTourDsl.g:1827:2: rule__Rotation__Group__9__Impl rule__Rotation__Group__10
             {
-            pushFollow(FOLLOW_19);
+            pushFollow(FOLLOW_20);
             rule__Rotation__Group__9__Impl();
 
             state._fsp--;
@@ -5002,17 +5313,17 @@ public class InternalTourDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Rotation__Group__9__Impl"
-    // InternalTourDsl.g:1726:1: rule__Rotation__Group__9__Impl : ( RULE_TWOPOINTS ) ;
+    // InternalTourDsl.g:1834:1: rule__Rotation__Group__9__Impl : ( RULE_TWOPOINTS ) ;
     public final void rule__Rotation__Group__9__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTourDsl.g:1730:1: ( ( RULE_TWOPOINTS ) )
-            // InternalTourDsl.g:1731:1: ( RULE_TWOPOINTS )
+            // InternalTourDsl.g:1838:1: ( ( RULE_TWOPOINTS ) )
+            // InternalTourDsl.g:1839:1: ( RULE_TWOPOINTS )
             {
-            // InternalTourDsl.g:1731:1: ( RULE_TWOPOINTS )
-            // InternalTourDsl.g:1732:2: RULE_TWOPOINTS
+            // InternalTourDsl.g:1839:1: ( RULE_TWOPOINTS )
+            // InternalTourDsl.g:1840:2: RULE_TWOPOINTS
             {
              before(grammarAccess.getRotationAccess().getTWOPOINTSTerminalRuleCall_9()); 
             match(input,RULE_TWOPOINTS,FOLLOW_2); 
@@ -5039,16 +5350,16 @@ public class InternalTourDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Rotation__Group__10"
-    // InternalTourDsl.g:1741:1: rule__Rotation__Group__10 : rule__Rotation__Group__10__Impl rule__Rotation__Group__11 ;
+    // InternalTourDsl.g:1849:1: rule__Rotation__Group__10 : rule__Rotation__Group__10__Impl rule__Rotation__Group__11 ;
     public final void rule__Rotation__Group__10() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTourDsl.g:1745:1: ( rule__Rotation__Group__10__Impl rule__Rotation__Group__11 )
-            // InternalTourDsl.g:1746:2: rule__Rotation__Group__10__Impl rule__Rotation__Group__11
+            // InternalTourDsl.g:1853:1: ( rule__Rotation__Group__10__Impl rule__Rotation__Group__11 )
+            // InternalTourDsl.g:1854:2: rule__Rotation__Group__10__Impl rule__Rotation__Group__11
             {
-            pushFollow(FOLLOW_19);
+            pushFollow(FOLLOW_20);
             rule__Rotation__Group__10__Impl();
 
             state._fsp--;
@@ -5077,29 +5388,29 @@ public class InternalTourDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Rotation__Group__10__Impl"
-    // InternalTourDsl.g:1753:1: rule__Rotation__Group__10__Impl : ( ( rule__Rotation__YAssignment_10 )? ) ;
+    // InternalTourDsl.g:1861:1: rule__Rotation__Group__10__Impl : ( ( rule__Rotation__YAssignment_10 )? ) ;
     public final void rule__Rotation__Group__10__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTourDsl.g:1757:1: ( ( ( rule__Rotation__YAssignment_10 )? ) )
-            // InternalTourDsl.g:1758:1: ( ( rule__Rotation__YAssignment_10 )? )
+            // InternalTourDsl.g:1865:1: ( ( ( rule__Rotation__YAssignment_10 )? ) )
+            // InternalTourDsl.g:1866:1: ( ( rule__Rotation__YAssignment_10 )? )
             {
-            // InternalTourDsl.g:1758:1: ( ( rule__Rotation__YAssignment_10 )? )
-            // InternalTourDsl.g:1759:2: ( rule__Rotation__YAssignment_10 )?
+            // InternalTourDsl.g:1866:1: ( ( rule__Rotation__YAssignment_10 )? )
+            // InternalTourDsl.g:1867:2: ( rule__Rotation__YAssignment_10 )?
             {
              before(grammarAccess.getRotationAccess().getYAssignment_10()); 
-            // InternalTourDsl.g:1760:2: ( rule__Rotation__YAssignment_10 )?
+            // InternalTourDsl.g:1868:2: ( rule__Rotation__YAssignment_10 )?
             int alt8=2;
             int LA8_0 = input.LA(1);
 
-            if ( (LA8_0==RULE_INT||(LA8_0>=32 && LA8_0<=33)) ) {
+            if ( (LA8_0==RULE_INT||(LA8_0>=33 && LA8_0<=34)) ) {
                 alt8=1;
             }
             switch (alt8) {
                 case 1 :
-                    // InternalTourDsl.g:1760:3: rule__Rotation__YAssignment_10
+                    // InternalTourDsl.g:1868:3: rule__Rotation__YAssignment_10
                     {
                     pushFollow(FOLLOW_2);
                     rule__Rotation__YAssignment_10();
@@ -5135,16 +5446,16 @@ public class InternalTourDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Rotation__Group__11"
-    // InternalTourDsl.g:1768:1: rule__Rotation__Group__11 : rule__Rotation__Group__11__Impl rule__Rotation__Group__12 ;
+    // InternalTourDsl.g:1876:1: rule__Rotation__Group__11 : rule__Rotation__Group__11__Impl rule__Rotation__Group__12 ;
     public final void rule__Rotation__Group__11() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTourDsl.g:1772:1: ( rule__Rotation__Group__11__Impl rule__Rotation__Group__12 )
-            // InternalTourDsl.g:1773:2: rule__Rotation__Group__11__Impl rule__Rotation__Group__12
+            // InternalTourDsl.g:1880:1: ( rule__Rotation__Group__11__Impl rule__Rotation__Group__12 )
+            // InternalTourDsl.g:1881:2: rule__Rotation__Group__11__Impl rule__Rotation__Group__12
             {
-            pushFollow(FOLLOW_21);
+            pushFollow(FOLLOW_22);
             rule__Rotation__Group__11__Impl();
 
             state._fsp--;
@@ -5173,17 +5484,17 @@ public class InternalTourDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Rotation__Group__11__Impl"
-    // InternalTourDsl.g:1780:1: rule__Rotation__Group__11__Impl : ( RULE_COMA ) ;
+    // InternalTourDsl.g:1888:1: rule__Rotation__Group__11__Impl : ( RULE_COMA ) ;
     public final void rule__Rotation__Group__11__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTourDsl.g:1784:1: ( ( RULE_COMA ) )
-            // InternalTourDsl.g:1785:1: ( RULE_COMA )
+            // InternalTourDsl.g:1892:1: ( ( RULE_COMA ) )
+            // InternalTourDsl.g:1893:1: ( RULE_COMA )
             {
-            // InternalTourDsl.g:1785:1: ( RULE_COMA )
-            // InternalTourDsl.g:1786:2: RULE_COMA
+            // InternalTourDsl.g:1893:1: ( RULE_COMA )
+            // InternalTourDsl.g:1894:2: RULE_COMA
             {
              before(grammarAccess.getRotationAccess().getCOMATerminalRuleCall_11()); 
             match(input,RULE_COMA,FOLLOW_2); 
@@ -5210,14 +5521,14 @@ public class InternalTourDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Rotation__Group__12"
-    // InternalTourDsl.g:1795:1: rule__Rotation__Group__12 : rule__Rotation__Group__12__Impl rule__Rotation__Group__13 ;
+    // InternalTourDsl.g:1903:1: rule__Rotation__Group__12 : rule__Rotation__Group__12__Impl rule__Rotation__Group__13 ;
     public final void rule__Rotation__Group__12() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTourDsl.g:1799:1: ( rule__Rotation__Group__12__Impl rule__Rotation__Group__13 )
-            // InternalTourDsl.g:1800:2: rule__Rotation__Group__12__Impl rule__Rotation__Group__13
+            // InternalTourDsl.g:1907:1: ( rule__Rotation__Group__12__Impl rule__Rotation__Group__13 )
+            // InternalTourDsl.g:1908:2: rule__Rotation__Group__12__Impl rule__Rotation__Group__13
             {
             pushFollow(FOLLOW_5);
             rule__Rotation__Group__12__Impl();
@@ -5248,17 +5559,17 @@ public class InternalTourDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Rotation__Group__12__Impl"
-    // InternalTourDsl.g:1807:1: rule__Rotation__Group__12__Impl : ( RULE_ROTZ ) ;
+    // InternalTourDsl.g:1915:1: rule__Rotation__Group__12__Impl : ( RULE_ROTZ ) ;
     public final void rule__Rotation__Group__12__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTourDsl.g:1811:1: ( ( RULE_ROTZ ) )
-            // InternalTourDsl.g:1812:1: ( RULE_ROTZ )
+            // InternalTourDsl.g:1919:1: ( ( RULE_ROTZ ) )
+            // InternalTourDsl.g:1920:1: ( RULE_ROTZ )
             {
-            // InternalTourDsl.g:1812:1: ( RULE_ROTZ )
-            // InternalTourDsl.g:1813:2: RULE_ROTZ
+            // InternalTourDsl.g:1920:1: ( RULE_ROTZ )
+            // InternalTourDsl.g:1921:2: RULE_ROTZ
             {
              before(grammarAccess.getRotationAccess().getROTZTerminalRuleCall_12()); 
             match(input,RULE_ROTZ,FOLLOW_2); 
@@ -5285,16 +5596,16 @@ public class InternalTourDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Rotation__Group__13"
-    // InternalTourDsl.g:1822:1: rule__Rotation__Group__13 : rule__Rotation__Group__13__Impl rule__Rotation__Group__14 ;
+    // InternalTourDsl.g:1930:1: rule__Rotation__Group__13 : rule__Rotation__Group__13__Impl rule__Rotation__Group__14 ;
     public final void rule__Rotation__Group__13() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTourDsl.g:1826:1: ( rule__Rotation__Group__13__Impl rule__Rotation__Group__14 )
-            // InternalTourDsl.g:1827:2: rule__Rotation__Group__13__Impl rule__Rotation__Group__14
+            // InternalTourDsl.g:1934:1: ( rule__Rotation__Group__13__Impl rule__Rotation__Group__14 )
+            // InternalTourDsl.g:1935:2: rule__Rotation__Group__13__Impl rule__Rotation__Group__14
             {
-            pushFollow(FOLLOW_22);
+            pushFollow(FOLLOW_23);
             rule__Rotation__Group__13__Impl();
 
             state._fsp--;
@@ -5323,17 +5634,17 @@ public class InternalTourDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Rotation__Group__13__Impl"
-    // InternalTourDsl.g:1834:1: rule__Rotation__Group__13__Impl : ( RULE_TWOPOINTS ) ;
+    // InternalTourDsl.g:1942:1: rule__Rotation__Group__13__Impl : ( RULE_TWOPOINTS ) ;
     public final void rule__Rotation__Group__13__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTourDsl.g:1838:1: ( ( RULE_TWOPOINTS ) )
-            // InternalTourDsl.g:1839:1: ( RULE_TWOPOINTS )
+            // InternalTourDsl.g:1946:1: ( ( RULE_TWOPOINTS ) )
+            // InternalTourDsl.g:1947:1: ( RULE_TWOPOINTS )
             {
-            // InternalTourDsl.g:1839:1: ( RULE_TWOPOINTS )
-            // InternalTourDsl.g:1840:2: RULE_TWOPOINTS
+            // InternalTourDsl.g:1947:1: ( RULE_TWOPOINTS )
+            // InternalTourDsl.g:1948:2: RULE_TWOPOINTS
             {
              before(grammarAccess.getRotationAccess().getTWOPOINTSTerminalRuleCall_13()); 
             match(input,RULE_TWOPOINTS,FOLLOW_2); 
@@ -5360,16 +5671,16 @@ public class InternalTourDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Rotation__Group__14"
-    // InternalTourDsl.g:1849:1: rule__Rotation__Group__14 : rule__Rotation__Group__14__Impl rule__Rotation__Group__15 ;
+    // InternalTourDsl.g:1957:1: rule__Rotation__Group__14 : rule__Rotation__Group__14__Impl rule__Rotation__Group__15 ;
     public final void rule__Rotation__Group__14() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTourDsl.g:1853:1: ( rule__Rotation__Group__14__Impl rule__Rotation__Group__15 )
-            // InternalTourDsl.g:1854:2: rule__Rotation__Group__14__Impl rule__Rotation__Group__15
+            // InternalTourDsl.g:1961:1: ( rule__Rotation__Group__14__Impl rule__Rotation__Group__15 )
+            // InternalTourDsl.g:1962:2: rule__Rotation__Group__14__Impl rule__Rotation__Group__15
             {
-            pushFollow(FOLLOW_22);
+            pushFollow(FOLLOW_23);
             rule__Rotation__Group__14__Impl();
 
             state._fsp--;
@@ -5398,29 +5709,29 @@ public class InternalTourDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Rotation__Group__14__Impl"
-    // InternalTourDsl.g:1861:1: rule__Rotation__Group__14__Impl : ( ( rule__Rotation__ZAssignment_14 )? ) ;
+    // InternalTourDsl.g:1969:1: rule__Rotation__Group__14__Impl : ( ( rule__Rotation__ZAssignment_14 )? ) ;
     public final void rule__Rotation__Group__14__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTourDsl.g:1865:1: ( ( ( rule__Rotation__ZAssignment_14 )? ) )
-            // InternalTourDsl.g:1866:1: ( ( rule__Rotation__ZAssignment_14 )? )
+            // InternalTourDsl.g:1973:1: ( ( ( rule__Rotation__ZAssignment_14 )? ) )
+            // InternalTourDsl.g:1974:1: ( ( rule__Rotation__ZAssignment_14 )? )
             {
-            // InternalTourDsl.g:1866:1: ( ( rule__Rotation__ZAssignment_14 )? )
-            // InternalTourDsl.g:1867:2: ( rule__Rotation__ZAssignment_14 )?
+            // InternalTourDsl.g:1974:1: ( ( rule__Rotation__ZAssignment_14 )? )
+            // InternalTourDsl.g:1975:2: ( rule__Rotation__ZAssignment_14 )?
             {
              before(grammarAccess.getRotationAccess().getZAssignment_14()); 
-            // InternalTourDsl.g:1868:2: ( rule__Rotation__ZAssignment_14 )?
+            // InternalTourDsl.g:1976:2: ( rule__Rotation__ZAssignment_14 )?
             int alt9=2;
             int LA9_0 = input.LA(1);
 
-            if ( (LA9_0==RULE_INT||(LA9_0>=32 && LA9_0<=33)) ) {
+            if ( (LA9_0==RULE_INT||(LA9_0>=33 && LA9_0<=34)) ) {
                 alt9=1;
             }
             switch (alt9) {
                 case 1 :
-                    // InternalTourDsl.g:1868:3: rule__Rotation__ZAssignment_14
+                    // InternalTourDsl.g:1976:3: rule__Rotation__ZAssignment_14
                     {
                     pushFollow(FOLLOW_2);
                     rule__Rotation__ZAssignment_14();
@@ -5456,14 +5767,14 @@ public class InternalTourDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Rotation__Group__15"
-    // InternalTourDsl.g:1876:1: rule__Rotation__Group__15 : rule__Rotation__Group__15__Impl ;
+    // InternalTourDsl.g:1984:1: rule__Rotation__Group__15 : rule__Rotation__Group__15__Impl ;
     public final void rule__Rotation__Group__15() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTourDsl.g:1880:1: ( rule__Rotation__Group__15__Impl )
-            // InternalTourDsl.g:1881:2: rule__Rotation__Group__15__Impl
+            // InternalTourDsl.g:1988:1: ( rule__Rotation__Group__15__Impl )
+            // InternalTourDsl.g:1989:2: rule__Rotation__Group__15__Impl
             {
             pushFollow(FOLLOW_2);
             rule__Rotation__Group__15__Impl();
@@ -5489,17 +5800,17 @@ public class InternalTourDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Rotation__Group__15__Impl"
-    // InternalTourDsl.g:1887:1: rule__Rotation__Group__15__Impl : ( RULE_RBRACKET ) ;
+    // InternalTourDsl.g:1995:1: rule__Rotation__Group__15__Impl : ( RULE_RBRACKET ) ;
     public final void rule__Rotation__Group__15__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTourDsl.g:1891:1: ( ( RULE_RBRACKET ) )
-            // InternalTourDsl.g:1892:1: ( RULE_RBRACKET )
+            // InternalTourDsl.g:1999:1: ( ( RULE_RBRACKET ) )
+            // InternalTourDsl.g:2000:1: ( RULE_RBRACKET )
             {
-            // InternalTourDsl.g:1892:1: ( RULE_RBRACKET )
-            // InternalTourDsl.g:1893:2: RULE_RBRACKET
+            // InternalTourDsl.g:2000:1: ( RULE_RBRACKET )
+            // InternalTourDsl.g:2001:2: RULE_RBRACKET
             {
              before(grammarAccess.getRotationAccess().getRBRACKETTerminalRuleCall_15()); 
             match(input,RULE_RBRACKET,FOLLOW_2); 
@@ -5526,16 +5837,16 @@ public class InternalTourDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Position__Group__0"
-    // InternalTourDsl.g:1903:1: rule__Position__Group__0 : rule__Position__Group__0__Impl rule__Position__Group__1 ;
+    // InternalTourDsl.g:2011:1: rule__Position__Group__0 : rule__Position__Group__0__Impl rule__Position__Group__1 ;
     public final void rule__Position__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTourDsl.g:1907:1: ( rule__Position__Group__0__Impl rule__Position__Group__1 )
-            // InternalTourDsl.g:1908:2: rule__Position__Group__0__Impl rule__Position__Group__1
+            // InternalTourDsl.g:2015:1: ( rule__Position__Group__0__Impl rule__Position__Group__1 )
+            // InternalTourDsl.g:2016:2: rule__Position__Group__0__Impl rule__Position__Group__1
             {
-            pushFollow(FOLLOW_16);
+            pushFollow(FOLLOW_17);
             rule__Position__Group__0__Impl();
 
             state._fsp--;
@@ -5564,21 +5875,21 @@ public class InternalTourDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Position__Group__0__Impl"
-    // InternalTourDsl.g:1915:1: rule__Position__Group__0__Impl : ( () ) ;
+    // InternalTourDsl.g:2023:1: rule__Position__Group__0__Impl : ( () ) ;
     public final void rule__Position__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTourDsl.g:1919:1: ( ( () ) )
-            // InternalTourDsl.g:1920:1: ( () )
+            // InternalTourDsl.g:2027:1: ( ( () ) )
+            // InternalTourDsl.g:2028:1: ( () )
             {
-            // InternalTourDsl.g:1920:1: ( () )
-            // InternalTourDsl.g:1921:2: ()
+            // InternalTourDsl.g:2028:1: ( () )
+            // InternalTourDsl.g:2029:2: ()
             {
              before(grammarAccess.getPositionAccess().getPositionAction_0()); 
-            // InternalTourDsl.g:1922:2: ()
-            // InternalTourDsl.g:1922:3: 
+            // InternalTourDsl.g:2030:2: ()
+            // InternalTourDsl.g:2030:3: 
             {
             }
 
@@ -5601,14 +5912,14 @@ public class InternalTourDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Position__Group__1"
-    // InternalTourDsl.g:1930:1: rule__Position__Group__1 : rule__Position__Group__1__Impl rule__Position__Group__2 ;
+    // InternalTourDsl.g:2038:1: rule__Position__Group__1 : rule__Position__Group__1__Impl rule__Position__Group__2 ;
     public final void rule__Position__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTourDsl.g:1934:1: ( rule__Position__Group__1__Impl rule__Position__Group__2 )
-            // InternalTourDsl.g:1935:2: rule__Position__Group__1__Impl rule__Position__Group__2
+            // InternalTourDsl.g:2042:1: ( rule__Position__Group__1__Impl rule__Position__Group__2 )
+            // InternalTourDsl.g:2043:2: rule__Position__Group__1__Impl rule__Position__Group__2
             {
             pushFollow(FOLLOW_5);
             rule__Position__Group__1__Impl();
@@ -5639,17 +5950,17 @@ public class InternalTourDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Position__Group__1__Impl"
-    // InternalTourDsl.g:1942:1: rule__Position__Group__1__Impl : ( RULE_T_POSITION ) ;
+    // InternalTourDsl.g:2050:1: rule__Position__Group__1__Impl : ( RULE_T_POSITION ) ;
     public final void rule__Position__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTourDsl.g:1946:1: ( ( RULE_T_POSITION ) )
-            // InternalTourDsl.g:1947:1: ( RULE_T_POSITION )
+            // InternalTourDsl.g:2054:1: ( ( RULE_T_POSITION ) )
+            // InternalTourDsl.g:2055:1: ( RULE_T_POSITION )
             {
-            // InternalTourDsl.g:1947:1: ( RULE_T_POSITION )
-            // InternalTourDsl.g:1948:2: RULE_T_POSITION
+            // InternalTourDsl.g:2055:1: ( RULE_T_POSITION )
+            // InternalTourDsl.g:2056:2: RULE_T_POSITION
             {
              before(grammarAccess.getPositionAccess().getT_POSITIONTerminalRuleCall_1()); 
             match(input,RULE_T_POSITION,FOLLOW_2); 
@@ -5676,14 +5987,14 @@ public class InternalTourDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Position__Group__2"
-    // InternalTourDsl.g:1957:1: rule__Position__Group__2 : rule__Position__Group__2__Impl rule__Position__Group__3 ;
+    // InternalTourDsl.g:2065:1: rule__Position__Group__2 : rule__Position__Group__2__Impl rule__Position__Group__3 ;
     public final void rule__Position__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTourDsl.g:1961:1: ( rule__Position__Group__2__Impl rule__Position__Group__3 )
-            // InternalTourDsl.g:1962:2: rule__Position__Group__2__Impl rule__Position__Group__3
+            // InternalTourDsl.g:2069:1: ( rule__Position__Group__2__Impl rule__Position__Group__3 )
+            // InternalTourDsl.g:2070:2: rule__Position__Group__2__Impl rule__Position__Group__3
             {
             pushFollow(FOLLOW_3);
             rule__Position__Group__2__Impl();
@@ -5714,17 +6025,17 @@ public class InternalTourDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Position__Group__2__Impl"
-    // InternalTourDsl.g:1969:1: rule__Position__Group__2__Impl : ( RULE_TWOPOINTS ) ;
+    // InternalTourDsl.g:2077:1: rule__Position__Group__2__Impl : ( RULE_TWOPOINTS ) ;
     public final void rule__Position__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTourDsl.g:1973:1: ( ( RULE_TWOPOINTS ) )
-            // InternalTourDsl.g:1974:1: ( RULE_TWOPOINTS )
+            // InternalTourDsl.g:2081:1: ( ( RULE_TWOPOINTS ) )
+            // InternalTourDsl.g:2082:1: ( RULE_TWOPOINTS )
             {
-            // InternalTourDsl.g:1974:1: ( RULE_TWOPOINTS )
-            // InternalTourDsl.g:1975:2: RULE_TWOPOINTS
+            // InternalTourDsl.g:2082:1: ( RULE_TWOPOINTS )
+            // InternalTourDsl.g:2083:2: RULE_TWOPOINTS
             {
              before(grammarAccess.getPositionAccess().getTWOPOINTSTerminalRuleCall_2()); 
             match(input,RULE_TWOPOINTS,FOLLOW_2); 
@@ -5751,16 +6062,16 @@ public class InternalTourDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Position__Group__3"
-    // InternalTourDsl.g:1984:1: rule__Position__Group__3 : rule__Position__Group__3__Impl rule__Position__Group__4 ;
+    // InternalTourDsl.g:2092:1: rule__Position__Group__3 : rule__Position__Group__3__Impl rule__Position__Group__4 ;
     public final void rule__Position__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTourDsl.g:1988:1: ( rule__Position__Group__3__Impl rule__Position__Group__4 )
-            // InternalTourDsl.g:1989:2: rule__Position__Group__3__Impl rule__Position__Group__4
+            // InternalTourDsl.g:2096:1: ( rule__Position__Group__3__Impl rule__Position__Group__4 )
+            // InternalTourDsl.g:2097:2: rule__Position__Group__3__Impl rule__Position__Group__4
             {
-            pushFollow(FOLLOW_23);
+            pushFollow(FOLLOW_24);
             rule__Position__Group__3__Impl();
 
             state._fsp--;
@@ -5789,17 +6100,17 @@ public class InternalTourDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Position__Group__3__Impl"
-    // InternalTourDsl.g:1996:1: rule__Position__Group__3__Impl : ( RULE_LBRACKET ) ;
+    // InternalTourDsl.g:2104:1: rule__Position__Group__3__Impl : ( RULE_LBRACKET ) ;
     public final void rule__Position__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTourDsl.g:2000:1: ( ( RULE_LBRACKET ) )
-            // InternalTourDsl.g:2001:1: ( RULE_LBRACKET )
+            // InternalTourDsl.g:2108:1: ( ( RULE_LBRACKET ) )
+            // InternalTourDsl.g:2109:1: ( RULE_LBRACKET )
             {
-            // InternalTourDsl.g:2001:1: ( RULE_LBRACKET )
-            // InternalTourDsl.g:2002:2: RULE_LBRACKET
+            // InternalTourDsl.g:2109:1: ( RULE_LBRACKET )
+            // InternalTourDsl.g:2110:2: RULE_LBRACKET
             {
              before(grammarAccess.getPositionAccess().getLBRACKETTerminalRuleCall_3()); 
             match(input,RULE_LBRACKET,FOLLOW_2); 
@@ -5826,14 +6137,14 @@ public class InternalTourDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Position__Group__4"
-    // InternalTourDsl.g:2011:1: rule__Position__Group__4 : rule__Position__Group__4__Impl rule__Position__Group__5 ;
+    // InternalTourDsl.g:2119:1: rule__Position__Group__4 : rule__Position__Group__4__Impl rule__Position__Group__5 ;
     public final void rule__Position__Group__4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTourDsl.g:2015:1: ( rule__Position__Group__4__Impl rule__Position__Group__5 )
-            // InternalTourDsl.g:2016:2: rule__Position__Group__4__Impl rule__Position__Group__5
+            // InternalTourDsl.g:2123:1: ( rule__Position__Group__4__Impl rule__Position__Group__5 )
+            // InternalTourDsl.g:2124:2: rule__Position__Group__4__Impl rule__Position__Group__5
             {
             pushFollow(FOLLOW_5);
             rule__Position__Group__4__Impl();
@@ -5864,17 +6175,17 @@ public class InternalTourDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Position__Group__4__Impl"
-    // InternalTourDsl.g:2023:1: rule__Position__Group__4__Impl : ( RULE_POSX ) ;
+    // InternalTourDsl.g:2131:1: rule__Position__Group__4__Impl : ( RULE_POSX ) ;
     public final void rule__Position__Group__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTourDsl.g:2027:1: ( ( RULE_POSX ) )
-            // InternalTourDsl.g:2028:1: ( RULE_POSX )
+            // InternalTourDsl.g:2135:1: ( ( RULE_POSX ) )
+            // InternalTourDsl.g:2136:1: ( RULE_POSX )
             {
-            // InternalTourDsl.g:2028:1: ( RULE_POSX )
-            // InternalTourDsl.g:2029:2: RULE_POSX
+            // InternalTourDsl.g:2136:1: ( RULE_POSX )
+            // InternalTourDsl.g:2137:2: RULE_POSX
             {
              before(grammarAccess.getPositionAccess().getPOSXTerminalRuleCall_4()); 
             match(input,RULE_POSX,FOLLOW_2); 
@@ -5901,16 +6212,16 @@ public class InternalTourDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Position__Group__5"
-    // InternalTourDsl.g:2038:1: rule__Position__Group__5 : rule__Position__Group__5__Impl rule__Position__Group__6 ;
+    // InternalTourDsl.g:2146:1: rule__Position__Group__5 : rule__Position__Group__5__Impl rule__Position__Group__6 ;
     public final void rule__Position__Group__5() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTourDsl.g:2042:1: ( rule__Position__Group__5__Impl rule__Position__Group__6 )
-            // InternalTourDsl.g:2043:2: rule__Position__Group__5__Impl rule__Position__Group__6
+            // InternalTourDsl.g:2150:1: ( rule__Position__Group__5__Impl rule__Position__Group__6 )
+            // InternalTourDsl.g:2151:2: rule__Position__Group__5__Impl rule__Position__Group__6
             {
-            pushFollow(FOLLOW_19);
+            pushFollow(FOLLOW_20);
             rule__Position__Group__5__Impl();
 
             state._fsp--;
@@ -5939,17 +6250,17 @@ public class InternalTourDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Position__Group__5__Impl"
-    // InternalTourDsl.g:2050:1: rule__Position__Group__5__Impl : ( RULE_TWOPOINTS ) ;
+    // InternalTourDsl.g:2158:1: rule__Position__Group__5__Impl : ( RULE_TWOPOINTS ) ;
     public final void rule__Position__Group__5__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTourDsl.g:2054:1: ( ( RULE_TWOPOINTS ) )
-            // InternalTourDsl.g:2055:1: ( RULE_TWOPOINTS )
+            // InternalTourDsl.g:2162:1: ( ( RULE_TWOPOINTS ) )
+            // InternalTourDsl.g:2163:1: ( RULE_TWOPOINTS )
             {
-            // InternalTourDsl.g:2055:1: ( RULE_TWOPOINTS )
-            // InternalTourDsl.g:2056:2: RULE_TWOPOINTS
+            // InternalTourDsl.g:2163:1: ( RULE_TWOPOINTS )
+            // InternalTourDsl.g:2164:2: RULE_TWOPOINTS
             {
              before(grammarAccess.getPositionAccess().getTWOPOINTSTerminalRuleCall_5()); 
             match(input,RULE_TWOPOINTS,FOLLOW_2); 
@@ -5976,16 +6287,16 @@ public class InternalTourDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Position__Group__6"
-    // InternalTourDsl.g:2065:1: rule__Position__Group__6 : rule__Position__Group__6__Impl rule__Position__Group__7 ;
+    // InternalTourDsl.g:2173:1: rule__Position__Group__6 : rule__Position__Group__6__Impl rule__Position__Group__7 ;
     public final void rule__Position__Group__6() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTourDsl.g:2069:1: ( rule__Position__Group__6__Impl rule__Position__Group__7 )
-            // InternalTourDsl.g:2070:2: rule__Position__Group__6__Impl rule__Position__Group__7
+            // InternalTourDsl.g:2177:1: ( rule__Position__Group__6__Impl rule__Position__Group__7 )
+            // InternalTourDsl.g:2178:2: rule__Position__Group__6__Impl rule__Position__Group__7
             {
-            pushFollow(FOLLOW_19);
+            pushFollow(FOLLOW_20);
             rule__Position__Group__6__Impl();
 
             state._fsp--;
@@ -6014,29 +6325,29 @@ public class InternalTourDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Position__Group__6__Impl"
-    // InternalTourDsl.g:2077:1: rule__Position__Group__6__Impl : ( ( rule__Position__XAssignment_6 )? ) ;
+    // InternalTourDsl.g:2185:1: rule__Position__Group__6__Impl : ( ( rule__Position__XAssignment_6 )? ) ;
     public final void rule__Position__Group__6__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTourDsl.g:2081:1: ( ( ( rule__Position__XAssignment_6 )? ) )
-            // InternalTourDsl.g:2082:1: ( ( rule__Position__XAssignment_6 )? )
+            // InternalTourDsl.g:2189:1: ( ( ( rule__Position__XAssignment_6 )? ) )
+            // InternalTourDsl.g:2190:1: ( ( rule__Position__XAssignment_6 )? )
             {
-            // InternalTourDsl.g:2082:1: ( ( rule__Position__XAssignment_6 )? )
-            // InternalTourDsl.g:2083:2: ( rule__Position__XAssignment_6 )?
+            // InternalTourDsl.g:2190:1: ( ( rule__Position__XAssignment_6 )? )
+            // InternalTourDsl.g:2191:2: ( rule__Position__XAssignment_6 )?
             {
              before(grammarAccess.getPositionAccess().getXAssignment_6()); 
-            // InternalTourDsl.g:2084:2: ( rule__Position__XAssignment_6 )?
+            // InternalTourDsl.g:2192:2: ( rule__Position__XAssignment_6 )?
             int alt10=2;
             int LA10_0 = input.LA(1);
 
-            if ( (LA10_0==RULE_INT||(LA10_0>=32 && LA10_0<=33)) ) {
+            if ( (LA10_0==RULE_INT||(LA10_0>=33 && LA10_0<=34)) ) {
                 alt10=1;
             }
             switch (alt10) {
                 case 1 :
-                    // InternalTourDsl.g:2084:3: rule__Position__XAssignment_6
+                    // InternalTourDsl.g:2192:3: rule__Position__XAssignment_6
                     {
                     pushFollow(FOLLOW_2);
                     rule__Position__XAssignment_6();
@@ -6072,16 +6383,16 @@ public class InternalTourDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Position__Group__7"
-    // InternalTourDsl.g:2092:1: rule__Position__Group__7 : rule__Position__Group__7__Impl rule__Position__Group__8 ;
+    // InternalTourDsl.g:2200:1: rule__Position__Group__7 : rule__Position__Group__7__Impl rule__Position__Group__8 ;
     public final void rule__Position__Group__7() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTourDsl.g:2096:1: ( rule__Position__Group__7__Impl rule__Position__Group__8 )
-            // InternalTourDsl.g:2097:2: rule__Position__Group__7__Impl rule__Position__Group__8
+            // InternalTourDsl.g:2204:1: ( rule__Position__Group__7__Impl rule__Position__Group__8 )
+            // InternalTourDsl.g:2205:2: rule__Position__Group__7__Impl rule__Position__Group__8
             {
-            pushFollow(FOLLOW_24);
+            pushFollow(FOLLOW_25);
             rule__Position__Group__7__Impl();
 
             state._fsp--;
@@ -6110,17 +6421,17 @@ public class InternalTourDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Position__Group__7__Impl"
-    // InternalTourDsl.g:2104:1: rule__Position__Group__7__Impl : ( RULE_COMA ) ;
+    // InternalTourDsl.g:2212:1: rule__Position__Group__7__Impl : ( RULE_COMA ) ;
     public final void rule__Position__Group__7__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTourDsl.g:2108:1: ( ( RULE_COMA ) )
-            // InternalTourDsl.g:2109:1: ( RULE_COMA )
+            // InternalTourDsl.g:2216:1: ( ( RULE_COMA ) )
+            // InternalTourDsl.g:2217:1: ( RULE_COMA )
             {
-            // InternalTourDsl.g:2109:1: ( RULE_COMA )
-            // InternalTourDsl.g:2110:2: RULE_COMA
+            // InternalTourDsl.g:2217:1: ( RULE_COMA )
+            // InternalTourDsl.g:2218:2: RULE_COMA
             {
              before(grammarAccess.getPositionAccess().getCOMATerminalRuleCall_7()); 
             match(input,RULE_COMA,FOLLOW_2); 
@@ -6147,14 +6458,14 @@ public class InternalTourDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Position__Group__8"
-    // InternalTourDsl.g:2119:1: rule__Position__Group__8 : rule__Position__Group__8__Impl rule__Position__Group__9 ;
+    // InternalTourDsl.g:2227:1: rule__Position__Group__8 : rule__Position__Group__8__Impl rule__Position__Group__9 ;
     public final void rule__Position__Group__8() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTourDsl.g:2123:1: ( rule__Position__Group__8__Impl rule__Position__Group__9 )
-            // InternalTourDsl.g:2124:2: rule__Position__Group__8__Impl rule__Position__Group__9
+            // InternalTourDsl.g:2231:1: ( rule__Position__Group__8__Impl rule__Position__Group__9 )
+            // InternalTourDsl.g:2232:2: rule__Position__Group__8__Impl rule__Position__Group__9
             {
             pushFollow(FOLLOW_5);
             rule__Position__Group__8__Impl();
@@ -6185,17 +6496,17 @@ public class InternalTourDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Position__Group__8__Impl"
-    // InternalTourDsl.g:2131:1: rule__Position__Group__8__Impl : ( RULE_POSY ) ;
+    // InternalTourDsl.g:2239:1: rule__Position__Group__8__Impl : ( RULE_POSY ) ;
     public final void rule__Position__Group__8__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTourDsl.g:2135:1: ( ( RULE_POSY ) )
-            // InternalTourDsl.g:2136:1: ( RULE_POSY )
+            // InternalTourDsl.g:2243:1: ( ( RULE_POSY ) )
+            // InternalTourDsl.g:2244:1: ( RULE_POSY )
             {
-            // InternalTourDsl.g:2136:1: ( RULE_POSY )
-            // InternalTourDsl.g:2137:2: RULE_POSY
+            // InternalTourDsl.g:2244:1: ( RULE_POSY )
+            // InternalTourDsl.g:2245:2: RULE_POSY
             {
              before(grammarAccess.getPositionAccess().getPOSYTerminalRuleCall_8()); 
             match(input,RULE_POSY,FOLLOW_2); 
@@ -6222,16 +6533,16 @@ public class InternalTourDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Position__Group__9"
-    // InternalTourDsl.g:2146:1: rule__Position__Group__9 : rule__Position__Group__9__Impl rule__Position__Group__10 ;
+    // InternalTourDsl.g:2254:1: rule__Position__Group__9 : rule__Position__Group__9__Impl rule__Position__Group__10 ;
     public final void rule__Position__Group__9() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTourDsl.g:2150:1: ( rule__Position__Group__9__Impl rule__Position__Group__10 )
-            // InternalTourDsl.g:2151:2: rule__Position__Group__9__Impl rule__Position__Group__10
+            // InternalTourDsl.g:2258:1: ( rule__Position__Group__9__Impl rule__Position__Group__10 )
+            // InternalTourDsl.g:2259:2: rule__Position__Group__9__Impl rule__Position__Group__10
             {
-            pushFollow(FOLLOW_19);
+            pushFollow(FOLLOW_20);
             rule__Position__Group__9__Impl();
 
             state._fsp--;
@@ -6260,17 +6571,17 @@ public class InternalTourDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Position__Group__9__Impl"
-    // InternalTourDsl.g:2158:1: rule__Position__Group__9__Impl : ( RULE_TWOPOINTS ) ;
+    // InternalTourDsl.g:2266:1: rule__Position__Group__9__Impl : ( RULE_TWOPOINTS ) ;
     public final void rule__Position__Group__9__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTourDsl.g:2162:1: ( ( RULE_TWOPOINTS ) )
-            // InternalTourDsl.g:2163:1: ( RULE_TWOPOINTS )
+            // InternalTourDsl.g:2270:1: ( ( RULE_TWOPOINTS ) )
+            // InternalTourDsl.g:2271:1: ( RULE_TWOPOINTS )
             {
-            // InternalTourDsl.g:2163:1: ( RULE_TWOPOINTS )
-            // InternalTourDsl.g:2164:2: RULE_TWOPOINTS
+            // InternalTourDsl.g:2271:1: ( RULE_TWOPOINTS )
+            // InternalTourDsl.g:2272:2: RULE_TWOPOINTS
             {
              before(grammarAccess.getPositionAccess().getTWOPOINTSTerminalRuleCall_9()); 
             match(input,RULE_TWOPOINTS,FOLLOW_2); 
@@ -6297,16 +6608,16 @@ public class InternalTourDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Position__Group__10"
-    // InternalTourDsl.g:2173:1: rule__Position__Group__10 : rule__Position__Group__10__Impl rule__Position__Group__11 ;
+    // InternalTourDsl.g:2281:1: rule__Position__Group__10 : rule__Position__Group__10__Impl rule__Position__Group__11 ;
     public final void rule__Position__Group__10() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTourDsl.g:2177:1: ( rule__Position__Group__10__Impl rule__Position__Group__11 )
-            // InternalTourDsl.g:2178:2: rule__Position__Group__10__Impl rule__Position__Group__11
+            // InternalTourDsl.g:2285:1: ( rule__Position__Group__10__Impl rule__Position__Group__11 )
+            // InternalTourDsl.g:2286:2: rule__Position__Group__10__Impl rule__Position__Group__11
             {
-            pushFollow(FOLLOW_19);
+            pushFollow(FOLLOW_20);
             rule__Position__Group__10__Impl();
 
             state._fsp--;
@@ -6335,29 +6646,29 @@ public class InternalTourDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Position__Group__10__Impl"
-    // InternalTourDsl.g:2185:1: rule__Position__Group__10__Impl : ( ( rule__Position__YAssignment_10 )? ) ;
+    // InternalTourDsl.g:2293:1: rule__Position__Group__10__Impl : ( ( rule__Position__YAssignment_10 )? ) ;
     public final void rule__Position__Group__10__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTourDsl.g:2189:1: ( ( ( rule__Position__YAssignment_10 )? ) )
-            // InternalTourDsl.g:2190:1: ( ( rule__Position__YAssignment_10 )? )
+            // InternalTourDsl.g:2297:1: ( ( ( rule__Position__YAssignment_10 )? ) )
+            // InternalTourDsl.g:2298:1: ( ( rule__Position__YAssignment_10 )? )
             {
-            // InternalTourDsl.g:2190:1: ( ( rule__Position__YAssignment_10 )? )
-            // InternalTourDsl.g:2191:2: ( rule__Position__YAssignment_10 )?
+            // InternalTourDsl.g:2298:1: ( ( rule__Position__YAssignment_10 )? )
+            // InternalTourDsl.g:2299:2: ( rule__Position__YAssignment_10 )?
             {
              before(grammarAccess.getPositionAccess().getYAssignment_10()); 
-            // InternalTourDsl.g:2192:2: ( rule__Position__YAssignment_10 )?
+            // InternalTourDsl.g:2300:2: ( rule__Position__YAssignment_10 )?
             int alt11=2;
             int LA11_0 = input.LA(1);
 
-            if ( (LA11_0==RULE_INT||(LA11_0>=32 && LA11_0<=33)) ) {
+            if ( (LA11_0==RULE_INT||(LA11_0>=33 && LA11_0<=34)) ) {
                 alt11=1;
             }
             switch (alt11) {
                 case 1 :
-                    // InternalTourDsl.g:2192:3: rule__Position__YAssignment_10
+                    // InternalTourDsl.g:2300:3: rule__Position__YAssignment_10
                     {
                     pushFollow(FOLLOW_2);
                     rule__Position__YAssignment_10();
@@ -6393,16 +6704,16 @@ public class InternalTourDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Position__Group__11"
-    // InternalTourDsl.g:2200:1: rule__Position__Group__11 : rule__Position__Group__11__Impl rule__Position__Group__12 ;
+    // InternalTourDsl.g:2308:1: rule__Position__Group__11 : rule__Position__Group__11__Impl rule__Position__Group__12 ;
     public final void rule__Position__Group__11() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTourDsl.g:2204:1: ( rule__Position__Group__11__Impl rule__Position__Group__12 )
-            // InternalTourDsl.g:2205:2: rule__Position__Group__11__Impl rule__Position__Group__12
+            // InternalTourDsl.g:2312:1: ( rule__Position__Group__11__Impl rule__Position__Group__12 )
+            // InternalTourDsl.g:2313:2: rule__Position__Group__11__Impl rule__Position__Group__12
             {
-            pushFollow(FOLLOW_25);
+            pushFollow(FOLLOW_26);
             rule__Position__Group__11__Impl();
 
             state._fsp--;
@@ -6431,17 +6742,17 @@ public class InternalTourDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Position__Group__11__Impl"
-    // InternalTourDsl.g:2212:1: rule__Position__Group__11__Impl : ( RULE_COMA ) ;
+    // InternalTourDsl.g:2320:1: rule__Position__Group__11__Impl : ( RULE_COMA ) ;
     public final void rule__Position__Group__11__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTourDsl.g:2216:1: ( ( RULE_COMA ) )
-            // InternalTourDsl.g:2217:1: ( RULE_COMA )
+            // InternalTourDsl.g:2324:1: ( ( RULE_COMA ) )
+            // InternalTourDsl.g:2325:1: ( RULE_COMA )
             {
-            // InternalTourDsl.g:2217:1: ( RULE_COMA )
-            // InternalTourDsl.g:2218:2: RULE_COMA
+            // InternalTourDsl.g:2325:1: ( RULE_COMA )
+            // InternalTourDsl.g:2326:2: RULE_COMA
             {
              before(grammarAccess.getPositionAccess().getCOMATerminalRuleCall_11()); 
             match(input,RULE_COMA,FOLLOW_2); 
@@ -6468,14 +6779,14 @@ public class InternalTourDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Position__Group__12"
-    // InternalTourDsl.g:2227:1: rule__Position__Group__12 : rule__Position__Group__12__Impl rule__Position__Group__13 ;
+    // InternalTourDsl.g:2335:1: rule__Position__Group__12 : rule__Position__Group__12__Impl rule__Position__Group__13 ;
     public final void rule__Position__Group__12() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTourDsl.g:2231:1: ( rule__Position__Group__12__Impl rule__Position__Group__13 )
-            // InternalTourDsl.g:2232:2: rule__Position__Group__12__Impl rule__Position__Group__13
+            // InternalTourDsl.g:2339:1: ( rule__Position__Group__12__Impl rule__Position__Group__13 )
+            // InternalTourDsl.g:2340:2: rule__Position__Group__12__Impl rule__Position__Group__13
             {
             pushFollow(FOLLOW_5);
             rule__Position__Group__12__Impl();
@@ -6506,17 +6817,17 @@ public class InternalTourDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Position__Group__12__Impl"
-    // InternalTourDsl.g:2239:1: rule__Position__Group__12__Impl : ( RULE_POSZ ) ;
+    // InternalTourDsl.g:2347:1: rule__Position__Group__12__Impl : ( RULE_POSZ ) ;
     public final void rule__Position__Group__12__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTourDsl.g:2243:1: ( ( RULE_POSZ ) )
-            // InternalTourDsl.g:2244:1: ( RULE_POSZ )
+            // InternalTourDsl.g:2351:1: ( ( RULE_POSZ ) )
+            // InternalTourDsl.g:2352:1: ( RULE_POSZ )
             {
-            // InternalTourDsl.g:2244:1: ( RULE_POSZ )
-            // InternalTourDsl.g:2245:2: RULE_POSZ
+            // InternalTourDsl.g:2352:1: ( RULE_POSZ )
+            // InternalTourDsl.g:2353:2: RULE_POSZ
             {
              before(grammarAccess.getPositionAccess().getPOSZTerminalRuleCall_12()); 
             match(input,RULE_POSZ,FOLLOW_2); 
@@ -6543,16 +6854,16 @@ public class InternalTourDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Position__Group__13"
-    // InternalTourDsl.g:2254:1: rule__Position__Group__13 : rule__Position__Group__13__Impl rule__Position__Group__14 ;
+    // InternalTourDsl.g:2362:1: rule__Position__Group__13 : rule__Position__Group__13__Impl rule__Position__Group__14 ;
     public final void rule__Position__Group__13() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTourDsl.g:2258:1: ( rule__Position__Group__13__Impl rule__Position__Group__14 )
-            // InternalTourDsl.g:2259:2: rule__Position__Group__13__Impl rule__Position__Group__14
+            // InternalTourDsl.g:2366:1: ( rule__Position__Group__13__Impl rule__Position__Group__14 )
+            // InternalTourDsl.g:2367:2: rule__Position__Group__13__Impl rule__Position__Group__14
             {
-            pushFollow(FOLLOW_22);
+            pushFollow(FOLLOW_23);
             rule__Position__Group__13__Impl();
 
             state._fsp--;
@@ -6581,17 +6892,17 @@ public class InternalTourDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Position__Group__13__Impl"
-    // InternalTourDsl.g:2266:1: rule__Position__Group__13__Impl : ( RULE_TWOPOINTS ) ;
+    // InternalTourDsl.g:2374:1: rule__Position__Group__13__Impl : ( RULE_TWOPOINTS ) ;
     public final void rule__Position__Group__13__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTourDsl.g:2270:1: ( ( RULE_TWOPOINTS ) )
-            // InternalTourDsl.g:2271:1: ( RULE_TWOPOINTS )
+            // InternalTourDsl.g:2378:1: ( ( RULE_TWOPOINTS ) )
+            // InternalTourDsl.g:2379:1: ( RULE_TWOPOINTS )
             {
-            // InternalTourDsl.g:2271:1: ( RULE_TWOPOINTS )
-            // InternalTourDsl.g:2272:2: RULE_TWOPOINTS
+            // InternalTourDsl.g:2379:1: ( RULE_TWOPOINTS )
+            // InternalTourDsl.g:2380:2: RULE_TWOPOINTS
             {
              before(grammarAccess.getPositionAccess().getTWOPOINTSTerminalRuleCall_13()); 
             match(input,RULE_TWOPOINTS,FOLLOW_2); 
@@ -6618,16 +6929,16 @@ public class InternalTourDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Position__Group__14"
-    // InternalTourDsl.g:2281:1: rule__Position__Group__14 : rule__Position__Group__14__Impl rule__Position__Group__15 ;
+    // InternalTourDsl.g:2389:1: rule__Position__Group__14 : rule__Position__Group__14__Impl rule__Position__Group__15 ;
     public final void rule__Position__Group__14() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTourDsl.g:2285:1: ( rule__Position__Group__14__Impl rule__Position__Group__15 )
-            // InternalTourDsl.g:2286:2: rule__Position__Group__14__Impl rule__Position__Group__15
+            // InternalTourDsl.g:2393:1: ( rule__Position__Group__14__Impl rule__Position__Group__15 )
+            // InternalTourDsl.g:2394:2: rule__Position__Group__14__Impl rule__Position__Group__15
             {
-            pushFollow(FOLLOW_22);
+            pushFollow(FOLLOW_23);
             rule__Position__Group__14__Impl();
 
             state._fsp--;
@@ -6656,29 +6967,29 @@ public class InternalTourDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Position__Group__14__Impl"
-    // InternalTourDsl.g:2293:1: rule__Position__Group__14__Impl : ( ( rule__Position__ZAssignment_14 )? ) ;
+    // InternalTourDsl.g:2401:1: rule__Position__Group__14__Impl : ( ( rule__Position__ZAssignment_14 )? ) ;
     public final void rule__Position__Group__14__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTourDsl.g:2297:1: ( ( ( rule__Position__ZAssignment_14 )? ) )
-            // InternalTourDsl.g:2298:1: ( ( rule__Position__ZAssignment_14 )? )
+            // InternalTourDsl.g:2405:1: ( ( ( rule__Position__ZAssignment_14 )? ) )
+            // InternalTourDsl.g:2406:1: ( ( rule__Position__ZAssignment_14 )? )
             {
-            // InternalTourDsl.g:2298:1: ( ( rule__Position__ZAssignment_14 )? )
-            // InternalTourDsl.g:2299:2: ( rule__Position__ZAssignment_14 )?
+            // InternalTourDsl.g:2406:1: ( ( rule__Position__ZAssignment_14 )? )
+            // InternalTourDsl.g:2407:2: ( rule__Position__ZAssignment_14 )?
             {
              before(grammarAccess.getPositionAccess().getZAssignment_14()); 
-            // InternalTourDsl.g:2300:2: ( rule__Position__ZAssignment_14 )?
+            // InternalTourDsl.g:2408:2: ( rule__Position__ZAssignment_14 )?
             int alt12=2;
             int LA12_0 = input.LA(1);
 
-            if ( (LA12_0==RULE_INT||(LA12_0>=32 && LA12_0<=33)) ) {
+            if ( (LA12_0==RULE_INT||(LA12_0>=33 && LA12_0<=34)) ) {
                 alt12=1;
             }
             switch (alt12) {
                 case 1 :
-                    // InternalTourDsl.g:2300:3: rule__Position__ZAssignment_14
+                    // InternalTourDsl.g:2408:3: rule__Position__ZAssignment_14
                     {
                     pushFollow(FOLLOW_2);
                     rule__Position__ZAssignment_14();
@@ -6714,14 +7025,14 @@ public class InternalTourDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Position__Group__15"
-    // InternalTourDsl.g:2308:1: rule__Position__Group__15 : rule__Position__Group__15__Impl ;
+    // InternalTourDsl.g:2416:1: rule__Position__Group__15 : rule__Position__Group__15__Impl ;
     public final void rule__Position__Group__15() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTourDsl.g:2312:1: ( rule__Position__Group__15__Impl )
-            // InternalTourDsl.g:2313:2: rule__Position__Group__15__Impl
+            // InternalTourDsl.g:2420:1: ( rule__Position__Group__15__Impl )
+            // InternalTourDsl.g:2421:2: rule__Position__Group__15__Impl
             {
             pushFollow(FOLLOW_2);
             rule__Position__Group__15__Impl();
@@ -6747,17 +7058,17 @@ public class InternalTourDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Position__Group__15__Impl"
-    // InternalTourDsl.g:2319:1: rule__Position__Group__15__Impl : ( RULE_RBRACKET ) ;
+    // InternalTourDsl.g:2427:1: rule__Position__Group__15__Impl : ( RULE_RBRACKET ) ;
     public final void rule__Position__Group__15__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTourDsl.g:2323:1: ( ( RULE_RBRACKET ) )
-            // InternalTourDsl.g:2324:1: ( RULE_RBRACKET )
+            // InternalTourDsl.g:2431:1: ( ( RULE_RBRACKET ) )
+            // InternalTourDsl.g:2432:1: ( RULE_RBRACKET )
             {
-            // InternalTourDsl.g:2324:1: ( RULE_RBRACKET )
-            // InternalTourDsl.g:2325:2: RULE_RBRACKET
+            // InternalTourDsl.g:2432:1: ( RULE_RBRACKET )
+            // InternalTourDsl.g:2433:2: RULE_RBRACKET
             {
              before(grammarAccess.getPositionAccess().getRBRACKETTerminalRuleCall_15()); 
             match(input,RULE_RBRACKET,FOLLOW_2); 
@@ -6784,16 +7095,16 @@ public class InternalTourDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__EDouble__Group__0"
-    // InternalTourDsl.g:2335:1: rule__EDouble__Group__0 : rule__EDouble__Group__0__Impl rule__EDouble__Group__1 ;
+    // InternalTourDsl.g:2443:1: rule__EDouble__Group__0 : rule__EDouble__Group__0__Impl rule__EDouble__Group__1 ;
     public final void rule__EDouble__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTourDsl.g:2339:1: ( rule__EDouble__Group__0__Impl rule__EDouble__Group__1 )
-            // InternalTourDsl.g:2340:2: rule__EDouble__Group__0__Impl rule__EDouble__Group__1
+            // InternalTourDsl.g:2447:1: ( rule__EDouble__Group__0__Impl rule__EDouble__Group__1 )
+            // InternalTourDsl.g:2448:2: rule__EDouble__Group__0__Impl rule__EDouble__Group__1
             {
-            pushFollow(FOLLOW_26);
+            pushFollow(FOLLOW_27);
             rule__EDouble__Group__0__Impl();
 
             state._fsp--;
@@ -6822,31 +7133,31 @@ public class InternalTourDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__EDouble__Group__0__Impl"
-    // InternalTourDsl.g:2347:1: rule__EDouble__Group__0__Impl : ( ( '-' )? ) ;
+    // InternalTourDsl.g:2455:1: rule__EDouble__Group__0__Impl : ( ( '-' )? ) ;
     public final void rule__EDouble__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTourDsl.g:2351:1: ( ( ( '-' )? ) )
-            // InternalTourDsl.g:2352:1: ( ( '-' )? )
+            // InternalTourDsl.g:2459:1: ( ( ( '-' )? ) )
+            // InternalTourDsl.g:2460:1: ( ( '-' )? )
             {
-            // InternalTourDsl.g:2352:1: ( ( '-' )? )
-            // InternalTourDsl.g:2353:2: ( '-' )?
+            // InternalTourDsl.g:2460:1: ( ( '-' )? )
+            // InternalTourDsl.g:2461:2: ( '-' )?
             {
              before(grammarAccess.getEDoubleAccess().getHyphenMinusKeyword_0()); 
-            // InternalTourDsl.g:2354:2: ( '-' )?
+            // InternalTourDsl.g:2462:2: ( '-' )?
             int alt13=2;
             int LA13_0 = input.LA(1);
 
-            if ( (LA13_0==32) ) {
+            if ( (LA13_0==33) ) {
                 alt13=1;
             }
             switch (alt13) {
                 case 1 :
-                    // InternalTourDsl.g:2354:3: '-'
+                    // InternalTourDsl.g:2462:3: '-'
                     {
-                    match(input,32,FOLLOW_2); 
+                    match(input,33,FOLLOW_2); 
 
                     }
                     break;
@@ -6876,16 +7187,16 @@ public class InternalTourDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__EDouble__Group__1"
-    // InternalTourDsl.g:2362:1: rule__EDouble__Group__1 : rule__EDouble__Group__1__Impl rule__EDouble__Group__2 ;
+    // InternalTourDsl.g:2470:1: rule__EDouble__Group__1 : rule__EDouble__Group__1__Impl rule__EDouble__Group__2 ;
     public final void rule__EDouble__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTourDsl.g:2366:1: ( rule__EDouble__Group__1__Impl rule__EDouble__Group__2 )
-            // InternalTourDsl.g:2367:2: rule__EDouble__Group__1__Impl rule__EDouble__Group__2
+            // InternalTourDsl.g:2474:1: ( rule__EDouble__Group__1__Impl rule__EDouble__Group__2 )
+            // InternalTourDsl.g:2475:2: rule__EDouble__Group__1__Impl rule__EDouble__Group__2
             {
-            pushFollow(FOLLOW_26);
+            pushFollow(FOLLOW_27);
             rule__EDouble__Group__1__Impl();
 
             state._fsp--;
@@ -6914,20 +7225,20 @@ public class InternalTourDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__EDouble__Group__1__Impl"
-    // InternalTourDsl.g:2374:1: rule__EDouble__Group__1__Impl : ( ( RULE_INT )? ) ;
+    // InternalTourDsl.g:2482:1: rule__EDouble__Group__1__Impl : ( ( RULE_INT )? ) ;
     public final void rule__EDouble__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTourDsl.g:2378:1: ( ( ( RULE_INT )? ) )
-            // InternalTourDsl.g:2379:1: ( ( RULE_INT )? )
+            // InternalTourDsl.g:2486:1: ( ( ( RULE_INT )? ) )
+            // InternalTourDsl.g:2487:1: ( ( RULE_INT )? )
             {
-            // InternalTourDsl.g:2379:1: ( ( RULE_INT )? )
-            // InternalTourDsl.g:2380:2: ( RULE_INT )?
+            // InternalTourDsl.g:2487:1: ( ( RULE_INT )? )
+            // InternalTourDsl.g:2488:2: ( RULE_INT )?
             {
              before(grammarAccess.getEDoubleAccess().getINTTerminalRuleCall_1()); 
-            // InternalTourDsl.g:2381:2: ( RULE_INT )?
+            // InternalTourDsl.g:2489:2: ( RULE_INT )?
             int alt14=2;
             int LA14_0 = input.LA(1);
 
@@ -6936,7 +7247,7 @@ public class InternalTourDslParser extends AbstractInternalContentAssistParser {
             }
             switch (alt14) {
                 case 1 :
-                    // InternalTourDsl.g:2381:3: RULE_INT
+                    // InternalTourDsl.g:2489:3: RULE_INT
                     {
                     match(input,RULE_INT,FOLLOW_2); 
 
@@ -6968,16 +7279,16 @@ public class InternalTourDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__EDouble__Group__2"
-    // InternalTourDsl.g:2389:1: rule__EDouble__Group__2 : rule__EDouble__Group__2__Impl rule__EDouble__Group__3 ;
+    // InternalTourDsl.g:2497:1: rule__EDouble__Group__2 : rule__EDouble__Group__2__Impl rule__EDouble__Group__3 ;
     public final void rule__EDouble__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTourDsl.g:2393:1: ( rule__EDouble__Group__2__Impl rule__EDouble__Group__3 )
-            // InternalTourDsl.g:2394:2: rule__EDouble__Group__2__Impl rule__EDouble__Group__3
+            // InternalTourDsl.g:2501:1: ( rule__EDouble__Group__2__Impl rule__EDouble__Group__3 )
+            // InternalTourDsl.g:2502:2: rule__EDouble__Group__2__Impl rule__EDouble__Group__3
             {
-            pushFollow(FOLLOW_27);
+            pushFollow(FOLLOW_28);
             rule__EDouble__Group__2__Impl();
 
             state._fsp--;
@@ -7006,20 +7317,20 @@ public class InternalTourDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__EDouble__Group__2__Impl"
-    // InternalTourDsl.g:2401:1: rule__EDouble__Group__2__Impl : ( '.' ) ;
+    // InternalTourDsl.g:2509:1: rule__EDouble__Group__2__Impl : ( '.' ) ;
     public final void rule__EDouble__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTourDsl.g:2405:1: ( ( '.' ) )
-            // InternalTourDsl.g:2406:1: ( '.' )
+            // InternalTourDsl.g:2513:1: ( ( '.' ) )
+            // InternalTourDsl.g:2514:1: ( '.' )
             {
-            // InternalTourDsl.g:2406:1: ( '.' )
-            // InternalTourDsl.g:2407:2: '.'
+            // InternalTourDsl.g:2514:1: ( '.' )
+            // InternalTourDsl.g:2515:2: '.'
             {
              before(grammarAccess.getEDoubleAccess().getFullStopKeyword_2()); 
-            match(input,33,FOLLOW_2); 
+            match(input,34,FOLLOW_2); 
              after(grammarAccess.getEDoubleAccess().getFullStopKeyword_2()); 
 
             }
@@ -7043,16 +7354,16 @@ public class InternalTourDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__EDouble__Group__3"
-    // InternalTourDsl.g:2416:1: rule__EDouble__Group__3 : rule__EDouble__Group__3__Impl rule__EDouble__Group__4 ;
+    // InternalTourDsl.g:2524:1: rule__EDouble__Group__3 : rule__EDouble__Group__3__Impl rule__EDouble__Group__4 ;
     public final void rule__EDouble__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTourDsl.g:2420:1: ( rule__EDouble__Group__3__Impl rule__EDouble__Group__4 )
-            // InternalTourDsl.g:2421:2: rule__EDouble__Group__3__Impl rule__EDouble__Group__4
+            // InternalTourDsl.g:2528:1: ( rule__EDouble__Group__3__Impl rule__EDouble__Group__4 )
+            // InternalTourDsl.g:2529:2: rule__EDouble__Group__3__Impl rule__EDouble__Group__4
             {
-            pushFollow(FOLLOW_28);
+            pushFollow(FOLLOW_29);
             rule__EDouble__Group__3__Impl();
 
             state._fsp--;
@@ -7081,17 +7392,17 @@ public class InternalTourDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__EDouble__Group__3__Impl"
-    // InternalTourDsl.g:2428:1: rule__EDouble__Group__3__Impl : ( RULE_INT ) ;
+    // InternalTourDsl.g:2536:1: rule__EDouble__Group__3__Impl : ( RULE_INT ) ;
     public final void rule__EDouble__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTourDsl.g:2432:1: ( ( RULE_INT ) )
-            // InternalTourDsl.g:2433:1: ( RULE_INT )
+            // InternalTourDsl.g:2540:1: ( ( RULE_INT ) )
+            // InternalTourDsl.g:2541:1: ( RULE_INT )
             {
-            // InternalTourDsl.g:2433:1: ( RULE_INT )
-            // InternalTourDsl.g:2434:2: RULE_INT
+            // InternalTourDsl.g:2541:1: ( RULE_INT )
+            // InternalTourDsl.g:2542:2: RULE_INT
             {
              before(grammarAccess.getEDoubleAccess().getINTTerminalRuleCall_3()); 
             match(input,RULE_INT,FOLLOW_2); 
@@ -7118,14 +7429,14 @@ public class InternalTourDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__EDouble__Group__4"
-    // InternalTourDsl.g:2443:1: rule__EDouble__Group__4 : rule__EDouble__Group__4__Impl ;
+    // InternalTourDsl.g:2551:1: rule__EDouble__Group__4 : rule__EDouble__Group__4__Impl ;
     public final void rule__EDouble__Group__4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTourDsl.g:2447:1: ( rule__EDouble__Group__4__Impl )
-            // InternalTourDsl.g:2448:2: rule__EDouble__Group__4__Impl
+            // InternalTourDsl.g:2555:1: ( rule__EDouble__Group__4__Impl )
+            // InternalTourDsl.g:2556:2: rule__EDouble__Group__4__Impl
             {
             pushFollow(FOLLOW_2);
             rule__EDouble__Group__4__Impl();
@@ -7151,29 +7462,29 @@ public class InternalTourDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__EDouble__Group__4__Impl"
-    // InternalTourDsl.g:2454:1: rule__EDouble__Group__4__Impl : ( ( rule__EDouble__Group_4__0 )? ) ;
+    // InternalTourDsl.g:2562:1: rule__EDouble__Group__4__Impl : ( ( rule__EDouble__Group_4__0 )? ) ;
     public final void rule__EDouble__Group__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTourDsl.g:2458:1: ( ( ( rule__EDouble__Group_4__0 )? ) )
-            // InternalTourDsl.g:2459:1: ( ( rule__EDouble__Group_4__0 )? )
+            // InternalTourDsl.g:2566:1: ( ( ( rule__EDouble__Group_4__0 )? ) )
+            // InternalTourDsl.g:2567:1: ( ( rule__EDouble__Group_4__0 )? )
             {
-            // InternalTourDsl.g:2459:1: ( ( rule__EDouble__Group_4__0 )? )
-            // InternalTourDsl.g:2460:2: ( rule__EDouble__Group_4__0 )?
+            // InternalTourDsl.g:2567:1: ( ( rule__EDouble__Group_4__0 )? )
+            // InternalTourDsl.g:2568:2: ( rule__EDouble__Group_4__0 )?
             {
              before(grammarAccess.getEDoubleAccess().getGroup_4()); 
-            // InternalTourDsl.g:2461:2: ( rule__EDouble__Group_4__0 )?
+            // InternalTourDsl.g:2569:2: ( rule__EDouble__Group_4__0 )?
             int alt15=2;
             int LA15_0 = input.LA(1);
 
-            if ( ((LA15_0>=30 && LA15_0<=31)) ) {
+            if ( ((LA15_0>=31 && LA15_0<=32)) ) {
                 alt15=1;
             }
             switch (alt15) {
                 case 1 :
-                    // InternalTourDsl.g:2461:3: rule__EDouble__Group_4__0
+                    // InternalTourDsl.g:2569:3: rule__EDouble__Group_4__0
                     {
                     pushFollow(FOLLOW_2);
                     rule__EDouble__Group_4__0();
@@ -7209,16 +7520,16 @@ public class InternalTourDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__EDouble__Group_4__0"
-    // InternalTourDsl.g:2470:1: rule__EDouble__Group_4__0 : rule__EDouble__Group_4__0__Impl rule__EDouble__Group_4__1 ;
+    // InternalTourDsl.g:2578:1: rule__EDouble__Group_4__0 : rule__EDouble__Group_4__0__Impl rule__EDouble__Group_4__1 ;
     public final void rule__EDouble__Group_4__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTourDsl.g:2474:1: ( rule__EDouble__Group_4__0__Impl rule__EDouble__Group_4__1 )
-            // InternalTourDsl.g:2475:2: rule__EDouble__Group_4__0__Impl rule__EDouble__Group_4__1
+            // InternalTourDsl.g:2582:1: ( rule__EDouble__Group_4__0__Impl rule__EDouble__Group_4__1 )
+            // InternalTourDsl.g:2583:2: rule__EDouble__Group_4__0__Impl rule__EDouble__Group_4__1
             {
-            pushFollow(FOLLOW_29);
+            pushFollow(FOLLOW_30);
             rule__EDouble__Group_4__0__Impl();
 
             state._fsp--;
@@ -7247,21 +7558,21 @@ public class InternalTourDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__EDouble__Group_4__0__Impl"
-    // InternalTourDsl.g:2482:1: rule__EDouble__Group_4__0__Impl : ( ( rule__EDouble__Alternatives_4_0 ) ) ;
+    // InternalTourDsl.g:2590:1: rule__EDouble__Group_4__0__Impl : ( ( rule__EDouble__Alternatives_4_0 ) ) ;
     public final void rule__EDouble__Group_4__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTourDsl.g:2486:1: ( ( ( rule__EDouble__Alternatives_4_0 ) ) )
-            // InternalTourDsl.g:2487:1: ( ( rule__EDouble__Alternatives_4_0 ) )
+            // InternalTourDsl.g:2594:1: ( ( ( rule__EDouble__Alternatives_4_0 ) ) )
+            // InternalTourDsl.g:2595:1: ( ( rule__EDouble__Alternatives_4_0 ) )
             {
-            // InternalTourDsl.g:2487:1: ( ( rule__EDouble__Alternatives_4_0 ) )
-            // InternalTourDsl.g:2488:2: ( rule__EDouble__Alternatives_4_0 )
+            // InternalTourDsl.g:2595:1: ( ( rule__EDouble__Alternatives_4_0 ) )
+            // InternalTourDsl.g:2596:2: ( rule__EDouble__Alternatives_4_0 )
             {
              before(grammarAccess.getEDoubleAccess().getAlternatives_4_0()); 
-            // InternalTourDsl.g:2489:2: ( rule__EDouble__Alternatives_4_0 )
-            // InternalTourDsl.g:2489:3: rule__EDouble__Alternatives_4_0
+            // InternalTourDsl.g:2597:2: ( rule__EDouble__Alternatives_4_0 )
+            // InternalTourDsl.g:2597:3: rule__EDouble__Alternatives_4_0
             {
             pushFollow(FOLLOW_2);
             rule__EDouble__Alternatives_4_0();
@@ -7294,16 +7605,16 @@ public class InternalTourDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__EDouble__Group_4__1"
-    // InternalTourDsl.g:2497:1: rule__EDouble__Group_4__1 : rule__EDouble__Group_4__1__Impl rule__EDouble__Group_4__2 ;
+    // InternalTourDsl.g:2605:1: rule__EDouble__Group_4__1 : rule__EDouble__Group_4__1__Impl rule__EDouble__Group_4__2 ;
     public final void rule__EDouble__Group_4__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTourDsl.g:2501:1: ( rule__EDouble__Group_4__1__Impl rule__EDouble__Group_4__2 )
-            // InternalTourDsl.g:2502:2: rule__EDouble__Group_4__1__Impl rule__EDouble__Group_4__2
+            // InternalTourDsl.g:2609:1: ( rule__EDouble__Group_4__1__Impl rule__EDouble__Group_4__2 )
+            // InternalTourDsl.g:2610:2: rule__EDouble__Group_4__1__Impl rule__EDouble__Group_4__2
             {
-            pushFollow(FOLLOW_29);
+            pushFollow(FOLLOW_30);
             rule__EDouble__Group_4__1__Impl();
 
             state._fsp--;
@@ -7332,31 +7643,31 @@ public class InternalTourDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__EDouble__Group_4__1__Impl"
-    // InternalTourDsl.g:2509:1: rule__EDouble__Group_4__1__Impl : ( ( '-' )? ) ;
+    // InternalTourDsl.g:2617:1: rule__EDouble__Group_4__1__Impl : ( ( '-' )? ) ;
     public final void rule__EDouble__Group_4__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTourDsl.g:2513:1: ( ( ( '-' )? ) )
-            // InternalTourDsl.g:2514:1: ( ( '-' )? )
+            // InternalTourDsl.g:2621:1: ( ( ( '-' )? ) )
+            // InternalTourDsl.g:2622:1: ( ( '-' )? )
             {
-            // InternalTourDsl.g:2514:1: ( ( '-' )? )
-            // InternalTourDsl.g:2515:2: ( '-' )?
+            // InternalTourDsl.g:2622:1: ( ( '-' )? )
+            // InternalTourDsl.g:2623:2: ( '-' )?
             {
              before(grammarAccess.getEDoubleAccess().getHyphenMinusKeyword_4_1()); 
-            // InternalTourDsl.g:2516:2: ( '-' )?
+            // InternalTourDsl.g:2624:2: ( '-' )?
             int alt16=2;
             int LA16_0 = input.LA(1);
 
-            if ( (LA16_0==32) ) {
+            if ( (LA16_0==33) ) {
                 alt16=1;
             }
             switch (alt16) {
                 case 1 :
-                    // InternalTourDsl.g:2516:3: '-'
+                    // InternalTourDsl.g:2624:3: '-'
                     {
-                    match(input,32,FOLLOW_2); 
+                    match(input,33,FOLLOW_2); 
 
                     }
                     break;
@@ -7386,14 +7697,14 @@ public class InternalTourDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__EDouble__Group_4__2"
-    // InternalTourDsl.g:2524:1: rule__EDouble__Group_4__2 : rule__EDouble__Group_4__2__Impl ;
+    // InternalTourDsl.g:2632:1: rule__EDouble__Group_4__2 : rule__EDouble__Group_4__2__Impl ;
     public final void rule__EDouble__Group_4__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTourDsl.g:2528:1: ( rule__EDouble__Group_4__2__Impl )
-            // InternalTourDsl.g:2529:2: rule__EDouble__Group_4__2__Impl
+            // InternalTourDsl.g:2636:1: ( rule__EDouble__Group_4__2__Impl )
+            // InternalTourDsl.g:2637:2: rule__EDouble__Group_4__2__Impl
             {
             pushFollow(FOLLOW_2);
             rule__EDouble__Group_4__2__Impl();
@@ -7419,17 +7730,17 @@ public class InternalTourDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__EDouble__Group_4__2__Impl"
-    // InternalTourDsl.g:2535:1: rule__EDouble__Group_4__2__Impl : ( RULE_INT ) ;
+    // InternalTourDsl.g:2643:1: rule__EDouble__Group_4__2__Impl : ( RULE_INT ) ;
     public final void rule__EDouble__Group_4__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTourDsl.g:2539:1: ( ( RULE_INT ) )
-            // InternalTourDsl.g:2540:1: ( RULE_INT )
+            // InternalTourDsl.g:2647:1: ( ( RULE_INT ) )
+            // InternalTourDsl.g:2648:1: ( RULE_INT )
             {
-            // InternalTourDsl.g:2540:1: ( RULE_INT )
-            // InternalTourDsl.g:2541:2: RULE_INT
+            // InternalTourDsl.g:2648:1: ( RULE_INT )
+            // InternalTourDsl.g:2649:2: RULE_INT
             {
              before(grammarAccess.getEDoubleAccess().getINTTerminalRuleCall_4_2()); 
             match(input,RULE_INT,FOLLOW_2); 
@@ -7456,17 +7767,17 @@ public class InternalTourDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Tour__NameAssignment_4"
-    // InternalTourDsl.g:2551:1: rule__Tour__NameAssignment_4 : ( ruleEString ) ;
+    // InternalTourDsl.g:2659:1: rule__Tour__NameAssignment_4 : ( ruleEString ) ;
     public final void rule__Tour__NameAssignment_4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTourDsl.g:2555:1: ( ( ruleEString ) )
-            // InternalTourDsl.g:2556:2: ( ruleEString )
+            // InternalTourDsl.g:2663:1: ( ( ruleEString ) )
+            // InternalTourDsl.g:2664:2: ( ruleEString )
             {
-            // InternalTourDsl.g:2556:2: ( ruleEString )
-            // InternalTourDsl.g:2557:3: ruleEString
+            // InternalTourDsl.g:2664:2: ( ruleEString )
+            // InternalTourDsl.g:2665:3: ruleEString
             {
              before(grammarAccess.getTourAccess().getNameEStringParserRuleCall_4_0()); 
             pushFollow(FOLLOW_2);
@@ -7497,17 +7808,17 @@ public class InternalTourDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Tour__PanoramaAssignment_9"
-    // InternalTourDsl.g:2566:1: rule__Tour__PanoramaAssignment_9 : ( rulePanorama ) ;
+    // InternalTourDsl.g:2674:1: rule__Tour__PanoramaAssignment_9 : ( rulePanorama ) ;
     public final void rule__Tour__PanoramaAssignment_9() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTourDsl.g:2570:1: ( ( rulePanorama ) )
-            // InternalTourDsl.g:2571:2: ( rulePanorama )
+            // InternalTourDsl.g:2678:1: ( ( rulePanorama ) )
+            // InternalTourDsl.g:2679:2: ( rulePanorama )
             {
-            // InternalTourDsl.g:2571:2: ( rulePanorama )
-            // InternalTourDsl.g:2572:3: rulePanorama
+            // InternalTourDsl.g:2679:2: ( rulePanorama )
+            // InternalTourDsl.g:2680:3: rulePanorama
             {
              before(grammarAccess.getTourAccess().getPanoramaPanoramaParserRuleCall_9_0()); 
             pushFollow(FOLLOW_2);
@@ -7538,17 +7849,17 @@ public class InternalTourDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Panorama__NameAssignment_4"
-    // InternalTourDsl.g:2581:1: rule__Panorama__NameAssignment_4 : ( ruleEString ) ;
+    // InternalTourDsl.g:2689:1: rule__Panorama__NameAssignment_4 : ( ruleEString ) ;
     public final void rule__Panorama__NameAssignment_4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTourDsl.g:2585:1: ( ( ruleEString ) )
-            // InternalTourDsl.g:2586:2: ( ruleEString )
+            // InternalTourDsl.g:2693:1: ( ( ruleEString ) )
+            // InternalTourDsl.g:2694:2: ( ruleEString )
             {
-            // InternalTourDsl.g:2586:2: ( ruleEString )
-            // InternalTourDsl.g:2587:3: ruleEString
+            // InternalTourDsl.g:2694:2: ( ruleEString )
+            // InternalTourDsl.g:2695:3: ruleEString
             {
              before(grammarAccess.getPanoramaAccess().getNameEStringParserRuleCall_4_0()); 
             pushFollow(FOLLOW_2);
@@ -7579,17 +7890,17 @@ public class InternalTourDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Panorama__DescriptionAssignment_8"
-    // InternalTourDsl.g:2596:1: rule__Panorama__DescriptionAssignment_8 : ( ruleEString ) ;
+    // InternalTourDsl.g:2704:1: rule__Panorama__DescriptionAssignment_8 : ( ruleEString ) ;
     public final void rule__Panorama__DescriptionAssignment_8() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTourDsl.g:2600:1: ( ( ruleEString ) )
-            // InternalTourDsl.g:2601:2: ( ruleEString )
+            // InternalTourDsl.g:2708:1: ( ( ruleEString ) )
+            // InternalTourDsl.g:2709:2: ( ruleEString )
             {
-            // InternalTourDsl.g:2601:2: ( ruleEString )
-            // InternalTourDsl.g:2602:3: ruleEString
+            // InternalTourDsl.g:2709:2: ( ruleEString )
+            // InternalTourDsl.g:2710:3: ruleEString
             {
              before(grammarAccess.getPanoramaAccess().getDescriptionEStringParserRuleCall_8_0()); 
             pushFollow(FOLLOW_2);
@@ -7619,26 +7930,26 @@ public class InternalTourDslParser extends AbstractInternalContentAssistParser {
     // $ANTLR end "rule__Panorama__DescriptionAssignment_8"
 
 
-    // $ANTLR start "rule__Panorama__HotspotAssignment_13"
-    // InternalTourDsl.g:2611:1: rule__Panorama__HotspotAssignment_13 : ( ruleHotspot ) ;
-    public final void rule__Panorama__HotspotAssignment_13() throws RecognitionException {
+    // $ANTLR start "rule__Panorama__ImagePathAssignment_12"
+    // InternalTourDsl.g:2719:1: rule__Panorama__ImagePathAssignment_12 : ( ruleEString ) ;
+    public final void rule__Panorama__ImagePathAssignment_12() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTourDsl.g:2615:1: ( ( ruleHotspot ) )
-            // InternalTourDsl.g:2616:2: ( ruleHotspot )
+            // InternalTourDsl.g:2723:1: ( ( ruleEString ) )
+            // InternalTourDsl.g:2724:2: ( ruleEString )
             {
-            // InternalTourDsl.g:2616:2: ( ruleHotspot )
-            // InternalTourDsl.g:2617:3: ruleHotspot
+            // InternalTourDsl.g:2724:2: ( ruleEString )
+            // InternalTourDsl.g:2725:3: ruleEString
             {
-             before(grammarAccess.getPanoramaAccess().getHotspotHotspotParserRuleCall_13_0()); 
+             before(grammarAccess.getPanoramaAccess().getImagePathEStringParserRuleCall_12_0()); 
             pushFollow(FOLLOW_2);
-            ruleHotspot();
+            ruleEString();
 
             state._fsp--;
 
-             after(grammarAccess.getPanoramaAccess().getHotspotHotspotParserRuleCall_13_0()); 
+             after(grammarAccess.getPanoramaAccess().getImagePathEStringParserRuleCall_12_0()); 
 
             }
 
@@ -7657,21 +7968,62 @@ public class InternalTourDslParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__Panorama__HotspotAssignment_13"
+    // $ANTLR end "rule__Panorama__ImagePathAssignment_12"
+
+
+    // $ANTLR start "rule__Panorama__HotspotAssignment_17"
+    // InternalTourDsl.g:2734:1: rule__Panorama__HotspotAssignment_17 : ( ruleHotspot ) ;
+    public final void rule__Panorama__HotspotAssignment_17() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+        	
+        try {
+            // InternalTourDsl.g:2738:1: ( ( ruleHotspot ) )
+            // InternalTourDsl.g:2739:2: ( ruleHotspot )
+            {
+            // InternalTourDsl.g:2739:2: ( ruleHotspot )
+            // InternalTourDsl.g:2740:3: ruleHotspot
+            {
+             before(grammarAccess.getPanoramaAccess().getHotspotHotspotParserRuleCall_17_0()); 
+            pushFollow(FOLLOW_2);
+            ruleHotspot();
+
+            state._fsp--;
+
+             after(grammarAccess.getPanoramaAccess().getHotspotHotspotParserRuleCall_17_0()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Panorama__HotspotAssignment_17"
 
 
     // $ANTLR start "rule__Hotspot__NameAssignment_4"
-    // InternalTourDsl.g:2626:1: rule__Hotspot__NameAssignment_4 : ( ruleEString ) ;
+    // InternalTourDsl.g:2749:1: rule__Hotspot__NameAssignment_4 : ( ruleEString ) ;
     public final void rule__Hotspot__NameAssignment_4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTourDsl.g:2630:1: ( ( ruleEString ) )
-            // InternalTourDsl.g:2631:2: ( ruleEString )
+            // InternalTourDsl.g:2753:1: ( ( ruleEString ) )
+            // InternalTourDsl.g:2754:2: ( ruleEString )
             {
-            // InternalTourDsl.g:2631:2: ( ruleEString )
-            // InternalTourDsl.g:2632:3: ruleEString
+            // InternalTourDsl.g:2754:2: ( ruleEString )
+            // InternalTourDsl.g:2755:3: ruleEString
             {
              before(grammarAccess.getHotspotAccess().getNameEStringParserRuleCall_4_0()); 
             pushFollow(FOLLOW_2);
@@ -7702,21 +8054,21 @@ public class InternalTourDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Hotspot__ToAssignment_8"
-    // InternalTourDsl.g:2641:1: rule__Hotspot__ToAssignment_8 : ( ( ruleEString ) ) ;
+    // InternalTourDsl.g:2764:1: rule__Hotspot__ToAssignment_8 : ( ( ruleEString ) ) ;
     public final void rule__Hotspot__ToAssignment_8() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTourDsl.g:2645:1: ( ( ( ruleEString ) ) )
-            // InternalTourDsl.g:2646:2: ( ( ruleEString ) )
+            // InternalTourDsl.g:2768:1: ( ( ( ruleEString ) ) )
+            // InternalTourDsl.g:2769:2: ( ( ruleEString ) )
             {
-            // InternalTourDsl.g:2646:2: ( ( ruleEString ) )
-            // InternalTourDsl.g:2647:3: ( ruleEString )
+            // InternalTourDsl.g:2769:2: ( ( ruleEString ) )
+            // InternalTourDsl.g:2770:3: ( ruleEString )
             {
              before(grammarAccess.getHotspotAccess().getToPanoramaCrossReference_8_0()); 
-            // InternalTourDsl.g:2648:3: ( ruleEString )
-            // InternalTourDsl.g:2649:4: ruleEString
+            // InternalTourDsl.g:2771:3: ( ruleEString )
+            // InternalTourDsl.g:2772:4: ruleEString
             {
              before(grammarAccess.getHotspotAccess().getToPanoramaEStringParserRuleCall_8_0_1()); 
             pushFollow(FOLLOW_2);
@@ -7751,17 +8103,17 @@ public class InternalTourDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Hotspot__PositionAssignment_10"
-    // InternalTourDsl.g:2660:1: rule__Hotspot__PositionAssignment_10 : ( rulePosition ) ;
+    // InternalTourDsl.g:2783:1: rule__Hotspot__PositionAssignment_10 : ( rulePosition ) ;
     public final void rule__Hotspot__PositionAssignment_10() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTourDsl.g:2664:1: ( ( rulePosition ) )
-            // InternalTourDsl.g:2665:2: ( rulePosition )
+            // InternalTourDsl.g:2787:1: ( ( rulePosition ) )
+            // InternalTourDsl.g:2788:2: ( rulePosition )
             {
-            // InternalTourDsl.g:2665:2: ( rulePosition )
-            // InternalTourDsl.g:2666:3: rulePosition
+            // InternalTourDsl.g:2788:2: ( rulePosition )
+            // InternalTourDsl.g:2789:3: rulePosition
             {
              before(grammarAccess.getHotspotAccess().getPositionPositionParserRuleCall_10_0()); 
             pushFollow(FOLLOW_2);
@@ -7792,17 +8144,17 @@ public class InternalTourDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Hotspot__RotationAssignment_12"
-    // InternalTourDsl.g:2675:1: rule__Hotspot__RotationAssignment_12 : ( ruleRotation ) ;
+    // InternalTourDsl.g:2798:1: rule__Hotspot__RotationAssignment_12 : ( ruleRotation ) ;
     public final void rule__Hotspot__RotationAssignment_12() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTourDsl.g:2679:1: ( ( ruleRotation ) )
-            // InternalTourDsl.g:2680:2: ( ruleRotation )
+            // InternalTourDsl.g:2802:1: ( ( ruleRotation ) )
+            // InternalTourDsl.g:2803:2: ( ruleRotation )
             {
-            // InternalTourDsl.g:2680:2: ( ruleRotation )
-            // InternalTourDsl.g:2681:3: ruleRotation
+            // InternalTourDsl.g:2803:2: ( ruleRotation )
+            // InternalTourDsl.g:2804:3: ruleRotation
             {
              before(grammarAccess.getHotspotAccess().getRotationRotationParserRuleCall_12_0()); 
             pushFollow(FOLLOW_2);
@@ -7833,17 +8185,17 @@ public class InternalTourDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Rotation__XAssignment_6"
-    // InternalTourDsl.g:2690:1: rule__Rotation__XAssignment_6 : ( ruleEDouble ) ;
+    // InternalTourDsl.g:2813:1: rule__Rotation__XAssignment_6 : ( ruleEDouble ) ;
     public final void rule__Rotation__XAssignment_6() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTourDsl.g:2694:1: ( ( ruleEDouble ) )
-            // InternalTourDsl.g:2695:2: ( ruleEDouble )
+            // InternalTourDsl.g:2817:1: ( ( ruleEDouble ) )
+            // InternalTourDsl.g:2818:2: ( ruleEDouble )
             {
-            // InternalTourDsl.g:2695:2: ( ruleEDouble )
-            // InternalTourDsl.g:2696:3: ruleEDouble
+            // InternalTourDsl.g:2818:2: ( ruleEDouble )
+            // InternalTourDsl.g:2819:3: ruleEDouble
             {
              before(grammarAccess.getRotationAccess().getXEDoubleParserRuleCall_6_0()); 
             pushFollow(FOLLOW_2);
@@ -7874,17 +8226,17 @@ public class InternalTourDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Rotation__YAssignment_10"
-    // InternalTourDsl.g:2705:1: rule__Rotation__YAssignment_10 : ( ruleEDouble ) ;
+    // InternalTourDsl.g:2828:1: rule__Rotation__YAssignment_10 : ( ruleEDouble ) ;
     public final void rule__Rotation__YAssignment_10() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTourDsl.g:2709:1: ( ( ruleEDouble ) )
-            // InternalTourDsl.g:2710:2: ( ruleEDouble )
+            // InternalTourDsl.g:2832:1: ( ( ruleEDouble ) )
+            // InternalTourDsl.g:2833:2: ( ruleEDouble )
             {
-            // InternalTourDsl.g:2710:2: ( ruleEDouble )
-            // InternalTourDsl.g:2711:3: ruleEDouble
+            // InternalTourDsl.g:2833:2: ( ruleEDouble )
+            // InternalTourDsl.g:2834:3: ruleEDouble
             {
              before(grammarAccess.getRotationAccess().getYEDoubleParserRuleCall_10_0()); 
             pushFollow(FOLLOW_2);
@@ -7915,17 +8267,17 @@ public class InternalTourDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Rotation__ZAssignment_14"
-    // InternalTourDsl.g:2720:1: rule__Rotation__ZAssignment_14 : ( ruleEDouble ) ;
+    // InternalTourDsl.g:2843:1: rule__Rotation__ZAssignment_14 : ( ruleEDouble ) ;
     public final void rule__Rotation__ZAssignment_14() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTourDsl.g:2724:1: ( ( ruleEDouble ) )
-            // InternalTourDsl.g:2725:2: ( ruleEDouble )
+            // InternalTourDsl.g:2847:1: ( ( ruleEDouble ) )
+            // InternalTourDsl.g:2848:2: ( ruleEDouble )
             {
-            // InternalTourDsl.g:2725:2: ( ruleEDouble )
-            // InternalTourDsl.g:2726:3: ruleEDouble
+            // InternalTourDsl.g:2848:2: ( ruleEDouble )
+            // InternalTourDsl.g:2849:3: ruleEDouble
             {
              before(grammarAccess.getRotationAccess().getZEDoubleParserRuleCall_14_0()); 
             pushFollow(FOLLOW_2);
@@ -7956,17 +8308,17 @@ public class InternalTourDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Position__XAssignment_6"
-    // InternalTourDsl.g:2735:1: rule__Position__XAssignment_6 : ( ruleEDouble ) ;
+    // InternalTourDsl.g:2858:1: rule__Position__XAssignment_6 : ( ruleEDouble ) ;
     public final void rule__Position__XAssignment_6() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTourDsl.g:2739:1: ( ( ruleEDouble ) )
-            // InternalTourDsl.g:2740:2: ( ruleEDouble )
+            // InternalTourDsl.g:2862:1: ( ( ruleEDouble ) )
+            // InternalTourDsl.g:2863:2: ( ruleEDouble )
             {
-            // InternalTourDsl.g:2740:2: ( ruleEDouble )
-            // InternalTourDsl.g:2741:3: ruleEDouble
+            // InternalTourDsl.g:2863:2: ( ruleEDouble )
+            // InternalTourDsl.g:2864:3: ruleEDouble
             {
              before(grammarAccess.getPositionAccess().getXEDoubleParserRuleCall_6_0()); 
             pushFollow(FOLLOW_2);
@@ -7997,17 +8349,17 @@ public class InternalTourDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Position__YAssignment_10"
-    // InternalTourDsl.g:2750:1: rule__Position__YAssignment_10 : ( ruleEDouble ) ;
+    // InternalTourDsl.g:2873:1: rule__Position__YAssignment_10 : ( ruleEDouble ) ;
     public final void rule__Position__YAssignment_10() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTourDsl.g:2754:1: ( ( ruleEDouble ) )
-            // InternalTourDsl.g:2755:2: ( ruleEDouble )
+            // InternalTourDsl.g:2877:1: ( ( ruleEDouble ) )
+            // InternalTourDsl.g:2878:2: ( ruleEDouble )
             {
-            // InternalTourDsl.g:2755:2: ( ruleEDouble )
-            // InternalTourDsl.g:2756:3: ruleEDouble
+            // InternalTourDsl.g:2878:2: ( ruleEDouble )
+            // InternalTourDsl.g:2879:3: ruleEDouble
             {
              before(grammarAccess.getPositionAccess().getYEDoubleParserRuleCall_10_0()); 
             pushFollow(FOLLOW_2);
@@ -8038,17 +8390,17 @@ public class InternalTourDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Position__ZAssignment_14"
-    // InternalTourDsl.g:2765:1: rule__Position__ZAssignment_14 : ( ruleEDouble ) ;
+    // InternalTourDsl.g:2888:1: rule__Position__ZAssignment_14 : ( ruleEDouble ) ;
     public final void rule__Position__ZAssignment_14() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTourDsl.g:2769:1: ( ( ruleEDouble ) )
-            // InternalTourDsl.g:2770:2: ( ruleEDouble )
+            // InternalTourDsl.g:2892:1: ( ( ruleEDouble ) )
+            // InternalTourDsl.g:2893:2: ( ruleEDouble )
             {
-            // InternalTourDsl.g:2770:2: ( ruleEDouble )
-            // InternalTourDsl.g:2771:3: ruleEDouble
+            // InternalTourDsl.g:2893:2: ( ruleEDouble )
+            // InternalTourDsl.g:2894:3: ruleEDouble
             {
              before(grammarAccess.getPositionAccess().getZEDoubleParserRuleCall_14_0()); 
             pushFollow(FOLLOW_2);
@@ -8097,19 +8449,20 @@ public class InternalTourDslParser extends AbstractInternalContentAssistParser {
     public static final BitSet FOLLOW_13 = new BitSet(new long[]{0x0000000000004000L});
     public static final BitSet FOLLOW_14 = new BitSet(new long[]{0x0000000000008000L});
     public static final BitSet FOLLOW_15 = new BitSet(new long[]{0x0000000000010000L});
-    public static final BitSet FOLLOW_16 = new BitSet(new long[]{0x0000000000200000L});
-    public static final BitSet FOLLOW_17 = new BitSet(new long[]{0x0000000000020000L});
+    public static final BitSet FOLLOW_16 = new BitSet(new long[]{0x0000000000020000L});
+    public static final BitSet FOLLOW_17 = new BitSet(new long[]{0x0000000000400000L});
     public static final BitSet FOLLOW_18 = new BitSet(new long[]{0x0000000000040000L});
-    public static final BitSet FOLLOW_19 = new BitSet(new long[]{0x0000000302000200L});
-    public static final BitSet FOLLOW_20 = new BitSet(new long[]{0x0000000000080000L});
+    public static final BitSet FOLLOW_19 = new BitSet(new long[]{0x0000000000080000L});
+    public static final BitSet FOLLOW_20 = new BitSet(new long[]{0x0000000604000200L});
     public static final BitSet FOLLOW_21 = new BitSet(new long[]{0x0000000000100000L});
-    public static final BitSet FOLLOW_22 = new BitSet(new long[]{0x0000000302002000L});
-    public static final BitSet FOLLOW_23 = new BitSet(new long[]{0x0000000000400000L});
+    public static final BitSet FOLLOW_22 = new BitSet(new long[]{0x0000000000200000L});
+    public static final BitSet FOLLOW_23 = new BitSet(new long[]{0x0000000604002000L});
     public static final BitSet FOLLOW_24 = new BitSet(new long[]{0x0000000000800000L});
     public static final BitSet FOLLOW_25 = new BitSet(new long[]{0x0000000001000000L});
-    public static final BitSet FOLLOW_26 = new BitSet(new long[]{0x0000000302000000L});
-    public static final BitSet FOLLOW_27 = new BitSet(new long[]{0x0000000002000000L});
-    public static final BitSet FOLLOW_28 = new BitSet(new long[]{0x00000000C0000000L});
-    public static final BitSet FOLLOW_29 = new BitSet(new long[]{0x0000000102000000L});
+    public static final BitSet FOLLOW_26 = new BitSet(new long[]{0x0000000002000000L});
+    public static final BitSet FOLLOW_27 = new BitSet(new long[]{0x0000000604000000L});
+    public static final BitSet FOLLOW_28 = new BitSet(new long[]{0x0000000004000000L});
+    public static final BitSet FOLLOW_29 = new BitSet(new long[]{0x0000000180000000L});
+    public static final BitSet FOLLOW_30 = new BitSet(new long[]{0x0000000204000000L});
 
 }

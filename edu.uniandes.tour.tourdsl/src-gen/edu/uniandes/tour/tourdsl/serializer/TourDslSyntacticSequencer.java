@@ -21,13 +21,13 @@ public class TourDslSyntacticSequencer extends AbstractSyntacticSequencer {
 
 	protected TourDslGrammarAccess grammarAccess;
 	protected AbstractElementAlias match_Hotspot_COMATerminalRuleCall_14_q;
-	protected AbstractElementAlias match_Panorama_COMATerminalRuleCall_16_q;
+	protected AbstractElementAlias match_Panorama_COMATerminalRuleCall_20_q;
 	
 	@Inject
 	protected void init(IGrammarAccess access) {
 		grammarAccess = (TourDslGrammarAccess) access;
 		match_Hotspot_COMATerminalRuleCall_14_q = new TokenAlias(false, true, grammarAccess.getHotspotAccess().getCOMATerminalRuleCall_14());
-		match_Panorama_COMATerminalRuleCall_16_q = new TokenAlias(false, true, grammarAccess.getPanoramaAccess().getCOMATerminalRuleCall_16());
+		match_Panorama_COMATerminalRuleCall_20_q = new TokenAlias(false, true, grammarAccess.getPanoramaAccess().getCOMATerminalRuleCall_20());
 	}
 	
 	@Override
@@ -64,6 +64,8 @@ public class TourDslSyntacticSequencer extends AbstractSyntacticSequencer {
 			return getTWOPOINTSToken(semanticObject, ruleCall, node);
 		else if (ruleCall.getRule() == grammarAccess.getT_HOTSPOTRule())
 			return getT_HOTSPOTToken(semanticObject, ruleCall, node);
+		else if (ruleCall.getRule() == grammarAccess.getT_IMAGENRule())
+			return getT_IMAGENToken(semanticObject, ruleCall, node);
 		else if (ruleCall.getRule() == grammarAccess.getT_PANORAMARule())
 			return getT_PANORAMAToken(semanticObject, ruleCall, node);
 		else if (ruleCall.getRule() == grammarAccess.getT_POSITIONRule())
@@ -218,6 +220,15 @@ public class TourDslSyntacticSequencer extends AbstractSyntacticSequencer {
 	}
 	
 	/**
+	 * terminal T_IMAGEN: "imagePath";
+	 */
+	protected String getT_IMAGENToken(EObject semanticObject, RuleCall ruleCall, INode node) {
+		if (node != null)
+			return getTokenText(node);
+		return "imagePath";
+	}
+	
+	/**
 	 * terminal T_PANORAMA:"panoramas";
 	 */
 	protected String getT_PANORAMAToken(EObject semanticObject, RuleCall ruleCall, INode node) {
@@ -252,8 +263,8 @@ public class TourDslSyntacticSequencer extends AbstractSyntacticSequencer {
 			List<INode> syntaxNodes = getNodesFor(transitionNodes, syntax);
 			if (match_Hotspot_COMATerminalRuleCall_14_q.equals(syntax))
 				emit_Hotspot_COMATerminalRuleCall_14_q(semanticObject, getLastNavigableState(), syntaxNodes);
-			else if (match_Panorama_COMATerminalRuleCall_16_q.equals(syntax))
-				emit_Panorama_COMATerminalRuleCall_16_q(semanticObject, getLastNavigableState(), syntaxNodes);
+			else if (match_Panorama_COMATerminalRuleCall_20_q.equals(syntax))
+				emit_Panorama_COMATerminalRuleCall_20_q(semanticObject, getLastNavigableState(), syntaxNodes);
 			else acceptNodes(getLastNavigableState(), syntaxNodes);
 		}
 	}
@@ -276,7 +287,7 @@ public class TourDslSyntacticSequencer extends AbstractSyntacticSequencer {
 	 * This ambiguous syntax occurs at:
 	 *     hotspot+=Hotspot RPARENTISISCUADRADO RBRACKET (ambiguity) (rule end)
 	 */
-	protected void emit_Panorama_COMATerminalRuleCall_16_q(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
+	protected void emit_Panorama_COMATerminalRuleCall_20_q(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
 		acceptNodes(transition, nodes);
 	}
 	

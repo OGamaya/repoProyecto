@@ -112,27 +112,33 @@ public class TourDslGrammarAccess extends AbstractGrammarElementFinder {
 		private final Assignment cDescriptionAssignment_8 = (Assignment)cGroup.eContents().get(8);
 		private final RuleCall cDescriptionEStringParserRuleCall_8_0 = (RuleCall)cDescriptionAssignment_8.eContents().get(0);
 		private final RuleCall cCOMATerminalRuleCall_9 = (RuleCall)cGroup.eContents().get(9);
-		private final RuleCall cT_HOTSPOTTerminalRuleCall_10 = (RuleCall)cGroup.eContents().get(10);
+		private final RuleCall cT_IMAGENTerminalRuleCall_10 = (RuleCall)cGroup.eContents().get(10);
 		private final RuleCall cTWOPOINTSTerminalRuleCall_11 = (RuleCall)cGroup.eContents().get(11);
-		private final RuleCall cLPARENTISISCUADRADOTerminalRuleCall_12 = (RuleCall)cGroup.eContents().get(12);
-		private final Assignment cHotspotAssignment_13 = (Assignment)cGroup.eContents().get(13);
-		private final RuleCall cHotspotHotspotParserRuleCall_13_0 = (RuleCall)cHotspotAssignment_13.eContents().get(0);
-		private final RuleCall cRPARENTISISCUADRADOTerminalRuleCall_14 = (RuleCall)cGroup.eContents().get(14);
-		private final RuleCall cRBRACKETTerminalRuleCall_15 = (RuleCall)cGroup.eContents().get(15);
-		private final RuleCall cCOMATerminalRuleCall_16 = (RuleCall)cGroup.eContents().get(16);
+		private final Assignment cImagePathAssignment_12 = (Assignment)cGroup.eContents().get(12);
+		private final RuleCall cImagePathEStringParserRuleCall_12_0 = (RuleCall)cImagePathAssignment_12.eContents().get(0);
+		private final RuleCall cCOMATerminalRuleCall_13 = (RuleCall)cGroup.eContents().get(13);
+		private final RuleCall cT_HOTSPOTTerminalRuleCall_14 = (RuleCall)cGroup.eContents().get(14);
+		private final RuleCall cTWOPOINTSTerminalRuleCall_15 = (RuleCall)cGroup.eContents().get(15);
+		private final RuleCall cLPARENTISISCUADRADOTerminalRuleCall_16 = (RuleCall)cGroup.eContents().get(16);
+		private final Assignment cHotspotAssignment_17 = (Assignment)cGroup.eContents().get(17);
+		private final RuleCall cHotspotHotspotParserRuleCall_17_0 = (RuleCall)cHotspotAssignment_17.eContents().get(0);
+		private final RuleCall cRPARENTISISCUADRADOTerminalRuleCall_18 = (RuleCall)cGroup.eContents().get(18);
+		private final RuleCall cRBRACKETTerminalRuleCall_19 = (RuleCall)cGroup.eContents().get(19);
+		private final RuleCall cCOMATerminalRuleCall_20 = (RuleCall)cGroup.eContents().get(20);
 		
 		//Panorama:
 		//	{Panorama} LBRACKET
 		//	NAME TWOPOINTS name=EString COMA
 		//	DESCRIPTION TWOPOINTS description=EString COMA
+		//	T_IMAGEN TWOPOINTS imagePath=EString COMA
 		//	T_HOTSPOT TWOPOINTS LPARENTISISCUADRADO
 		//	hotspot+=Hotspot+
 		//	RPARENTISISCUADRADO
 		//	RBRACKET COMA?;
 		@Override public ParserRule getRule() { return rule; }
 		
-		//{Panorama} LBRACKET NAME TWOPOINTS name=EString COMA DESCRIPTION TWOPOINTS description=EString COMA T_HOTSPOT TWOPOINTS
-		//LPARENTISISCUADRADO hotspot+=Hotspot+ RPARENTISISCUADRADO RBRACKET COMA?
+		//{Panorama} LBRACKET NAME TWOPOINTS name=EString COMA DESCRIPTION TWOPOINTS description=EString COMA T_IMAGEN TWOPOINTS
+		//imagePath=EString COMA T_HOTSPOT TWOPOINTS LPARENTISISCUADRADO hotspot+=Hotspot+ RPARENTISISCUADRADO RBRACKET COMA?
 		public Group getGroup() { return cGroup; }
 		
 		//{Panorama}
@@ -171,29 +177,44 @@ public class TourDslGrammarAccess extends AbstractGrammarElementFinder {
 		//COMA
 		public RuleCall getCOMATerminalRuleCall_9() { return cCOMATerminalRuleCall_9; }
 		
-		//T_HOTSPOT
-		public RuleCall getT_HOTSPOTTerminalRuleCall_10() { return cT_HOTSPOTTerminalRuleCall_10; }
+		//T_IMAGEN
+		public RuleCall getT_IMAGENTerminalRuleCall_10() { return cT_IMAGENTerminalRuleCall_10; }
 		
 		//TWOPOINTS
 		public RuleCall getTWOPOINTSTerminalRuleCall_11() { return cTWOPOINTSTerminalRuleCall_11; }
 		
+		//imagePath=EString
+		public Assignment getImagePathAssignment_12() { return cImagePathAssignment_12; }
+		
+		//EString
+		public RuleCall getImagePathEStringParserRuleCall_12_0() { return cImagePathEStringParserRuleCall_12_0; }
+		
+		//COMA
+		public RuleCall getCOMATerminalRuleCall_13() { return cCOMATerminalRuleCall_13; }
+		
+		//T_HOTSPOT
+		public RuleCall getT_HOTSPOTTerminalRuleCall_14() { return cT_HOTSPOTTerminalRuleCall_14; }
+		
+		//TWOPOINTS
+		public RuleCall getTWOPOINTSTerminalRuleCall_15() { return cTWOPOINTSTerminalRuleCall_15; }
+		
 		//LPARENTISISCUADRADO
-		public RuleCall getLPARENTISISCUADRADOTerminalRuleCall_12() { return cLPARENTISISCUADRADOTerminalRuleCall_12; }
+		public RuleCall getLPARENTISISCUADRADOTerminalRuleCall_16() { return cLPARENTISISCUADRADOTerminalRuleCall_16; }
 		
 		//hotspot+=Hotspot+
-		public Assignment getHotspotAssignment_13() { return cHotspotAssignment_13; }
+		public Assignment getHotspotAssignment_17() { return cHotspotAssignment_17; }
 		
 		//Hotspot
-		public RuleCall getHotspotHotspotParserRuleCall_13_0() { return cHotspotHotspotParserRuleCall_13_0; }
+		public RuleCall getHotspotHotspotParserRuleCall_17_0() { return cHotspotHotspotParserRuleCall_17_0; }
 		
 		//RPARENTISISCUADRADO
-		public RuleCall getRPARENTISISCUADRADOTerminalRuleCall_14() { return cRPARENTISISCUADRADOTerminalRuleCall_14; }
+		public RuleCall getRPARENTISISCUADRADOTerminalRuleCall_18() { return cRPARENTISISCUADRADOTerminalRuleCall_18; }
 		
 		//RBRACKET
-		public RuleCall getRBRACKETTerminalRuleCall_15() { return cRBRACKETTerminalRuleCall_15; }
+		public RuleCall getRBRACKETTerminalRuleCall_19() { return cRBRACKETTerminalRuleCall_19; }
 		
 		//COMA?
-		public RuleCall getCOMATerminalRuleCall_16() { return cCOMATerminalRuleCall_16; }
+		public RuleCall getCOMATerminalRuleCall_20() { return cCOMATerminalRuleCall_20; }
 	}
 	public class HotspotElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "edu.uniandes.tour.tourdsl.TourDsl.Hotspot");
@@ -574,6 +595,7 @@ public class TourDslGrammarAccess extends AbstractGrammarElementFinder {
 	private final TerminalRule tCOMA;
 	private final TerminalRule tTWOPOINTS;
 	private final TerminalRule tNAME;
+	private final TerminalRule tT_IMAGEN;
 	private final TerminalRule tT_PANORAMA;
 	private final TerminalRule tDESCRIPTION;
 	private final TerminalRule tT_HOTSPOT;
@@ -611,6 +633,7 @@ public class TourDslGrammarAccess extends AbstractGrammarElementFinder {
 		this.tCOMA = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "edu.uniandes.tour.tourdsl.TourDsl.COMA");
 		this.tTWOPOINTS = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "edu.uniandes.tour.tourdsl.TourDsl.TWOPOINTS");
 		this.tNAME = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "edu.uniandes.tour.tourdsl.TourDsl.NAME");
+		this.tT_IMAGEN = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "edu.uniandes.tour.tourdsl.TourDsl.T_IMAGEN");
 		this.tT_PANORAMA = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "edu.uniandes.tour.tourdsl.TourDsl.T_PANORAMA");
 		this.tDESCRIPTION = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "edu.uniandes.tour.tourdsl.TourDsl.DESCRIPTION");
 		this.tT_HOTSPOT = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "edu.uniandes.tour.tourdsl.TourDsl.T_HOTSPOT");
@@ -671,6 +694,7 @@ public class TourDslGrammarAccess extends AbstractGrammarElementFinder {
 	//	{Panorama} LBRACKET
 	//	NAME TWOPOINTS name=EString COMA
 	//	DESCRIPTION TWOPOINTS description=EString COMA
+	//	T_IMAGEN TWOPOINTS imagePath=EString COMA
 	//	T_HOTSPOT TWOPOINTS LPARENTISISCUADRADO
 	//	hotspot+=Hotspot+
 	//	RPARENTISISCUADRADO
@@ -796,6 +820,12 @@ public class TourDslGrammarAccess extends AbstractGrammarElementFinder {
 	//	"name";
 	public TerminalRule getNAMERule() {
 		return tNAME;
+	}
+	
+	//terminal T_IMAGEN:
+	//	"imagePath";
+	public TerminalRule getT_IMAGENRule() {
+		return tT_IMAGEN;
 	}
 	
 	//terminal T_PANORAMA:
